@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zhuoli Yang (杨卓力) | Life Sciences & Molecular Biology Portfolio</title>
-  <meta name="description" content="Personal academic portfolio of Zhuoli Yang (杨卓力) &mdash; High school student exploring comparative anatomy, vivarium ecology, and molecular biotechnology.">
+  <title>Zhuoli Yang (杨卓力) | Life Sciences & Visual Portfolio</title>
+  <meta name="description" content="Personal academic & visual portfolio of Zhuoli Yang (杨卓力) — High school student exploring comparative anatomy, vivarium ecology, and molecular biology.">
   
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -59,48 +59,39 @@
   <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 z-50 transition-all duration-100" style="width: 0%;"></div>
 
   <!-- ==================== HEADER & NAVBAR ==================== -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-slate-800/80">
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand Logo / Name -->
       <a href="#" class="flex items-center gap-2.5 group">
-        <div class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:bg-emerald-700 transition-colors">
-          Z
+        <div class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:bg-emerald-700 transition-colors">
+          ZY
         </div>
         <div class="flex flex-col">
           <span class="font-bold text-slate-900 dark:text-white tracking-tight leading-none group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
             Zhuoli Yang <span class="text-xs font-normal text-slate-500 dark:text-slate-400">杨卓力</span>
           </span>
           <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-medium mt-0.5">
-            Life Sciences &middot; Class of '27
+            Life Sciences &middot; Class of 2027
           </span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
         <a href="#about" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About</a>
-        <a href="#projects" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Projects & Research</a>
-        <a href="#footprint" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Global Footprint</a>
-        <a href="#arts" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Arts & Hobbies</a>
+        <a href="#projects" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Works & Exhibition</a>
+        <a href="#gallery" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Activities & Arts</a>
         <a href="#aspirations" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Aspirations</a>
         <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
       </nav>
 
-      <!-- Right Actions: Theme Toggle & Contact Button -->
+      <!-- Utility Actions: Theme Toggle -->
       <div class="flex items-center gap-3">
-        <!-- Dark Mode Toggle Button -->
-        <button id="theme-toggle" type="button" aria-label="Toggle Dark Mode" 
-          class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none">
-          <i data-lucide="sun" id="theme-icon-sun" class="w-5 h-5 hidden"></i>
-          <i data-lucide="moon" id="theme-icon-moon" class="w-5 h-5"></i>
+        <button id="theme-toggle" type="button" aria-label="Toggle Theme" class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i id="theme-icon-sun" data-lucide="sun" class="w-5 h-5 hidden"></i>
+          <i id="theme-icon-moon" data-lucide="moon" class="w-5 h-5"></i>
         </button>
-
-        <!-- Direct Action Button -->
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition-all">
-          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-          Get in Touch
-        </a>
 
         <!-- Mobile Menu Hamburger -->
         <button id="mobile-menu-btn" type="button" aria-label="Open Mobile Menu" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
@@ -113,27 +104,26 @@
     <!-- Mobile Dropdown Navigation -->
     <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-3 pb-5 space-y-2.5">
       <a href="#about" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">About</a>
-      <a href="#projects" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Projects & Research</a>
-      <a href="#footprint" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Global Footprint</a>
-      <a href="#arts" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Arts & Hobbies</a>
+      <a href="#projects" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Works & Exhibition</a>
+      <a href="#gallery" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Activities & Arts</a>
       <a href="#aspirations" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Aspirations</a>
       <a href="#contact" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Contact</a>
     </div>
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left Column: Introduction & Core Manifesto -->
-        <div class="lg:col-span-8 space-y-6">
+        <!-- Left Column: Introduction (Streamlined & Clean) -->
+        <div class="lg:col-span-7 space-y-5">
           
           <!-- Badges / Status Indicator -->
           <div class="inline-flex flex-wrap items-center gap-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-bio-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-gentle-pulse"></span>
               High School Life Sciences Enthusiast
             </span>
             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/80">
@@ -141,97 +131,84 @@
             </span>
           </div>
 
-          <!-- Main Title -->
-          <div class="space-y-2">
+          <!-- Main Title: Static, Non-Animated & Dignified -->
+          <div class="space-y-3">
             <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
               Connecting Anatomical Form <br class="hidden sm:inline">
               to <span class="text-emerald-700 dark:text-emerald-400">Molecular Mechanism</span>.
             </h1>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed pt-2">
-              I am <strong>Zhuoli Yang (杨卓力)</strong>, a high school student (Class of 2027) fascinated by how living systems are engineered. From hands-on osteological articulation and multi-species vivarium husbandry to biomechanical structure-function relationships, I investigate the logic underlying biology.
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+              I am <strong>Zhuoli Yang (杨卓力)</strong>, Class of 2027. Investigating comparative osteology, closed vivarium ecosystems, and molecular biomechanics through empirical dissection, chemical calibration, and specimen reconstruction.
             </p>
           </div>
 
-          <!-- Philosophy Quote Card -->
-          <div class="quote-card p-4 sm:p-5 rounded-r-xl bg-emerald-50/80 dark:bg-emerald-950/30 border border-l-4 border-l-emerald-600 border-slate-200 dark:border-slate-800">
-            <p class="italic text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-serif">
-              "Articulating a skeleton this fragile does not forgive guesswork. Starting with small, reversible trials before committing to an irreversible step taught me that patience alone was not enough. I also needed a method."
-            </p>
-            <span class="block mt-2 text-xs font-mono text-emerald-700 dark:text-emerald-400 font-semibold">&mdash; From Personal Statement on Tigerfish Articulation</span>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-1">
             <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all">
-              <i data-lucide="microscope" class="w-4 h-4"></i>
-              Explore Biological Projects
+              <i data-lucide="image" class="w-4 h-4"></i>
+              View Visual Works
             </a>
-            <a href="#about" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 transition-all">
-              <i data-lucide="user" class="w-4 h-4 text-emerald-500"></i>
-              Academic Profile
-            </a>
-            <a href="mailto:yangzhuoli2009@163.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 text-sm font-medium transition-colors">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              Send Email
+            <a href="mailto:yangzhuoli2009@163.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 transition-all">
+              <i data-lucide="mail" class="w-4 h-4 text-emerald-500"></i>
+              Contact
             </a>
           </div>
 
         </div>
 
-        <!-- Right Column: Student Academic Portrait & Profile Card -->
-        <div class="lg:col-span-4">
-          <div class="glass-card rounded-2xl p-6 sm:p-7 relative overflow-hidden">
-            <!-- Decorative corner tag -->
-            <div class="absolute top-3 right-3 z-10">
+        <!-- Right Column: Dedicated Academic Portrait Frame (以大图为主) -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-5 sm:p-6 relative overflow-hidden shadow-lg">
+            
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <i data-lucide="user" class="w-4 h-4 text-emerald-600"></i> Student Profile
+              </span>
               <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800">
-                Identity Profile
+                Class of 2027
               </span>
             </div>
 
             <!-- Dedicated Portrait Photo Frame -->
-            <div class="relative w-full aspect-[4/3] mb-5 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center justify-center">
-              <!-- Actual image when avatar.jpg is present in assets/images/ -->
+            <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center justify-center group mb-4">
+              <!-- Real photo automatically loads when assets/images/avatar.jpg is present -->
               <img src="assets/images/avatar.jpg" 
                    alt="Zhuoli Yang (杨卓力)" 
                    id="avatar-img"
-                   class="w-full h-full object-cover object-top hidden"
+                   class="w-full h-full object-cover object-top hidden transition-transform duration-300 group-hover:scale-[1.02]"
                    onload="this.classList.remove('hidden'); const fb = document.getElementById('avatar-fallback'); if (fb) fb.classList.add('hidden');"
                    onerror="this.classList.add('hidden'); const fb = document.getElementById('avatar-fallback'); if (fb) fb.classList.remove('hidden');">
 
-              <!-- Elegant Silhouette & Academic Photo Placeholder -->
-              <div id="avatar-fallback" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-b from-slate-50 to-emerald-50/30 dark:from-slate-800/40 dark:to-emerald-950/20">
-                <div class="w-16 h-16 rounded-full bg-white dark:bg-slate-800 border-2 border-emerald-500/25 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2 shadow-xs">
+              <!-- Elegant Silhouette / Photo Placeholder Frame -->
+              <div id="avatar-fallback" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-b from-slate-50 to-emerald-50/40 dark:from-slate-800/50 dark:to-emerald-950/20">
+                <div class="w-16 h-16 rounded-full bg-white dark:bg-slate-800 border-2 border-emerald-500/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2 shadow-xs">
                   <i data-lucide="user" class="w-8 h-8 stroke-[1.5]"></i>
                 </div>
-                <span class="text-xs font-bold text-slate-900 dark:text-white">Zhuoli Yang &middot; 杨卓力</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">High School Class of 2027</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-100/70 dark:bg-emerald-900/40 px-2 py-0.5 rounded-full border border-emerald-200/70 dark:border-emerald-800/70 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Spot &middot; avatar.jpg
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Zhuoli Yang &middot; 杨卓力</span>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">High School Life Sciences Track</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-100/80 dark:bg-emerald-900/40 px-2 py-0.5 rounded-full border border-emerald-200/80 dark:border-emerald-800/60 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Portrait Slot &middot; avatar.jpg
                 </span>
               </div>
             </div>
 
-            <!-- Profile Summary Points -->
-            <div class="space-y-3 text-xs">
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-100 dark:border-slate-800">
-                <span class="text-slate-500 dark:text-slate-400">Track</span>
-                <span class="font-semibold text-slate-800 dark:text-slate-200">Physics, Chemistry, Biology</span>
+            <!-- Profile Quick Facts -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="p-2 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">Academic Track</span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">Physics, Chem, Bio</span>
               </div>
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-100 dark:border-slate-800">
-                <span class="text-slate-500 dark:text-slate-400">High School</span>
-                <span class="font-semibold text-slate-800 dark:text-slate-200">Kunming Long-Spring Exp.</span>
+              <div class="p-2 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">High School</span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">Kunming Long-Spring</span>
               </div>
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-100 dark:border-slate-800">
-                <span class="text-slate-500 dark:text-slate-400">Core Passion</span>
-                <span class="font-semibold text-emerald-700 dark:text-emerald-400">Life Sciences &amp; Osteology</span>
+              <div class="p-2 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">English</span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">TOEFL iBT 93</span>
               </div>
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-100 dark:border-slate-800">
-                <span class="text-slate-500 dark:text-slate-400">English</span>
-                <span class="font-semibold text-slate-800 dark:text-slate-200">TOEFL iBT 93</span>
-              </div>
-              <div class="flex items-center justify-between py-1.5">
-                <span class="text-slate-500 dark:text-slate-400">Arts</span>
-                <span class="font-semibold text-slate-800 dark:text-slate-200">Saxophone Grade 10</span>
+              <div class="p-2 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">Performing Arts</span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">Saxophone Grade 10</span>
               </div>
             </div>
 
@@ -240,34 +217,43 @@
 
       </div>
 
-      <!-- Quick Metrics Ribbon -->
-      <div id="stats-ribbon" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-slate-200/80 dark:border-slate-800/80">
+      <!-- Quick Highlights Ribbon: 4 Focused Visual Cards -->
+      <div id="stats-ribbon" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 border-t border-slate-200/80 dark:border-slate-800/80">
         
         <div class="glass-card p-4 rounded-xl interactive-card">
-          <span class="text-xs text-slate-500 dark:text-slate-400 block mb-1">Comparative Osteology</span>
-          <div class="text-2xl font-bold text-slate-900 dark:text-white font-mono">H. goliath</div>
-          <span class="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium">Skeleton Articulation &amp; Anatomy</span>
-        </div>
-
-        <div class="glass-card p-4 rounded-xl interactive-card">
-          <span class="text-xs text-slate-500 dark:text-slate-400 block mb-1">Vivarium Ecology</span>
-          <div class="text-2xl font-bold text-slate-900 dark:text-white font-mono">3+ <span class="text-xs font-normal text-slate-400">Years</span></div>
-          <span class="text-[11px] text-teal-700 dark:text-teal-400 font-medium">Closed Habitat Care &amp; Pathology</span>
-        </div>
-
-        <div class="glass-card p-4 rounded-xl interactive-card">
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs text-slate-500 dark:text-slate-400">English Proficiency</span>
-            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400">Oct 2025</span>
+          <div class="flex items-center gap-2 mb-1 text-emerald-600 dark:text-emerald-400">
+            <i data-lucide="fish" class="w-4 h-4"></i>
+            <span class="text-xs font-semibold text-slate-600 dark:text-slate-300">Osteology</span>
           </div>
-          <div class="text-2xl font-bold text-slate-900 dark:text-white font-mono"><span data-counter-target="93">0</span> <span class="text-xs font-normal text-slate-400">/ 120</span></div>
-          <span class="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium">TOEFL iBT Official Certification</span>
+          <div class="text-xl font-bold text-slate-900 dark:text-white font-mono">H. goliath</div>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400">1:1 Skeletal Articulation</span>
         </div>
 
         <div class="glass-card p-4 rounded-xl interactive-card">
-          <span class="text-xs text-slate-500 dark:text-slate-400 block mb-1">Performing Arts</span>
-          <div class="text-2xl font-bold text-slate-900 dark:text-white font-mono">Grade <span data-counter-target="10">0</span></div>
-          <span class="text-[11px] text-purple-700 dark:text-purple-400 font-medium">Saxophone Distinction Certificate</span>
+          <div class="flex items-center gap-2 mb-1 text-teal-600 dark:text-teal-400">
+            <i data-lucide="leaf" class="w-4 h-4"></i>
+            <span class="text-xs font-semibold text-slate-600 dark:text-slate-300">Vivarium</span>
+          </div>
+          <div class="text-xl font-bold text-slate-900 dark:text-white font-mono">3+ Years</div>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400">Closed Habitat Diagnostics</span>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl interactive-card">
+          <div class="flex items-center gap-2 mb-1 text-blue-600 dark:text-blue-400">
+            <i data-lucide="award" class="w-4 h-4"></i>
+            <span class="text-xs font-semibold text-slate-600 dark:text-slate-300">TOEFL iBT</span>
+          </div>
+          <div class="text-xl font-bold text-slate-900 dark:text-white font-mono"><span data-counter-target="93">0</span> <span class="text-xs font-normal text-slate-400">/ 120</span></div>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400">Official Certification (R·L·S·W)</span>
+        </div>
+
+        <div class="glass-card p-4 rounded-xl interactive-card">
+          <div class="flex items-center gap-2 mb-1 text-purple-600 dark:text-purple-400">
+            <i data-lucide="music" class="w-4 h-4"></i>
+            <span class="text-xs font-semibold text-slate-600 dark:text-slate-300">Saxophone</span>
+          </div>
+          <div class="text-xl font-bold text-slate-900 dark:text-white font-mono">Grade 10</div>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400">China National Opera Distinction</span>
         </div>
 
       </div>
@@ -275,73 +261,68 @@
     </div>
   </section>
 
-  <!-- ==================== ABOUT SECTION ==================== -->
-  <section id="about" class="reveal py-16 md:py-24 bg-white dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800/80">
+  <!-- ==================== ABOUT & PILLARS SECTION ==================== -->
+  <section id="about" class="reveal py-14 md:py-20 bg-white dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="max-w-2xl mb-12">
-        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Academic Background & Philosophy</span>
+      <div class="max-w-2xl mb-10">
+        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Core Foundations</span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-          A Journey Rooted in Rigorous Observation
+          Three Pillars of Scientific Inquiry
         </h2>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
-          Bridging personal laboratory projects with high-school science fundamentals and an ambition for advanced molecular research.
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          From hands-on craftsmanship to molecular inquiry.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Left: Core Narrative -->
-        <div class="lg:col-span-7 space-y-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-          <p>
-            My curiosity about biology did not start from textbooks alone. For years, I maintained a dynamic vivarium at home, keeping various species of fish, reptiles, spiders, and scorpions. Caring for these living systems required mastering water chemistry, microclimate temperature gradients, and differential diagnoses&mdash;distinguishing, for instance, between parasitic white-spot infections requiring stepwise thermal escalation and bacterial ailments demanding strict feed restriction and biological filtration.
-          </p>
-          <p>
-            This hands-on instinct culminated in my specimen articulation project with the goliath tigerfish (<span class="bio-tooltip" data-tooltip="Hydrocynus goliath: Apex predator of Congo River with specialized cranial & vertebral biomechanics"><em>Hydrocynus goliath</em></span>). Facing the risk of bone dissolution during chemical defatting with sodium hydroxide (<span class="bio-tooltip" data-tooltip="NaOH: Tested on crucian carp to strip lipids safely without dissolving sutures">NaOH</span>), I devised an initial trial protocol on a crucian carp to determine safe concentration and soak windows. Once the soft tissue was cleared, I reassembled the vertebral column and cranial joints by matching unfamiliar facets against biomechanical movement constraints&mdash;a method reminiscent of solving rigorous mathematical proofs.
-          </p>
-          <p>
-            Through this process, I began to see living form not as static geometry, but as the direct outcome of physical forces and molecular adaptations. Three questions continually guide my thinking:
-          </p>
+        <!-- Left: 3 Visual Pillars (Replaces dense narrative) -->
+        <div class="lg:col-span-7 grid grid-cols-1 gap-4">
           
-          <ul class="space-y-2 my-3 pl-2">
-            <li class="flex items-start gap-2 text-xs sm:text-sm">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"></i>
-              <span><strong>Form to Function:</strong> How does an anatomical structure physically optimize for its mechanical role?</span>
-            </li>
-            <li class="flex items-start gap-2 text-xs sm:text-sm">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"></i>
-              <span><strong>Micro to Macro:</strong> How do variations at the molecular and cellular level manifest as macro-scale biomechanical adaptations?</span>
-            </li>
-            <li class="flex items-start gap-2 text-xs sm:text-sm">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"></i>
-              <span><strong>Biotechnological Application:</strong> How can these principles be leveraged to design engineered biomolecules and bio-inspired tools?</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Right: Teacher Endorsement & Academic Track Card -->
-        <div class="lg:col-span-5 space-y-6">
-          
-          <!-- Endorsement Card -->
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 relative">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-300 flex items-center justify-center font-bold text-sm">
-                胡
-              </div>
-              <div>
-                <h3 class="text-sm font-bold text-slate-900 dark:text-white">Ms. Mengting Hu (胡梦婷)</h3>
-                <span class="text-xs text-slate-500 dark:text-slate-400">Homeroom Teacher & Biology Instructor</span>
-              </div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+              <i data-lucide="flask-conical" class="w-5 h-5"></i>
             </div>
-            
-            <blockquote class="text-xs italic text-slate-600 dark:text-slate-300 leading-relaxed border-l-2 border-emerald-500 pl-3.5 my-3 font-serif">
-              "Zhuoli stands out for his lively thinking and strong capacity for conceptual migration&mdash;frequently linking microscopic molecular characteristics to macroscopic ecosystem behaviors. When facing unfamiliar biological scenarios, he remains calm, breaks down problems systematically, and verifies hypotheses against scientific literature."
-            </blockquote>
-            <span class="text-[11px] font-mono text-slate-400 dark:text-slate-500 block text-right">Kunming Xishan Long-Spring Exp. Middle School</span>
+            <div class="space-y-1">
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">Empirical Calibration</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Tested serial NaOH dilutions on common crucian carp (<em>Carassius carassius</em>) to safely saponify lipids without damaging fragile suture landmarks before working on the goliath tigerfish.
+              </p>
+            </div>
           </div>
 
-          <!-- Standardized Language Proficiency & Subscores -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <div class="space-y-1">
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">Differential Vivarium Pathology</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Managed multi-species closed habitats for years, establishing clear diagnostic protocols distinguishing parasitic white-spot vectors from bacterial and water-quality imbalances.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 flex items-center justify-center shrink-0">
+              <i data-lucide="dna" class="w-5 h-5"></i>
+            </div>
+            <div class="space-y-1">
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">Bridging Macro to Micro</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Investigating how macroscopic biomechanical adaptations (e.g. predatory jaw strikes, orthopteran saltation) are physically encoded in elastomeric proteins (<span class="bio-tooltip" data-tooltip="Resilin: Cuticular elastomeric protein with >97% energy return">resilin</span>) and chitin matrices.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Official TOEFL 93 Certification & Teacher Note -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- TOEFL iBT Card with Subscores -->
           <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 bg-slate-50/50 dark:bg-slate-800/40">
             <div class="flex items-center justify-between">
               <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Language Proficiency</h4>
@@ -377,7 +358,18 @@
             </div>
 
             <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed pt-0.5">
-              Demonstrates solid readiness for English-medium scientific instruction, international academic discourse, and primary biological literature synthesis.
+              Solid foundation for English-medium scientific instruction, international academic discourse, and primary biological literature synthesis.
+            </p>
+          </div>
+
+          <!-- Concise Teacher Endorsement -->
+          <div class="p-4 rounded-2xl bg-slate-50/60 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 text-xs">
+            <div class="flex items-center gap-2.5 mb-2">
+              <span class="font-bold text-slate-900 dark:text-white">Ms. Mengting Hu (胡梦婷)</span>
+              <span class="text-[11px] text-slate-500">&middot; Biology Instructor</span>
+            </div>
+            <p class="italic text-slate-600 dark:text-slate-300 leading-relaxed font-serif">
+              "Zhuoli stands out for connecting microscopic molecular properties to macroscopic ecosystem behaviors, methodically solving unfamiliar biological problems with patience."
             </p>
           </div>
 
@@ -388,190 +380,208 @@
     </div>
   </section>
 
-  <!-- ==================== PROJECTS & RESEARCH ==================== -->
-  <section id="projects" class="reveal py-16 md:py-24">
+  <!-- ==================== PROJECTS & VISUAL EXHIBITION ==================== -->
+  <section id="projects" class="reveal py-14 md:py-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Title & Filter Tabs -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-5">
         <div>
-          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Hands-on Investigation</span>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Visual Exhibition</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-            Selected Biological & Experimental Projects
+            Specimen Works & Research Projects
           </h2>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Independent research, specimen articulation, and diagnostic husbandry.
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-0.5">
+            Image-driven exhibition of independent biological investigation.
           </p>
         </div>
 
         <!-- Filter Buttons -->
-        <div class="flex flex-wrap gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 self-start md:self-auto text-xs font-medium">
-          <button type="button" class="filter-btn active px-3 py-1.5 rounded-lg transition-all" data-filter="all">All</button>
-          <button type="button" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="anatomy">Anatomy & Osteology</button>
-          <button type="button" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="vivarium">Vivarium & Ethology</button>
+        <div class="flex flex-wrap gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-medium self-start md:self-auto">
+          <button type="button" class="filter-btn active px-3 py-1.5 rounded-lg transition-all" data-filter="all">All Exhibits</button>
+          <button type="button" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="anatomy">Osteology</button>
+          <button type="button" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="vivarium">Vivarium</button>
           <button type="button" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="biomechanics">Biomechanics</button>
         </div>
       </div>
 
-      <!-- Project Cards Grid -->
+      <!-- Exhibition Grid: 3 Large-Image Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- CARD 1: Goliath Tigerfish -->
-        <div class="project-card glass-card interactive-card rounded-2xl overflow-hidden flex flex-col" data-category="anatomy">
-          <!-- Stylized Graphic Placeholder (No actual image asset loaded) -->
-          <div class="specimen-placeholder h-48">
-            <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
-              <i data-lucide="fish" class="w-6 h-6"></i>
+        <!-- EXHIBIT 1: Goliath Tigerfish -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-md" data-category="anatomy">
+          
+          <!-- Large Visual Frame (Supports assets/images/tigerfish.jpg) -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
+            <img src="assets/images/tigerfish.jpg" 
+                 alt="Goliath Tigerfish Skeletal Articulation" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('tigerfish-placeholder'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('tigerfish-placeholder'); if (p) p.classList.remove('hidden');">
+
+            <!-- Elegant Graphic Exhibition Placeholder -->
+            <div id="tigerfish-placeholder" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-emerald-50/60 to-teal-50/30 dark:from-slate-800/60 dark:to-emerald-950/30">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
+                <i data-lucide="fish" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Hydrocynus goliath Specimen</span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200/80 dark:border-emerald-800/60 mt-1.5">
+                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: tigerfish.jpg
+              </span>
             </div>
-            <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Hydrocynus goliath Specimen</span>
-            <span class="text-[11px] text-slate-500 font-mono mt-0.5">Skeletal Articulation Photo Placeholder</span>
-            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-600 dark:text-emerald-400 mt-1"><i data-lucide="image" class="w-3 h-3"></i> Specimen Articulation</span>
+
+            <div class="absolute top-2.5 left-2.5">
+              <span class="text-[10px] font-mono uppercase tracking-wider bg-slate-900/80 text-white px-2 py-0.5 rounded backdrop-blur-xs">
+                Specimen Exhibit
+              </span>
+            </div>
           </div>
 
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-[11px]">
-                <span class="font-mono text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Osteology & Kinematics</span>
-                <span class="text-slate-400">Independent Work</span>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
-                Goliath Tigerfish Skeletal Articulation & Biomechanical Reconstruction
+          <!-- Concise Card Content (No Text Overload) -->
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Comparative Osteology</span>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mt-0.5">
+                Goliath Tigerfish Skeletal Reconstruction
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Controlled chemical defatting using NaOH trials calibrated on crucian carp (<em>Carassius carassius</em>), manual articulation of vertebral columns, and joint angle inference.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-1.5">
+                Calibrated NaOH saponification parameters on crucian carp, then completed delicate manual vertebral articulation and cranial kinematics.
               </p>
-              
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">NaOH Saponification</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Comparative Anatomy</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Topological Induction</span>
-              </div>
-
-              <!-- Interactive Articulation Stepper -->
-              <div class="mt-2 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
-                <div class="flex gap-1 mb-1.5">
-                  <button type="button" class="stepper-btn flex-1 py-1 px-0.5 rounded text-[10px] font-mono font-medium transition-all bg-emerald-600 text-white shadow-xs" data-step="0">1. Clean</button>
-                  <button type="button" class="stepper-btn flex-1 py-1 px-0.5 rounded text-[10px] font-mono font-medium transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-step="1">2. NaOH</button>
-                  <button type="button" class="stepper-btn flex-1 py-1 px-0.5 rounded text-[10px] font-mono font-medium transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-step="2">3. H2O2</button>
-                  <button type="button" class="stepper-btn flex-1 py-1 px-0.5 rounded text-[10px] font-mono font-medium transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-step="3">4. Joint</button>
-                </div>
-                <div id="stepper-info" class="text-[11px] text-slate-600 dark:text-slate-300 leading-tight transition-opacity duration-150">
-                  <strong>Phase 1: Soft Tissue Clearance:</strong> Manual separation of musculature and connective membranes preserving delicate hyoid and fin rays.
-                </div>
-              </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-slate-100 dark:border-slate-800/80">
+            <div class="space-y-3 pt-1">
+              <!-- Visual Step Indicators -->
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-2">
+                <span>1. Dissect</span> &rarr;
+                <span>2. NaOH</span> &rarr;
+                <span>3. H2O2</span> &rarr;
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold">4. Articulate</span>
+              </div>
+
+              <!-- Action button -->
               <button type="button" class="open-modal-btn w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-emerald-50 dark:bg-slate-800 dark:hover:bg-emerald-950/50 text-slate-800 hover:text-emerald-600 dark:text-slate-200 dark:hover:text-emerald-400 text-xs font-semibold transition-colors" data-project="tigerfish">
-                <span>View Full Protocol & Analysis</span>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Read Case Study
               </button>
             </div>
+
           </div>
+
         </div>
 
-        <!-- CARD 2: Vivarium Husbandry -->
-        <div class="project-card glass-card interactive-card rounded-2xl overflow-hidden flex flex-col" data-category="vivarium">
-          <!-- Stylized Graphic Placeholder -->
-          <div class="specimen-placeholder h-48">
-            <div class="w-12 h-12 rounded-xl bg-teal-600/15 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-2">
-              <i data-lucide="shield-alert" class="w-6 h-6"></i>
+        <!-- EXHIBIT 2: Closed Vivarium Ecosystem -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-md" data-category="vivarium">
+          
+          <!-- Large Visual Frame (Supports assets/images/vivarium.jpg) -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
+            <img src="assets/images/vivarium.jpg" 
+                 alt="Closed Vivarium Ecosystem" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('vivarium-placeholder'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('vivarium-placeholder'); if (p) p.classList.remove('hidden');">
+
+            <!-- Elegant Graphic Exhibition Placeholder -->
+            <div id="vivarium-placeholder" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-teal-50/60 to-cyan-50/30 dark:from-slate-800/60 dark:to-teal-950/30">
+              <div class="w-14 h-14 rounded-2xl bg-teal-600/10 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-2">
+                <i data-lucide="leaf" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Vivarium Ecology Setup</span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-teal-700 dark:text-teal-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-teal-200/80 dark:border-teal-800/60 mt-1.5">
+                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: vivarium.jpg
+              </span>
             </div>
-            <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Vivarium Closed Ecosystem</span>
-            <span class="text-[11px] text-slate-500 font-mono mt-0.5">Tank & Habitat Photo Placeholder</span>
-            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-teal-600 dark:text-teal-400 mt-1"><i data-lucide="image" class="w-3 h-3"></i> Habitat Setup</span>
+
+            <div class="absolute top-2.5 left-2.5">
+              <span class="text-[10px] font-mono uppercase tracking-wider bg-slate-900/80 text-white px-2 py-0.5 rounded backdrop-blur-xs">
+                Habitat Exhibit
+              </span>
+            </div>
           </div>
 
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-[11px]">
-                <span class="font-mono text-teal-600 dark:text-teal-400 font-semibold uppercase">Husbandry & Pathology</span>
-                <span class="text-slate-400">Multi-Year Care</span>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
-                Long-Term Vivarium Ecology & Differential Pathology Diagnostics
+          <!-- Concise Card Content -->
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <span class="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold uppercase">Ecosystem Husbandry</span>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mt-0.5">
+                Closed Vivarium Ecology & Differential Pathology
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Management of closed aquatic and terrestrial micro-habitats (reptiles, scorpions, fish). Synthesis of multi-language veterinary care guides and water chemistry protocols.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-1.5">
+                Long-term closed microhabitat management (reptiles, scorpions, aquatic species); thermal parasite treatment and hydrochemical monitoring.
               </p>
-
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Differential Diagnosis</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Water Chemistry</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Biological Filtration</span>
-              </div>
-
-              <!-- Simulated Vivarium Telemetry Feed -->
-              <div class="mt-2 p-2.5 rounded-xl bg-slate-900 text-white font-mono text-[11px] border border-slate-800">
-                <div class="flex items-center justify-between mb-1.5 text-[10px] text-teal-400">
-                  <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span> LIVE TELEMETRY</span>
-                  <span class="text-[9px] text-slate-400">Microhabitat Sensor</span>
-                </div>
-                <div class="grid grid-cols-3 gap-1 text-center">
-                  <div class="p-1 rounded bg-slate-800/80">
-                    <div class="text-[8px] text-slate-400">WATER TEMP</div>
-                    <div class="font-bold text-teal-300 text-xs" id="telemetry-temp">24.6°C</div>
-                  </div>
-                  <div class="p-1 rounded bg-slate-800/80">
-                    <div class="text-[8px] text-slate-400">pH LEVEL</div>
-                    <div class="font-bold text-emerald-300 text-xs" id="telemetry-ph">6.82</div>
-                  </div>
-                  <div class="p-1 rounded bg-slate-800/80">
-                    <div class="text-[8px] text-slate-400">TDS PURITY</div>
-                    <div class="font-bold text-cyan-300 text-xs" id="telemetry-tds">142 ppm</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-slate-100 dark:border-slate-800/80">
+            <div class="space-y-3 pt-1">
+              <!-- Key Tags -->
+              <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-2">
+                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">#Hydrochemistry</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">#DifferentialDiagnosis</span>
+              </div>
+
+              <!-- Action button -->
               <button type="button" class="open-modal-btn w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-teal-50 dark:bg-slate-800 dark:hover:bg-teal-950/50 text-slate-800 hover:text-teal-600 dark:text-slate-200 dark:hover:text-teal-400 text-xs font-semibold transition-colors" data-project="vivarium">
-                <span>View Husbandry Notes</span>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Read Case Study
               </button>
             </div>
+
           </div>
+
         </div>
 
-        <!-- CARD 3: Biomechanics & Energy Storage -->
-        <div class="project-card glass-card interactive-card rounded-2xl overflow-hidden flex flex-col" data-category="biomechanics">
-          <!-- Stylized Graphic Placeholder -->
-          <div class="specimen-placeholder h-48">
-            <div class="w-12 h-12 rounded-xl bg-cyan-600/15 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
-              <i data-lucide="activity" class="w-6 h-6"></i>
+        <!-- EXHIBIT 3: Biomechanics -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-md" data-category="biomechanics">
+          
+          <!-- Large Visual Frame (Supports assets/images/biomechanics.jpg) -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
+            <img src="assets/images/biomechanics.jpg" 
+                 alt="Orthopteran Biomechanics" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('biomechanics-placeholder'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('biomechanics-placeholder'); if (p) p.classList.remove('hidden');">
+
+            <!-- Elegant Graphic Exhibition Placeholder -->
+            <div id="biomechanics-placeholder" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-cyan-50/60 to-blue-50/30 dark:from-slate-800/60 dark:to-cyan-950/30">
+              <div class="w-14 h-14 rounded-2xl bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
+                <i data-lucide="activity" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Biomechanics & Resilin Logic</span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-cyan-700 dark:text-cyan-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-cyan-200/80 dark:border-cyan-800/60 mt-1.5">
+                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: biomechanics.jpg
+              </span>
             </div>
-            <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Orthopteran Saltatorial System</span>
-            <span class="text-[11px] text-slate-500 font-mono mt-0.5">Biomechanical Model Placeholder</span>
-            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-cyan-600 dark:text-cyan-400 mt-1"><i data-lucide="activity" class="w-3 h-3"></i> Biomechanical Model</span>
+
+            <div class="absolute top-2.5 left-2.5">
+              <span class="text-[10px] font-mono uppercase tracking-wider bg-slate-900/80 text-white px-2 py-0.5 rounded backdrop-blur-xs">
+                Biomechanics Exhibit
+              </span>
+            </div>
           </div>
 
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-[11px]">
-                <span class="font-mono text-cyan-600 dark:text-cyan-400 font-semibold uppercase">Biophysical Mechanics</span>
-                <span class="text-slate-400">Theoretical Inquiry</span>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
-                Elastic Energy Storage in Orthopteran Saltatorial Appendages
+          <!-- Concise Card Content -->
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <span class="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-semibold uppercase">Biophysics & Mechanics</span>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mt-0.5">
+                Orthopteran Saltation & Resilin Energy Storage
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Investigating the biomechanical paradox of high-power saltation without structural fatigue; exploring the role of <span class="bio-tooltip" data-tooltip="Resilin: Highly elastomeric cuticular protein delivering >97% energy storage efficiency">resilin proteins</span> and cuticular microstructures.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-1.5">
+                Examining the microstructural mechanism of semi-lunar processes and resilin proteins delivering elastic energy storage without skeletal fatigue.
               </p>
-
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Resilin Elasticity</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Structure-Function</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Molecular Biophysics</span>
-              </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-slate-100 dark:border-slate-800/80">
+            <div class="space-y-3 pt-1">
+              <!-- Key Tags -->
+              <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-2">
+                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">#ResilinProtein</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">#ElasticStorage</span>
+              </div>
+
+              <!-- Action button -->
               <button type="button" class="open-modal-btn w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-cyan-50 dark:bg-slate-800 dark:hover:bg-cyan-950/50 text-slate-800 hover:text-cyan-600 dark:text-slate-200 dark:hover:text-cyan-400 text-xs font-semibold transition-colors" data-project="biomechanics">
-                <span>View Theoretical Model</span>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Read Case Study
               </button>
             </div>
+
           </div>
+
         </div>
 
       </div>
@@ -579,160 +589,133 @@
     </div>
   </section>
 
-  <!-- ==================== GLOBAL FOOTPRINT & LEADERSHIP ==================== -->
-  <section id="footprint" class="reveal py-16 md:py-24 bg-white dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800/80">
+  <!-- ==================== ARTS & ACTIVITIES GALLERY ==================== -->
+  <section id="gallery" class="reveal py-14 md:py-20 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-2xl mb-12">
-        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Global Perspective & Academics</span>
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-10">
+        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Multidisciplinary Showcase</span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-          International Immersion & Leadership
+          Arts, Global Horizons & Field Observation
         </h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-          Experiencing diverse educational paradigms across the United States and Australia.
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-0.5">
+          Visual documentation of musical discipline and international diplomacy.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 4-Card Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         
-        <!-- WIMUN NY -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center">
-              <i data-lucide="globe" class="w-5 h-5"></i>
-            </div>
-            <span class="text-[11px] font-mono text-slate-400 block">Jan&ndash;Feb 2024 &middot; New York, USA</span>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white">WFUNA International Model UN</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Student Delegate representing Switzerland in the Second Committee (Economic and Financial) at United Nations Headquarters. Drafted resolutions with 800+ international peers.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
-            <span class="text-[11px] font-medium text-blue-600 dark:text-blue-400 flex items-center gap-1">
-              <i data-lucide="award" class="w-3.5 h-3.5"></i> UN Headquarters Delegate
-            </span>
-          </div>
-        </div>
-
-        <!-- The University of Sydney -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center">
-              <i data-lucide="landmark" class="w-5 h-5"></i>
-            </div>
-            <span class="text-[11px] font-mono text-slate-400 block">Feb 2025 &middot; Sydney, Australia</span>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white">The University of Sydney Immersion</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Attended introductory collegiate science lectures, surveyed university laboratories, and earned an official Certificate of Completion during a focused academic study tour.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
-            <span class="text-[11px] font-medium text-amber-600 dark:text-amber-400 flex items-center gap-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Official Certificate Earned
-            </span>
-          </div>
-        </div>
-
-        <!-- Harvard Student Agencies & UNSW -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center">
-              <i data-lucide="users" class="w-5 h-5"></i>
-            </div>
-            <span class="text-[11px] font-mono text-slate-400 block">2024&ndash;2025 &middot; USA & Australia</span>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white">HSA & UNSW Arc Program</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Completed peer-led problem-solving workshops with Harvard Student Agencies (HSA) and joined endurance and collaborative communication sessions at UNSW Arc.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
-            <span class="text-[11px] font-medium text-rose-600 dark:text-rose-400 flex items-center gap-1">
-              <i data-lucide="compass" class="w-3.5 h-3.5"></i> Leadership & Team Dynamics
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== ARTS & HOBBIES ==================== -->
-  <section id="arts" class="reveal py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="max-w-2xl mb-12">
-        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Creative Balance</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-          Musicianship & Nature Photography
-        </h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-          Developing aesthetic discipline, breath control, and visual sensitivity.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Saxophone Grade 10 -->
-        <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
-              <i data-lucide="music" class="w-3.5 h-3.5"></i>
-              Grade 10 Distinction &middot; China National Opera & Dance Drama Theater
-            </div>
-            
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
-              Saxophone Performance (Grade 1 to Grade 10)
-            </h3>
-            
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Maintained disciplined, uninterrupted instrument practice through years of rigorous high-school academics. Completed comprehensive repertoire evaluations from Grade 1 through Grade 10, mastering advanced breath control, embouchure stability, and polyphonic phrasing.
-            </p>
-
-            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 text-xs space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-slate-500">Certifying Body:</span>
-                <span class="font-medium text-slate-800 dark:text-slate-200">China National Opera & Dance Drama Theater</span>
+        <!-- Gallery 1: Saxophone -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+          <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <img src="assets/images/saxophone.jpg" 
+                 alt="Saxophone Performance" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('sax-ph'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('sax-ph'); if (p) p.classList.remove('hidden');">
+            <div id="sax-ph" class="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-gradient-to-br from-purple-50/70 to-purple-100/40 dark:from-slate-800 dark:to-purple-950/30">
+              <div class="w-10 h-10 rounded-full bg-purple-600/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-1.5">
+                <i data-lucide="music" class="w-5 h-5"></i>
               </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-500">Certificate No.:</span>
-                <span class="font-mono text-emerald-600 dark:text-emerald-400">20240072010301051120007</span>
-              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Saxophone Recital</span>
+              <span class="text-[10px] font-mono text-purple-700 dark:text-purple-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> saxophone.jpg</span>
             </div>
           </div>
-
-          <!-- Refined Music Insignia -->
-          <div class="specimen-placeholder h-36 flex flex-col justify-center items-center">
-            <div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-2">
-              <i data-lucide="music" class="w-5 h-5"></i>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-purple-600 dark:text-purple-400 font-bold">Grade 10 Distinction</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Saxophone Performance</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug mt-1">
+                China National Opera & Dance Drama Theater certificate (No. 20240072010301051120007).
+              </p>
             </div>
-            <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Saxophone Recital Repertoire</span>
-            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-purple-600 dark:text-purple-400 mt-1">Grade 10 Distinction &middot; Repertoire Discipline</span>
+            <span class="text-[10px] font-mono text-slate-400 pt-1">Ten Grades Completed</span>
           </div>
         </div>
 
-        <!-- Nature Photography Portfolio Placeholder -->
-        <div class="lg:col-span-5 glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-cyan-100 dark:bg-cyan-950/60 text-cyan-800 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">
-              <i data-lucide="camera" class="w-3.5 h-3.5"></i>
-              Observation & Optics
+        <!-- Gallery 2: WIMUN NY -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+          <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <img src="assets/images/wimun.jpg" 
+                 alt="WIMUN New York UN Headquarters" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('wimun-ph'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('wimun-ph'); if (p) p.classList.remove('hidden');">
+            <div id="wimun-ph" class="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-gradient-to-br from-blue-50/70 to-blue-100/40 dark:from-slate-800 dark:to-blue-950/30">
+              <div class="w-10 h-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-1.5">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">WIMUN New York</span>
+              <span class="text-[10px] font-mono text-blue-700 dark:text-blue-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> wimun.jpg</span>
             </div>
-            
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
-              Nature & Macro Photography
-            </h3>
-            
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Documenting biological subjects in nature and in vivaria. Focusing on capturing micro-morphological features: insect cuticle patterns, leaf venation, and structural coloration.
-            </p>
           </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-blue-600 dark:text-blue-400 font-bold">UN Headquarters</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">WFUNA Model UN</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug mt-1">
+                Represented Switzerland (Second Committee) debating international economic development at the UN.
+              </p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-400 pt-1">New York, USA</span>
+          </div>
+        </div>
 
-          <div class="specimen-placeholder h-48">
-            <i data-lucide="image" class="w-8 h-8 text-cyan-500 mb-2"></i>
-            <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Photography Gallery Placeholder</span>
-            <span class="text-[11px] text-slate-500 font-mono mt-0.5">Macro & Ecological Shots</span>
-            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-cyan-600 dark:text-cyan-400 mt-1"><i data-lucide="camera" class="w-3 h-3"></i> Nature Gallery</span>
+        <!-- Gallery 3: Sydney University -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+          <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <img src="assets/images/sydney.jpg" 
+                 alt="University of Sydney Academic Study Tour" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('sydney-ph'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('sydney-ph'); if (p) p.classList.remove('hidden');">
+            <div id="sydney-ph" class="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-gradient-to-br from-amber-50/70 to-amber-100/40 dark:from-slate-800 dark:to-amber-950/30">
+              <div class="w-10 h-10 rounded-full bg-amber-600/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-1.5">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Sydney Immersion</span>
+              <span class="text-[10px] font-mono text-amber-700 dark:text-amber-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> sydney.jpg</span>
+            </div>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-amber-600 dark:text-amber-400 font-bold">Academic Immersion</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">University of Sydney</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug mt-1">
+                Completed campus lectures, scientific facility tours, and official completion certificate.
+              </p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-400 pt-1">Sydney, Australia</span>
+          </div>
+        </div>
+
+        <!-- Gallery 4: Nature Photography -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+          <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <img src="assets/images/photography.jpg" 
+                 alt="Macro Nature Photography" 
+                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
+                 onload="this.classList.remove('hidden'); const p = document.getElementById('photo-ph'); if (p) p.classList.add('hidden');"
+                 onerror="this.classList.add('hidden'); const p = document.getElementById('photo-ph'); if (p) p.classList.remove('hidden');">
+            <div id="photo-ph" class="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-gradient-to-br from-cyan-50/70 to-cyan-100/40 dark:from-slate-800 dark:to-cyan-950/30">
+              <div class="w-10 h-10 rounded-full bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-1.5">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Macro Photography</span>
+              <span class="text-[10px] font-mono text-cyan-700 dark:text-cyan-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photography.jpg</span>
+            </div>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-cyan-600 dark:text-cyan-400 font-bold">Field Observation</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Nature & Macro Optics</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-snug mt-1">
+                Visual documentation of biological textures, insect cuticle patterns, and botanical venation.
+              </p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-400 pt-1">Field Ethology & Optics</span>
           </div>
         </div>
 
@@ -742,124 +725,74 @@
   </section>
 
   <!-- ==================== FUTURE ASPIRATIONS ==================== -->
-  <section id="aspirations" class="reveal py-16 md:py-24 bg-gradient-to-b from-slate-50 to-emerald-50/40 dark:from-slate-950 dark:to-emerald-950/20 border-t border-slate-200/80 dark:border-slate-800/80">
+  <section id="aspirations" class="reveal py-14 md:py-20 bg-gradient-to-b from-slate-50 to-emerald-50/30 dark:from-slate-950 dark:to-emerald-950/20 border-t border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-emerald-200/60 dark:border-emerald-800/40 relative overflow-hidden">
-        
-        <div class="relative z-10 max-w-3xl space-y-6">
-          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Next Horizon &middot; Undergraduate Goals</span>
-          
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-emerald-200/60 dark:border-emerald-800/40 relative overflow-hidden shadow-sm">
+        <div class="relative z-10 max-w-3xl space-y-4">
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Next Horizon</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Preparing for Accelerated Research in Molecular Biology & Biotechnology
           </h2>
-          
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            Standard high school curricula follow structured cookbook procedures. My goal is to enter a rigorous undergraduate research framework&mdash;such as the <strong>HKU 6688 Science Master Class (Intensive Major in Molecular Biology & Biotechnology / Young Scientist Scheme)</strong> or premier life science institutions in Singapore and Hong Kong.
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Targeting top undergraduate research tracks&mdash;notably the <strong>HKU 6688 Science Master Class (Young Scientist Scheme YSS)</strong> and premier Singapore life science programs&mdash;to transition from anatomical form to molecular-level biophysical tools and structural biology.
           </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-            <div class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200/70 dark:border-slate-800">
-              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Early Lab Immersion</span>
-              <p class="text-xs text-slate-600 dark:text-slate-400">Direct pairing with principal investigators to test self-directed hypotheses under formal guidance.</p>
-            </div>
-            <div class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200/70 dark:border-slate-800">
-              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Biomolecular Tools</span>
-              <p class="text-xs text-slate-600 dark:text-slate-400">Mastering structural biology, bio-imaging, and protein engineering technologies.</p>
-            </div>
-            <div class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200/70 dark:border-slate-800">
-              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Scientific Integrity</span>
-              <p class="text-xs text-slate-600 dark:text-slate-400">Comprehensive training in research ethics, reproducible protocols, and peer collaboration.</p>
-            </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-100/80 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+              HKU 6688 Science Master Class
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+              Young Scientist Scheme (YSS)
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+              Singapore Life Sciences
+            </span>
           </div>
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== CONTACT & FOOTER ==================== -->
-  <footer id="contact" class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-12 mt-auto">
+  <!-- ==================== FOOTER & CONTACT ==================== -->
+  <footer id="contact" class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-12 pb-10 mt-auto">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-200 dark:border-slate-800">
-        
-        <!-- Contact Info -->
-        <div class="lg:col-span-8 space-y-4">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">
-              Z
-            </div>
-            <span class="font-bold text-lg text-slate-900 dark:text-white">Zhuoli Yang (杨卓力)</span>
-          </div>
-          
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
-            Interested in biological inquiries, academic exchanges, or university admissions dialogues. Feel free to connect via email.
-          </p>
-
-          <div class="flex items-center gap-3 pt-2">
-            <a href="mailto:yangzhuoli2009@163.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition-all">
-              <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-              yangzhuoli2009@163.com
-            </a>
-            <button id="copy-email-btn" type="button" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors text-xs flex items-center gap-1" title="Copy Email to Clipboard">
-              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-              <span class="hidden sm:inline">Copy</span>
-            </button>
-          </div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <span class="font-bold text-lg text-slate-900 dark:text-white">Zhuoli Yang (杨卓力)</span>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">High School Class of 2027 &middot; Life Sciences & Visual Portfolio</p>
         </div>
-
-        <!-- Quick Directory Links -->
-        <div class="lg:col-span-4 space-y-3">
-          <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Navigation</h4>
-          <ul class="grid grid-cols-2 gap-2 text-xs">
-            <li><a href="#about" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About & Track</a></li>
-            <li><a href="#projects" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Specimen & Projects</a></li>
-            <li><a href="#footprint" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">International Immersion</a></li>
-            <li><a href="#arts" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Saxophone & Arts</a></li>
-            <li><a href="#aspirations" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Undergraduate Vision</a></li>
-          </ul>
+        <div class="flex items-center gap-3">
+          <button id="copy-email-btn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-slate-700 dark:text-slate-200 text-xs font-medium border border-slate-200 dark:border-slate-700 transition-colors">
+            <i data-lucide="copy" class="w-3.5 h-3.5 text-emerald-600"></i>
+            yangzhuoli2009@163.com
+          </button>
+          <a href="mailto:yangzhuoli2009@163.com" class="p-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors" title="Send Email">
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </a>
         </div>
-
       </div>
-
-      <!-- Copyright & Bottom Credit -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
-        <p>© 2026 Zhuoli Yang (杨卓力). All Rights Reserved.</p>
-        <p class="font-mono text-[11px]">Academic & Life Sciences Portfolio</p>
+      <div class="pt-6 text-center text-xs text-slate-400 dark:text-slate-500">
+        <p>&copy; 2026 Zhuoli Yang (杨卓力). All Rights Reserved.</p>
       </div>
-
     </div>
   </footer>
 
-  <!-- ==================== MODAL DEEP DIVE SYSTEM ==================== -->
-  <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-xl w-full border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden flex flex-col max-h-[85vh] animate-in fade-in zoom-in-95 duration-200">
-      
-      <!-- Modal Header -->
-      <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+  <!-- ==================== MODAL CASE STUDY VIEWER ==================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-xl w-full border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+      <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
         <div>
           <span id="modal-category" class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Category</span>
-          <h3 id="modal-title" class="text-base font-bold text-slate-900 dark:text-white leading-snug mt-0.5">Project Title</h3>
+          <h3 id="modal-title" class="text-base font-bold text-slate-900 dark:text-white mt-0.5">Title</h3>
         </div>
-        <button id="modal-close-btn" type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <button id="modal-close-btn" type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-
-      <!-- Modal Body -->
-      <div id="modal-body" class="px-6 py-5 overflow-y-auto space-y-4">
+      <div id="modal-body" class="p-6 overflow-y-auto space-y-4 text-sm text-slate-600 dark:text-slate-300">
         <!-- Injected via script.js -->
       </div>
-
-      <!-- Modal Footer -->
-      <div class="px-6 py-3 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 flex items-center justify-end">
-        <button type="button" onclick="document.getElementById('project-modal').classList.add('hidden'); document.body.style.overflow='auto';" class="px-4 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">
-          Close
-        </button>
-      </div>
-
     </div>
   </div>
 
@@ -869,12 +802,12 @@
     Email copied to clipboard!
   </div>
 
-    <!-- Back to Top Floating Button -->
+  <!-- Back to Top Floating Button -->
   <button id="back-to-top" type="button" aria-label="Back to Top" class="fixed bottom-6 left-6 z-40 p-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 shadow-lg hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/50 transition-all duration-300 opacity-0 pointer-events-none backdrop-blur-md">
     <i data-lucide="arrow-up" class="w-4 h-4"></i>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
