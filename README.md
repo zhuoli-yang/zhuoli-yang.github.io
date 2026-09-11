@@ -1,70 +1,59 @@
-<a id="top"></a>
-
-# Zhuoli Yang (杨卓力) | Academic Portfolio Website
+# Zhuoli Yang (杨卓力) | Personal Space & Visual Portfolio
 
 <p align="center">
-  <a href="#english"><b>English</b></a> &nbsp;|&nbsp;
-  <a href="#chinese"><b>中文</b></a> &nbsp;|&nbsp;
-  <a href="#espanol"><b>Español</b></a> &nbsp;|&nbsp;
-  <a href="#francais"><b>Français</b></a>
-</p>
-
-<p align="center">
-  🌐 <b>Live Website</b>: <a href="https://zhuoli-yang.github.io/">https://zhuoli-yang.github.io/</a>
+  <a href="https://zhuoli-yang.github.io/"><b>🌐 Visit Website</b></a> &nbsp;|&nbsp;
+  <a href="https://zhuoli-yang.github.io/projects.html">🔬 Works Archive</a> &nbsp;|&nbsp;
+  <a href="https://zhuoli-yang.github.io/footprint.html">🌍 Global Footprint</a> &nbsp;|&nbsp;
+  <a href="https://zhuoli-yang.github.io/gallery.html">🎷 Arts & Music</a>
 </p>
 
 ---
 
-<a id="english"></a>
-## English
+### About Me · 关于我
 
-Personal academic portfolio of **Zhuoli Yang (杨卓力)**, High School Class of 2027 (Kunming, China).
+Personal digital space of **Zhuoli Yang (杨卓力)** — High School Class of 2027 (Kunming, China).  
+A hands-on explorer at the intersection of vertebrate osteology, vivarium ecology, biophysics, and performing arts.
 
-- **Core Passion**: Life Sciences, Comparative Osteology (*Hydrocynus goliath* skeleton articulation & saponification), and Vivarium Ecology.
-- **Language Proficiency**: TOEFL iBT **93** (Reading, Listening, Speaking, Writing).
-- **Multidisciplinary & Arts**: Saxophone Performance **Grade 10 Distinction** (China National Opera), WIMUN New York Delegate at UN Headquarters.
-- **Higher Education Goal**: Accelerated undergraduate research in Molecular Biology & Biotechnology (HKU 6688 Science Master Class / YSS / Singapore).
-
-🔗 [Visit Live Portfolio](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [Top ↑](#top)
+杨卓力的个人空间与探索记录。立足动手探究与宏微观结合，记录骨骼装架、生态缸微环境、萨克斯音乐与自然微距摄影。
 
 ---
 
-<a id="chinese"></a>
-## 中文
+### Core Passions & Hobbies · 核心爱好与探索
 
-**杨卓力 (Zhuoli Yang)** 个人学术主页与成果作品集，2027 届高中生（中国云南昆明）。
-
-- **探究方向**：生命科学、比较解剖学（黄金猛鱼 *Hydrocynus goliath* 骨骼标本制作与脱脂工艺）、生态缸微环境病理诊断。
-- **语言能力**：TOEFL iBT **93** 分（标准化英语能力认证：阅读、听力、口语、写作）。
-- **多元才艺**：中国歌剧舞剧院萨克斯**十级优秀证书**、纽约联合国总部 WIMUN 国际模联代表。
-- **升学愿景**：香港大学 6688 理学硕士班（主修分子生物学与生物技术 / 青年科学家计划 YSS）及顶尖生命科学本科。
-
-🔗 [主页在线访问](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [返回顶部 ↑](#top)
-
----
-
-<a id="espanol"></a>
-## Español
-
-Portafolio académico personal de **Zhuoli Yang (杨卓力)**, estudiante de secundaria (Promoción 2027, Kunming, China).
-
-- **Enfoque Principal**: Ciencias de la vida, osteología comparada (articulación esquelética de *Hydrocynus goliath*) y ecología de vivarios.
-- **Competencia Lingüística**: TOEFL iBT **93** (Lectura, Escucha, Expresión oral y Escrita).
-- **Artes y Diplomacia**: **Grado 10 con Distinción** en Saxofón (Teatro Nacional de Ópera de China), Delegado WIMUN Nueva York en la Sede de la ONU.
-- **Aspiración Universitaria**: Investigación acelerada en Biología Molecular y Biotecnología (HKU 6688 / Singapur).
-
-🔗 [Visitar Sitio Web](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [Volver arriba ↑](#top)
+- 🐟 **Vertebrate Osteology & Comparative Anatomy (比较解剖与骨骼标本)**  
+  Completed 1:1 skeletal articulation of the Goliath Tigerfish (*Hydrocynus goliath*); empirically calibrated NaOH lipid saponification parameters on crucian carp (*Carassius carassius*) to preserve delicate cranial suture landmarks.
+- 🌿 **Closed Vivarium Ecology (生态缸与微环境饲养)**  
+  3+ years managing closed-loop terraria and aquatic habitats (reptiles, arachnids, aquatic species); established differential diagnostic protocols between water chemistry shifts and cutaneous/parasitic infections.
+- 🎷 **Classical Saxophone (萨克斯管演奏)**  
+  China National Opera and Dance Drama Theater **Grade 10 Distinction** (中国歌剧舞剧院考级十级优秀，证书号：`20240072010301051120007`) across a 10-year classical repertoire.
+- 📷 **Field Ethology & Macro Photography (野外生态与微距摄影)**  
+  Optical macro documentation of insect cuticular structural colors, Yunnan montane cloud forest flora, and Dianchi lake wintering avian flight dynamics.
+- 🌐 **Global Footprint (全球足迹与学术视野)**  
+  WIMUN New York Delegate at United Nations Headquarters (Second Committee / ECOFIN), University of Sydney Academic Immersion, Harvard Student Agencies (HSA) Workshops.
 
 ---
 
-<a id="francais"></a>
-## Français
+### Language Proficiency · 语言能力
 
-Portfolio académique de **Zhuoli Yang (杨卓力)**, lycéen (Promotion 2027, Kunming, Chine).
+- **TOEFL iBT Official**: **93 / 120** (Test Date: Oct 11, 2025)
+  - 📖 **Reading**: 24
+  - 🎧 **Listening**: 23
+  - 🗣️ **Speaking**: 22
+  - ✍️ **Writing**: 24
 
-- **Axes de Recherche**: Sciences de la vie, ostéologie comparative (articulation squelettique d'*Hydrocynus goliath*) et écologie de vivarium.
-- **Compétence Linguistique**: TOEFL iBT **93** (Compréhension et Expression écrites et orales).
-- **Musique et Parcours**: **Diplôme de 10e degré avec distinction** en Saxophone (Théâtre National d'Opéra de Chine), Délégué WIMUN New York au Siège de l'ONU.
-- **Objectif d'Études**: Cursus de recherche en biologie moléculaire et biotechnologie (programme HKU 6688 / Singapour).
+---
 
-🔗 [Consulter le Portfolio](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [Retour en haut ↑](#top)
+### Quick Links · 快速直达
+
+| Section | Link | Description |
+| :--- | :--- | :--- |
+| 🏠 **Home** | [zhuoli-yang.github.io](https://zhuoli-yang.github.io/) | Interactive overview, mindset pillars, and teacher commentary |
+| 🔬 **Works Archive** | [projects.html](https://zhuoli-yang.github.io/projects.html) | Full documentation of 6 biological and specimen inquiries |
+| 🌍 **Global Footprint** | [footprint.html](https://zhuoli-yang.github.io/footprint.html) | Chronological travel timeline (UN NYC, USyd, Harvard, Yunnan) |
+| 🎷 **Arts & Gallery** | [gallery.html](https://zhuoli-yang.github.io/gallery.html) | Grade 1-10 saxophone repertoire log & 6-photo macro exhibition |
+
+---
+
+<p align="center">
+  <sub>© 2026 Zhuoli Yang (杨卓力) · Contact: <a href="mailto:yangzhuoli2009@163.com">yangzhuoli2009@163.com</a></sub>
+</p>
