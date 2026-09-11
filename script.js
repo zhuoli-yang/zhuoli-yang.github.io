@@ -1,4 +1,4 @@
-// Dynamic Script for Zhuoli Yang's Portfolio Website
+// Refined & Understated Script for Zhuoli Yang's Portfolio
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==================== 1. DARK MODE TOGGLE ====================
@@ -60,217 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==================== 3. BIOLOGICAL PARTICLE CANVAS (HERO) ====================
-  const canvas = document.getElementById('bio-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = canvas.parentElement.offsetWidth);
-    let height = (canvas.height = canvas.parentElement.offsetHeight);
-    let particles = [];
-    const particleCount = Math.min(Math.floor(width / 22), 45);
-    let mouse = { x: null, y: null, radius: 120 };
-
-    window.addEventListener('resize', () => {
-      if (!canvas.parentElement) return;
-      width = canvas.width = canvas.parentElement.offsetWidth;
-      height = canvas.height = canvas.parentElement.offsetHeight;
-    });
-
-    canvas.parentElement.addEventListener('mousemove', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    });
-
-    canvas.parentElement.addEventListener('mouseleave', () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.7;
-        this.vy = (Math.random() - 0.5) * 0.7;
-        this.radius = Math.random() * 2 + 1.2;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0 || this.x > width) this.vx = -this.vx;
-        if (this.y < 0 || this.y > height) this.vy = -this.vy;
-
-        if (mouse.x !== null && mouse.y !== null) {
-          const dx = mouse.x - this.x;
-          const dy = mouse.y - this.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < mouse.radius) {
-            const angle = Math.atan2(dy, dx);
-            this.x -= Math.cos(angle) * 1.5;
-            this.y -= Math.sin(angle) * 1.5;
-          }
-        }
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = document.documentElement.classList.contains('dark')
-          ? 'rgba(52, 211, 153, 0.45)'
-          : 'rgba(5, 150, 105, 0.35)';
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, width, height);
-
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 90) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            const alpha = (1 - dist / 90) * 0.22;
-            ctx.strokeStyle = document.documentElement.classList.contains('dark')
-              ? `rgba(52, 211, 153, ${alpha})`
-              : `rgba(5, 150, 105, ${alpha})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(animateParticles);
-    }
-
-    animateParticles();
-  }
-
-  // ==================== 4. 3D ROTATING DNA HELIX CANVAS (PROFILE CARD) ====================
-  const dnaCanvas = document.getElementById('dna-canvas');
-  if (dnaCanvas) {
-    const ctx = dnaCanvas.getContext('2d');
-    let width = (dnaCanvas.width = dnaCanvas.offsetWidth || 300);
-    let height = (dnaCanvas.height = dnaCanvas.offsetHeight || 160);
-    let angle = 0;
-
-    window.addEventListener('resize', () => {
-      if (dnaCanvas.offsetWidth) {
-        width = dnaCanvas.width = dnaCanvas.offsetWidth;
-        height = dnaCanvas.height = dnaCanvas.offsetHeight;
-      }
-    });
-
-    function drawDNA() {
-      ctx.clearRect(0, 0, width, height);
-      const centerX = width / 2;
-      const numNodes = 14;
-      const stepY = (height - 30) / numNodes;
-      const radius = Math.min(width * 0.28, 55);
-
-      angle += 0.022;
-
-      for (let i = 0; i < numNodes; i++) {
-        const y = 15 + i * stepY;
-        const currentAngle = angle + (i * 0.45);
-
-        // Strand 1
-        const x1 = centerX + Math.cos(currentAngle) * radius;
-        const z1 = Math.sin(currentAngle);
-        const scale1 = (z1 + 2) / 3;
-
-        // Strand 2 (180 deg out of phase)
-        const x2 = centerX + Math.cos(currentAngle + Math.PI) * radius;
-        const z2 = Math.sin(currentAngle + Math.PI);
-        const scale2 = (z2 + 2) / 3;
-
-        // Draw connecting base-pair rung
-        ctx.beginPath();
-        ctx.moveTo(x1, y);
-        ctx.lineTo(x2, y);
-        const rungAlpha = Math.max(0.15, (scale1 + scale2) / 3.5);
-        ctx.strokeStyle = document.documentElement.classList.contains('dark')
-          ? `rgba(52, 211, 153, ${rungAlpha * 0.6})`
-          : `rgba(5, 150, 105, ${rungAlpha * 0.5})`;
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-
-        // Node 1 (Emerald)
-        ctx.beginPath();
-        ctx.arc(x1, y, 3.5 * scale1, 0, Math.PI * 2);
-        ctx.fillStyle = z1 > 0 ? '#10b981' : '#059669';
-        ctx.fill();
-
-        // Node 2 (Cyan)
-        ctx.beginPath();
-        ctx.arc(x2, y, 3.5 * scale2, 0, Math.PI * 2);
-        ctx.fillStyle = z2 > 0 ? '#06b6d4' : '#0891b2';
-        ctx.fill();
-      }
-
-      requestAnimationFrame(drawDNA);
-    }
-
-    drawDNA();
-  }
-
-  // ==================== 5. DYNAMIC TYPEWRITER EFFECT ====================
-  const typewriterTarget = document.getElementById('typewriter-text');
-  if (typewriterTarget) {
-    const phrases = [
-      'Molecular Mechanism.',
-      'Biomechanical Function.',
-      'Ecological Balance.',
-      'Osteological Kinematics.'
-    ];
-    let phraseIndex = 0;
-    let charIndex = phrases[0].length;
-    let isDeleting = true;
-    let speed = 90;
-
-    function typeLoop() {
-      const currentPhrase = phrases[phraseIndex];
-
-      if (isDeleting) {
-        charIndex--;
-        typewriterTarget.textContent = currentPhrase.substring(0, charIndex);
-        speed = 45;
-      } else {
-        charIndex++;
-        typewriterTarget.textContent = currentPhrase.substring(0, charIndex);
-        speed = 85;
-      }
-
-      if (!isDeleting && charIndex === currentPhrase.length) {
-        speed = 2200; // Pause at full word
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        speed = 400; // Pause before typing new word
-      }
-
-      setTimeout(typeLoop, speed);
-    }
-
-    setTimeout(typeLoop, 2500);
-  }
-
-  // ==================== 6. NUMBER COUNTING ANIMATION ====================
+  // ==================== 3. NUMBER COUNTING ANIMATION (Runs Once) ====================
   const countElements = document.querySelectorAll('[data-counter-target]');
   let hasAnimatedCounters = false;
 
@@ -278,13 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
     countElements.forEach(el => {
       const target = parseFloat(el.getAttribute('data-counter-target'));
       const isFloat = el.getAttribute('data-counter-target').includes('.');
-      const duration = 1400;
+      const duration = 1200;
       const startTime = performance.now();
 
       function update(now) {
         const elapsed = now - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
         const current = ease * target;
 
         el.textContent = isFloat ? current.toFixed(1) : Math.floor(current);
@@ -308,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         runCounters();
         counterObserver.disconnect();
       }
-    }, { threshold: 0.3 });
+    }, { threshold: 0.25 });
     counterObserver.observe(statsRibbon);
   }
 
-  // ==================== 7. SCROLL REVEAL ANIMATIONS ====================
+  // ==================== 4. SCROLL REVEAL ANIMATIONS ====================
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -320,95 +110,54 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('revealed');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // ==================== 8. 3D TILT EFFECT ON CARDS ====================
-  document.querySelectorAll('.tilt-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      // Update mouse glow coordinates
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-
-      // Calculate 3D tilt angle
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -5;
-      const rotateY = ((x - centerX) / centerX) * 5;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-    });
-  });
-
-  // ==================== 9. LIVE VIVARIUM TELEMETRY SIMULATION ====================
-  const tempEl = document.getElementById('telemetry-temp');
-  const phEl = document.getElementById('telemetry-ph');
-  const tdsEl = document.getElementById('telemetry-tds');
-
-  if (tempEl && phEl && tdsEl) {
-    setInterval(() => {
-      // Fluctuate slightly to reflect live bio-system readings
-      const baseTemp = 24.6 + (Math.random() * 0.4 - 0.2);
-      const basePH = 6.82 + (Math.random() * 0.06 - 0.03);
-      const baseTDS = Math.floor(142 + (Math.random() * 4 - 2));
-
-      tempEl.textContent = baseTemp.toFixed(1) + '°C';
-      phEl.textContent = basePH.toFixed(2);
-      tdsEl.textContent = baseTDS + ' ppm';
-    }, 2800);
-  }
-
-  // ==================== 10. INTERACTIVE ARTICULATION STEPPER ====================
+  // ==================== 5. INTERACTIVE ARTICULATION STEPPER ====================
   const stepBtns = document.querySelectorAll('.stepper-btn');
   const stepInfo = document.getElementById('stepper-info');
 
   const stepData = [
     {
-      title: 'Phase 1: Controlled Soft Tissue Clearance',
-      desc: 'Manual separation of musculature and connective membranes preserving delicate hyoid and fin rays.'
+      title: 'Phase 1: Soft Tissue Clearance',
+      desc: 'Careful mechanical dissection preserving micro-articular condyles and delicate fin rays.'
     },
     {
       title: 'Phase 2: NaOH Lipid Saponification (Carp Trial)',
-      desc: 'Tested serial dilutions of sodium hydroxide on Carassius carassius to safely strip fats without dissolving osteological sutures.'
+      desc: 'Empirically tested serial dilutions of sodium hydroxide on Carassius carassius to safely strip fats without dissolving sutures.'
     },
     {
-      title: 'Phase 3: Mild H2O2 Oxidation & Degreasing',
-      desc: 'Controlled sub-immersion bleaching preventing chalking and preserving micro-articular condyles.'
+      title: 'Phase 3: Mild H2O2 Oxidation & Bleaching',
+      desc: 'Controlled bath preventing surface chalking while neutralizing remaining organic compounds.'
     },
     {
-      title: 'Phase 4: Kinematic Articulation & Spinal Alignment',
-      desc: 'Topological reconstruction matching unfamiliar joints by structural motion constraints.'
+      title: 'Phase 4: Kinematic Articulation & Assembly',
+      desc: 'Topological reconstruction matching unfamiliar joints against adjacent functional motion constraints.'
     }
   ];
 
   stepBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-      stepBtns.forEach(b => b.classList.remove('bg-emerald-600', 'text-white', 'shadow-sm'));
-      stepBtns.forEach(b => b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300'));
+      stepBtns.forEach(b => {
+        b.classList.remove('bg-emerald-600', 'text-white', 'shadow-xs');
+        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
       
       btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
-      btn.classList.add('bg-emerald-600', 'text-white', 'shadow-sm');
+      btn.classList.add('bg-emerald-600', 'text-white', 'shadow-xs');
 
       if (stepInfo) {
         stepInfo.style.opacity = '0';
         setTimeout(() => {
           stepInfo.innerHTML = `<strong>${stepData[index].title}:</strong> ${stepData[index].desc}`;
           stepInfo.style.opacity = '1';
-        }, 150);
+        }, 120);
       }
     });
   });
 
-  // ==================== 11. MOBILE MENU TOGGLE ====================
+  // ==================== 6. MOBILE MENU TOGGLE ====================
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
@@ -425,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==================== 12. PROJECT FILTER BUTTONS ====================
+  // ==================== 7. PROJECT FILTER BUTTONS ====================
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -440,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = card.getAttribute('data-category');
         if (filter === 'all' || category.includes(filter)) {
           card.style.display = 'block';
-          card.classList.add('fade-in');
         } else {
           card.style.display = 'none';
         }
@@ -448,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==================== 13. MODAL DEEP DIVE SYSTEM ====================
+  // ==================== 8. MODAL DEEP DIVE SYSTEM ====================
   const modal = document.getElementById('project-modal');
   const modalTitle = document.getElementById('modal-title');
   const modalCategory = document.getElementById('modal-category');
@@ -537,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==================== 14. COPY EMAIL TOAST ====================
+  // ==================== 9. COPY EMAIL TOAST ====================
   const copyEmailBtn = document.getElementById('copy-email-btn');
   const toast = document.getElementById('copy-toast');
 
@@ -550,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           toast.classList.remove('opacity-100');
           toast.classList.add('opacity-0', 'pointer-events-none');
-        }, 2200);
+        }, 2000);
       });
     });
   }

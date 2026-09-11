@@ -5,26 +5,22 @@
   --primary-emerald-hover: #047857;
   --accent-cyan: #06b6d4;
   --accent-teal: #0d9488;
-  --bg-gradient-light: radial-gradient(circle at 10% 20%, rgba(236, 253, 245, 0.7) 0%, rgba(248, 250, 252, 1) 90%);
-  --card-bg-light: rgba(255, 255, 255, 0.85);
-  --border-light: rgba(226, 232, 240, 0.8);
+  --card-bg-light: rgba(255, 255, 255, 0.9);
+  --border-light: rgba(226, 232, 240, 0.85);
 }
 
 .dark {
-  --bg-gradient-dark: radial-gradient(circle at 15% 15%, rgba(6, 78, 59, 0.2) 0%, rgba(10, 15, 29, 1) 85%);
-  --card-bg-dark: rgba(19, 27, 46, 0.75);
-  --border-dark: rgba(51, 65, 85, 0.6);
+  --card-bg-dark: rgba(19, 27, 46, 0.8);
+  --border-dark: rgba(51, 65, 85, 0.65);
 }
 
-/* Glassmorphism Card Effects */
+/* Glassmorphism Card Effects - Subtle & Calm */
 .glass-card {
   background: var(--card-bg-light);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-light);
-  transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.25s ease;
-  will-change: transform, box-shadow;
-  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .dark .glass-card {
@@ -33,31 +29,34 @@
 }
 
 .glass-card:hover {
-  box-shadow: 0 20px 35px -10px rgba(5, 150, 105, 0.15);
+  transform: translateY(-2.5px);
+  box-shadow: 0 12px 24px -6px rgba(5, 150, 105, 0.08);
+  border-color: rgba(16, 185, 129, 0.35);
 }
 
 .dark .glass-card:hover {
-  box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 12px 24px -6px rgba(16, 185, 129, 0.12);
+  border-color: rgba(52, 211, 153, 0.35);
 }
 
-/* Biological pattern backdrop decoration */
+/* Subtle biological grid pattern */
 .bio-grid-pattern {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(16, 185, 129, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.035) 1px, transparent 1px);
 }
 
 .dark .bio-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(52, 211, 153, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(52, 211, 153, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(52, 211, 153, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(52, 211, 153, 0.03) 1px, transparent 1px);
 }
 
-/* Custom placeholder illustration cards */
+/* Clean, understated specimen placeholder containers */
 .specimen-placeholder {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
-  border: 1px dashed rgba(16, 185, 129, 0.35);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -65,25 +64,23 @@
   justify-content: center;
   text-align: center;
   padding: 1.5rem 1.25rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .specimen-placeholder:hover {
-  border-color: rgba(16, 185, 129, 0.8);
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.12) 100%);
+  border-color: rgba(16, 185, 129, 0.5);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
 }
 
-/* Quote highlight ribbon */
+/* Quote highlight card */
 .quote-card {
   position: relative;
-  border-left: 4px solid #10b981;
+  border-left: 3px solid #10b981;
 }
 
-/* Custom scrollbar */
+/* Custom subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -91,46 +88,40 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.4);
+  background: rgba(148, 163, 184, 0.35);
   border-radius: 4px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: rgba(71, 85, 105, 0.6);
+  background: rgba(71, 85, 105, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.6);
+  background: rgba(16, 185, 129, 0.5);
 }
 
-/* Smooth tab & button animations */
+/* Smooth tab & filter buttons */
 .filter-btn.active {
   background-color: #059669;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
 }
 
-/* Pulse animation for status */
-@keyframes bio-pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.08);
-  }
+/* Gentle pulse for status indicator */
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
 }
 
-.animate-bio-pulse {
-  animation: bio-pulse 2.5s infinite ease-in-out;
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s infinite ease-in-out;
 }
 
 /* Scroll reveal animations */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(16px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.revealed {
@@ -138,66 +129,34 @@
   transform: translateY(0);
 }
 
-/* Dynamic typing cursor blink */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.typewriter-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background-color: #10b981;
-  margin-left: 3px;
-  vertical-align: -0.15em;
-  animation: blink 0.8s infinite;
-}
-
-/* Mouse glow follow on cards */
-.interactive-card {
+/* Tooltip for scientific terms (巧思小功能) */
+.bio-tooltip {
   position: relative;
+  cursor: help;
+  border-bottom: 1px dotted rgba(16, 185, 129, 0.6);
 }
 
-.interactive-card::before {
-  content: '';
+.bio-tooltip::after {
+  content: attr(data-tooltip);
   position: absolute;
-  top: var(--mouse-y, -100px);
-  left: var(--mouse-x, -100px);
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
-  transform: translate(-50%, -50%);
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-size: 11px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 50%;
-  z-index: 1;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 30;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.interactive-card:hover::before {
+.bio-tooltip:hover::after {
   opacity: 1;
-}
-
-/* Equalizer Audio Dance Animation */
-@keyframes eq-bounce {
-  0%, 100% { height: 6px; }
-  50% { height: 38px; }
-}
-
-.eq-bar {
-  width: 4px;
-  background: linear-gradient(to top, #9333ea, #c084fc);
-  border-radius: 2px;
-  animation: eq-bounce 1.2s ease-in-out infinite;
-}
-
-/* Live Telemetry Pulse */
-@keyframes pulse-dot {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.4); opacity: 0.5; }
-}
-
-.pulse-dot {
-  animation: pulse-dot 1.8s infinite ease-in-out;
+  transform: translateX(-50%) translateY(-2px);
 }

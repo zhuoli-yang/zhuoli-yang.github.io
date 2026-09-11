@@ -119,8 +119,6 @@
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
-    <!-- Dynamic Biological Particle Network -->
-    <canvas id="bio-canvas" class="absolute inset-0 pointer-events-none w-full h-full z-0 opacity-40 dark:opacity-30"></canvas>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -143,7 +141,7 @@
           <div class="space-y-2">
             <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
               Connecting Anatomical Form <br class="hidden sm:inline">
-              to <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300" id="typewriter-text">Molecular Mechanism.</span><span class="typewriter-cursor"></span>
+              to <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">Molecular Mechanism</span>.
             </h1>
             <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed pt-2">
               I am <strong>Zhuoli Yang (杨卓力)</strong>, a high school student (Class of 2027) fascinated by how living systems are engineered. From hands-on osteological articulation and multi-species vivarium husbandry to biomechanical structure-function relationships, I investigate the logic underlying biology.
@@ -178,7 +176,7 @@
 
         <!-- Right Column: Stylized Portrait / Bio Emblem Placeholder -->
         <div class="lg:col-span-4">
-          <div class="glass-card tilt-card rounded-2xl p-6 sm:p-7 relative overflow-hidden">
+          <div class="glass-card rounded-2xl p-6 sm:p-7 relative overflow-hidden">
             <!-- Decorative corner tag -->
             <div class="absolute top-3 right-3">
               <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800">
@@ -186,14 +184,16 @@
               </span>
             </div>
 
-            <!-- Interactive 3D DNA Double Helix Canvas & Portrait -->
-            <div class="specimen-placeholder h-44 mb-5 relative flex items-center justify-center p-0 overflow-hidden bg-emerald-950/5 dark:bg-emerald-950/20">
-              <canvas id="dna-canvas" class="w-full h-full block"></canvas>
-              <div class="absolute bottom-2 left-0 right-0 text-center pointer-events-none">
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono font-medium text-emerald-700 dark:text-emerald-300 bg-white/90 dark:bg-slate-900/90 px-2.5 py-0.5 rounded-full backdrop-blur-sm border border-emerald-200/80 dark:border-emerald-800/80 shadow-xs">
-                  <i data-lucide="dna" class="w-3 h-3 text-emerald-500"></i> Interactive 3D DNA Helix
-                </span>
+            <!-- Refined Academic Monogram & Status Badge -->
+            <div class="specimen-placeholder h-44 mb-5 relative flex flex-col items-center justify-center p-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/25 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3 shadow-xs">
+                <span class="font-mono text-2xl font-bold tracking-tight">ZY</span>
               </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-100">Zhuoli Yang &middot; 杨卓力</span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-600 dark:text-emerald-400 font-mono mt-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-gentle-pulse"></span>
+                Life Sciences &middot; Class of '27
+              </span>
             </div>
 
             <!-- Profile Summary Points -->
@@ -280,7 +280,7 @@
             My curiosity about biology did not start from textbooks alone. For years, I maintained a dynamic vivarium at home, keeping various species of fish, reptiles, spiders, and scorpions. Caring for these living systems required mastering water chemistry, microclimate temperature gradients, and differential diagnoses&mdash;distinguishing, for instance, between parasitic white-spot infections requiring stepwise thermal escalation and bacterial ailments demanding strict feed restriction and biological filtration.
           </p>
           <p>
-            This hands-on instinct culminated in my specimen articulation project with the goliath tigerfish (<em>Hydrocynus goliath</em>). Facing the risk of bone dissolution during chemical defatting with sodium hydroxide (NaOH), I devised an initial trial protocol on a crucian carp to determine safe concentration and soak windows. Once the soft tissue was cleared, I reassembled the vertebral column and cranial joints by matching unfamiliar facets against biomechanical movement constraints&mdash;a method reminiscent of solving rigorous mathematical proofs.
+            This hands-on instinct culminated in my specimen articulation project with the goliath tigerfish (<span class="bio-tooltip" data-tooltip="Hydrocynus goliath: Apex predator of Congo River with specialized cranial & vertebral biomechanics"><em>Hydrocynus goliath</em></span>). Facing the risk of bone dissolution during chemical defatting with sodium hydroxide (<span class="bio-tooltip" data-tooltip="NaOH: Tested on crucian carp to strip lipids safely without dissolving sutures">NaOH</span>), I devised an initial trial protocol on a crucian carp to determine safe concentration and soak windows. Once the soft tissue was cleared, I reassembled the vertebral column and cranial joints by matching unfamiliar facets against biomechanical movement constraints&mdash;a method reminiscent of solving rigorous mathematical proofs.
           </p>
           <p>
             Through this process, I began to see living form not as static geometry, but as the direct outcome of physical forces and molecular adaptations. Three questions continually guide my thinking:
@@ -382,7 +382,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- CARD 1: Goliath Tigerfish -->
-        <div class="project-card glass-card interactive-card tilt-card rounded-2xl overflow-hidden flex flex-col" data-category="anatomy">
+        <div class="project-card glass-card interactive-card rounded-2xl overflow-hidden flex flex-col" data-category="anatomy">
           <!-- Stylized Graphic Placeholder (No actual image asset loaded) -->
           <div class="specimen-placeholder h-48">
             <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
@@ -436,7 +436,7 @@
         </div>
 
         <!-- CARD 2: Vivarium Husbandry -->
-        <div class="project-card glass-card interactive-card tilt-card rounded-2xl overflow-hidden flex flex-col" data-category="vivarium">
+        <div class="project-card glass-card interactive-card rounded-2xl overflow-hidden flex flex-col" data-category="vivarium">
           <!-- Stylized Graphic Placeholder -->
           <div class="specimen-placeholder h-48">
             <div class="w-12 h-12 rounded-xl bg-teal-600/15 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-2">
@@ -499,7 +499,7 @@
         </div>
 
         <!-- CARD 3: Biomechanics & Energy Storage -->
-        <div class="project-card glass-card interactive-card tilt-card rounded-2xl overflow-hidden flex flex-col" data-category="biomechanics">
+        <div class="project-card glass-card interactive-card rounded-2xl overflow-hidden flex flex-col" data-category="biomechanics">
           <!-- Stylized Graphic Placeholder -->
           <div class="specimen-placeholder h-48">
             <div class="w-12 h-12 rounded-xl bg-cyan-600/15 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
@@ -520,7 +520,7 @@
                 Elastic Energy Storage in Orthopteran Saltatorial Appendages
               </h3>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Investigating the biomechanical paradox of high-power saltation without structural fatigue; exploring the role of resilin proteins and cuticular microstructures.
+                Investigating the biomechanical paradox of high-power saltation without structural fatigue; exploring the role of <span class="bio-tooltip" data-tooltip="Resilin: Highly elastomeric cuticular protein delivering >97% energy storage efficiency">resilin proteins</span> and cuticular microstructures.
               </p>
 
               <div class="flex flex-wrap gap-1.5 pt-1">
@@ -666,22 +666,13 @@
             </div>
           </div>
 
-          <!-- Dynamic Acoustic Sound Wave Visualizer -->
+          <!-- Refined Music Insignia -->
           <div class="specimen-placeholder h-36 flex flex-col justify-center items-center">
-            <div class="flex items-end justify-center gap-1.5 h-9 mb-2.5" id="eq-visualizer">
-              <span class="eq-bar" style="animation-delay: 0.1s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.35s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.15s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.5s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.25s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.4s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.2s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.6s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.3s;"></span>
-              <span class="eq-bar" style="animation-delay: 0.45s;"></span>
+            <div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-2">
+              <i data-lucide="music" class="w-5 h-5"></i>
             </div>
-            <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Acoustic & Repertoire Practice</span>
-            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-purple-600 dark:text-purple-400 mt-1"><i data-lucide="music" class="w-3 h-3"></i> Grade 10 Exam Repertoire</span>
+            <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Saxophone Recital Repertoire</span>
+            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-purple-600 dark:text-purple-400 mt-1">Grade 10 Distinction &middot; Repertoire Discipline</span>
           </div>
         </div>
 
