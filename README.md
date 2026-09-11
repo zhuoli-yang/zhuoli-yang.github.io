@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  🌐 <b>Live Website</b>: <a href="https://yangdrew028.github.io/zhuoliyang-web/">https://yangdrew028.github.io/zhuoliyang-web/</a>
+  🌐 <b>Live Website</b>: <a href="https://zhuoli-yang.github.io/">https://zhuoli-yang.github.io/</a>
 </p>
 
 ---
@@ -33,7 +33,7 @@ Personal academic portfolio website for **Zhuoli Yang (杨卓力)**, High School
 ### 🎯 Higher Education Vision
 Preparing for accelerated undergraduate research in Molecular Biology and Biotechnology (target programs include HKU 6688 Science Master Class / Young Scientist Scheme, and premier life science faculties in Singapore).
 
-🔗 **Visit Portfolio**: [https://yangdrew028.github.io/zhuoliyang-web/](https://yangdrew028.github.io/zhuoliyang-web/)
+🔗 **Visit Portfolio**: [https://zhuoli-yang.github.io/](https://zhuoli-yang.github.io/)
 
 [Back to top ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
 
@@ -59,7 +59,7 @@ Preparing for accelerated undergraduate research in Molecular Biology and Biotec
 ### 🎯 升学学术愿景
 致力于进入以科研为导向的高等教育轨道，重点关注**香港大学 6688 理学硕士班（主修分子生物学与生物技术 / 青年科学家计划 YSS）**及新加坡顶级生命科学本科，提前进入教授实验室开展结构生物学与生物技术工具开发。
 
-🔗 **主页在线访问**：[https://yangdrew028.github.io/zhuoliyang-web/](https://yangdrew028.github.io/zhuoliyang-web/)
+🔗 **主页在线访问**：[https://zhuoli-yang.github.io/](https://zhuoli-yang.github.io/)
 
 [返回顶部 ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
 
@@ -85,7 +85,7 @@ Sitio web de portafolio académico personal de **Zhuoli Yang (杨卓力)**, estu
 ### 🎯 Aspiraciones de Educación Superior
 Preparación para la investigación acelerada en Biología Molecular y Biotecnología (programas objetivo: HKU 6688 Science Master Class / Young Scientist Scheme, e instituciones líderes en Singapur).
 
-🔗 **Visitar Sitio Web**: [https://yangdrew028.github.io/zhuoliyang-web/](https://yangdrew028.github.io/zhuoliyang-web/)
+🔗 **Visitar Sitio Web**: [https://zhuoli-yang.github.io/](https://zhuoli-yang.github.io/)
 
 [Volver arriba ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
 
@@ -111,6 +111,6 @@ Site web et portfolio académique personnel de **Zhuoli Yang (杨卓力)**, lyc�
 ### 🎯 Objectif Universitaire
 Intégrer un cursus de recherche accélérée en biologie moléculaire et biotechnologie (notamment le programme HKU 6688 Science Master Class / Young Scientist Scheme, ainsi que les facultés d'excellence à Singapour).
 
-🔗 **Consulter le Portfolio**: [https://yangdrew028.github.io/zhuoliyang-web/](https://yangdrew028.github.io/zhuoliyang-web/)
+🔗 **Consulter le Portfolio**: [https://zhuoli-yang.github.io/](https://zhuoli-yang.github.io/)
 
 [Retour en haut ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)

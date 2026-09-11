@@ -11,7 +11,7 @@ Context and guidelines for AI agents maintaining this repository.
 ## 2. Tech Stack & Hosting
 - **Architecture**: Zero-build static web (`index.html`, `styles.css`, `script.js`).
 - **Styling & Icons**: Tailwind CSS (CDN) + Lucide Icons.
-- **Hosting**: GitHub Pages (`https://yangdrew028.github.io/zhuoliyang-web/`).
+- **Hosting**: GitHub Pages (`https://zhuoli-yang.github.io/`).
 
 ## 3. Maintenance Rules
 1. **No Heavy Frameworks**: Keep the zero-dependency static setup (no Node/npm/vite) unless explicitly requested.
