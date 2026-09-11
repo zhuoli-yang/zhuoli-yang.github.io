@@ -8,3 +8,8 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+
+# AI Instructions & Internal Notes
+AGENTS.md
+CLAUDE.md
+*.local.md
