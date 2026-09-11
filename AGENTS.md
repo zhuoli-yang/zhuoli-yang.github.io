@@ -5,7 +5,7 @@ Context and guidelines for AI agents maintaining this repository.
 ## 1. Persona & Narrative
 - **Owner**: Zhuoli Yang (杨卓力) · High School Class of 2027 (Kunming, China).
 - **Academic Focus**: Life Sciences / Molecular Biology (Target: HKU 6688 Science Master Class / Singapore).
-- **Core Story**: Hands-on biological inquiry (tigerfish *Hydrocynus goliath* skeleton articulation, vivarium pathology diagnostics, biomechanics), paired with strong STEM foundations (Chemistry 97, Biology 95, TOEFL 93) and arts (Saxophone Grade 10).
+- **Core Story**: Hands-on biological inquiry (tigerfish *Hydrocynus goliath* skeleton articulation, vivarium pathology diagnostics, biomechanics), language proficiency (TOEFL 93), and performing arts (Saxophone Grade 10 Distinction).
 - **Tone**: Authentic, humble, method-driven. Avoid exaggeration.
 
 ## 2. Tech Stack & Hosting
