@@ -161,15 +161,15 @@
             </p>
           </div>
 
-          <!-- Quick Action Buttons -->
+          <!-- Quick Action Buttons: Curriculum Vitae (CV) & Get in Touch -->
           <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="projects.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all">
-              <i data-lucide="folder-git-2" class="w-4 h-4"></i>
-              View Works Archive &rarr;
-            </a>
-            <a href="#about" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 transition-all">
-              <i data-lucide="arrow-down" class="w-4 h-4 text-emerald-500"></i>
-              Explore Overview
+            <button type="button" id="cv-modal-trigger" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all cursor-pointer">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>Curriculum Vitae (CV)</span>
+            </button>
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-sm font-medium border border-slate-200 dark:border-slate-700 transition-all">
+              <i data-lucide="mail" class="w-4 h-4 text-emerald-500"></i>
+              <span>Get in Touch</span>
             </a>
           </div>
 
@@ -808,6 +808,147 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==================== CURRICULUM VITAE (CV) MODAL ==================== -->
+  <div id="cv-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-8 relative">
+      
+      <!-- Modal Close Button -->
+      <button id="cv-modal-close" type="button" aria-label="Close CV Modal" class="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- CV Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-200 dark:border-slate-800 pr-8 sm:pr-0">
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block">Curriculum Vitae &middot; 个人履历</span>
+          <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">Zhuoli Yang (杨卓力)</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Class of 2027 &middot; Kunming, Yunnan, China</p>
+        </div>
+        
+        <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-xs transition-colors self-start sm:self-auto">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Download PDF</span>
+        </a>
+      </div>
+
+      <!-- CV Body Content -->
+      <div class="py-5 space-y-6 text-sm text-slate-700 dark:text-slate-300">
+        
+        <!-- 1. Education -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="graduation-cap" class="w-4 h-4 text-emerald-600"></i> Education
+          </h4>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+            <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+              <span>Kunming Long-Spring High School (昆明长丰学校)</span>
+              <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400">Class of 2027</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">High School Track &middot; Focus: Physics, Chemistry, Biology (物化生组)</p>
+          </div>
+        </div>
+
+        <!-- 2. Standardized Language -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="award" class="w-4 h-4 text-blue-600"></i> Language Certification
+          </h4>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60 space-y-2">
+            <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+              <span>TOEFL iBT Official Certification</span>
+              <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400">Total: 93 / 120</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center text-xs pt-1">
+              <div class="p-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[10px] text-slate-400 block font-mono">Reading</span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">24</span>
+              </div>
+              <div class="p-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[10px] text-slate-400 block font-mono">Listening</span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">23</span>
+              </div>
+              <div class="p-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[10px] text-slate-400 block font-mono">Speaking</span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">22</span>
+              </div>
+              <div class="p-1.5 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[10px] text-slate-400 block font-mono">Writing</span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">24</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Arts & Performing Honors -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="music" class="w-4 h-4 text-purple-600"></i> Arts &amp; Musical Honors
+          </h4>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60 space-y-1 text-xs">
+            <div class="flex items-center justify-between font-bold text-slate-900 dark:text-white">
+              <span>Classical Saxophone Performance &middot; Grade 10 Distinction</span>
+              <span class="font-mono text-purple-600 dark:text-purple-400">10 Years</span>
+            </div>
+            <p class="text-slate-500">Awarded by China National Opera and Dance Drama Theater (中国歌剧舞剧院考级十级优秀)</p>
+            <p class="font-mono text-[11px] text-slate-400">Certificate: 20240072010301051120007</p>
+          </div>
+        </div>
+
+        <!-- 4. Global Footprint & Leadership -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4 text-teal-600"></i> International Footprint &amp; Summits
+          </h4>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+              <span class="font-bold text-slate-900 dark:text-white block">WFUNA International Model UN (WIMUN 2024) &middot; UN Headquarters, NYC</span>
+              <span class="text-slate-500">Switzerland Delegate, Second Committee (Economic &amp; Financial) &middot; Feb 2024</span>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+              <span class="font-bold text-slate-900 dark:text-white block">Harvard Student Agencies Innovation Workshops &middot; Cambridge, MA</span>
+              <span class="text-slate-500">Case Analysis &amp; Teamwork Leadership Certificate &middot; Jan 2024</span>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+              <span class="font-bold text-slate-900 dark:text-white block">The University of Sydney Academic Immersion &middot; Sydney, Australia</span>
+              <span class="text-slate-500">Laboratory Immersion &amp; Comparative Zoology Collections &middot; Feb 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Core Hands-on Inquiries -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="flask-conical" class="w-4 h-4 text-emerald-600"></i> Selected Hands-on Inquiries
+          </h4>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+              <span class="font-bold text-slate-900 dark:text-white block">Goliath Tigerfish (*Hydrocynus goliath*) 1:1 Skeletal Articulation</span>
+              <span class="text-slate-500">Manual cranial dissection, dentition replacement kinematics, and multi-vertebra wire reconstruction.</span>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+              <span class="font-bold text-slate-900 dark:text-white block">NaOH Lipid Saponification Calibration Matrix (*Carassius carassius*)</span>
+              <span class="text-slate-500">Serial dilution matrix (0.5% - 3.5%) identifying 1.0% NaOH threshold to preserve cranial sutures without erosion.</span>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+              <span class="font-bold text-slate-900 dark:text-white block">Multi-Year Closed Vivarium Husbandry &amp; Differential Pathology</span>
+              <span class="text-slate-500">Microclimate control (reptiles, scorpions, aquatic species); symptom checklist between water spikes &amp; parasites.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CV Modal Footer -->
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+        <span>Email: yangzhuoli2009@163.com</span>
+        <button id="cv-modal-close-bottom" type="button" class="px-4 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium transition-colors">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Toast Notification for Copy -->
   <div id="copy-toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">

@@ -285,6 +285,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==================== 8B. CV MODAL INTERACTION ====================
+  const cvTriggerBtn = document.getElementById('cv-modal-trigger');
+  const cvModal = document.getElementById('cv-modal');
+  const cvCloseBtn = document.getElementById('cv-modal-close');
+  const cvCloseBottomBtn = document.getElementById('cv-modal-close-bottom');
+
+  if (cvTriggerBtn && cvModal) {
+    cvTriggerBtn.addEventListener('click', () => {
+      cvModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) window.lucide.createIcons();
+    });
+  }
+
+  function closeCvModal() {
+    if (cvModal) {
+      cvModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  if (cvCloseBtn) cvCloseBtn.addEventListener('click', closeCvModal);
+  if (cvCloseBottomBtn) cvCloseBottomBtn.addEventListener('click', closeCvModal);
+  if (cvModal) {
+    cvModal.addEventListener('click', (e) => {
+      if (e.target === cvModal) closeCvModal();
+    });
+  }
+
   // ==================== 9. COPY EMAIL TOAST ====================
   const copyEmailBtn = document.getElementById('copy-email-btn');
   const toast = document.getElementById('copy-toast');
