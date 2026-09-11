@@ -1,10 +1,12 @@
-# Zhuoli Yang (杨卓力) — Academic Portfolio Website
+<a id="top"></a>
+
+# Zhuoli Yang (杨卓力) | Academic Portfolio Website
 
 <p align="center">
   <a href="#english"><b>English</b></a> &nbsp;|&nbsp;
-  <a href="#中文"><b>中文</b></a> &nbsp;|&nbsp;
-  <a href="#español"><b>Español</b></a> &nbsp;|&nbsp;
-  <a href="#français"><b>Français</b></a>
+  <a href="#chinese"><b>中文</b></a> &nbsp;|&nbsp;
+  <a href="#espanol"><b>Español</b></a> &nbsp;|&nbsp;
+  <a href="#francais"><b>Français</b></a>
 </p>
 
 <p align="center">
@@ -13,6 +15,7 @@
 
 ---
 
+<a id="english"></a>
 ## English
 
 Personal academic portfolio of **Zhuoli Yang (杨卓力)**, High School Class of 2027 (Kunming, China).
@@ -22,36 +25,39 @@ Personal academic portfolio of **Zhuoli Yang (杨卓力)**, High School Class of
 - **Multidisciplinary**: Saxophone Performance **Grade 10 Distinction** (China National Opera), WIMUN New York Delegate at UN Headquarters.
 - **Higher Education Goal**: Accelerated undergraduate research in Molecular Biology & Biotechnology (HKU 6688 Science Master Class / YSS / Singapore).
 
-🔗 [Visit Live Portfolio](https://zhuoli-yang.github.io/) &nbsp;·&nbsp; [Top ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
+🔗 [Visit Live Portfolio](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [Top ↑](#top)
 
 ---
 
+<a id="chinese"></a>
 ## 中文
 
-**杨卓力（Zhuoli Yang）**个人学术主页与成果作品集，2027 届高中生（中国云南昆明）。
+**杨卓力 (Zhuoli Yang)** 个人学术主页与成果作品集，2027 届高中生（中国云南昆明）。
 
 - **探究方向**：生命科学、分子生物学、比较解剖学（黄金猛鱼 *Hydrocynus goliath* 骨骼标本制作与脱脂工艺）、生态缸微环境病理诊断。
 - **学业亮点**：期中标准化统考年级第 **11** 名（总分 **625.5 / 750**）、化学 **97** 分、生物 **95** 分、TOEFL iBT **93** 分。
 - **多元才艺**：中国歌剧舞剧院萨克斯**十级优秀证书**、纽约联合国总部 WIMUN 国际模联代表。
 - **升学愿景**：香港大学 6688 理学硕士班（主修分子生物学与生物技术 / 青年科学家计划 YSS）及顶尖生命科学本科。
 
-🔗 [主页在线访问](https://zhuoli-yang.github.io/) &nbsp;·&nbsp; [返回顶部 ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
+🔗 [主页在线访问](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [返回顶部 ↑](#top)
 
 ---
 
+<a id="espanol"></a>
 ## Español
 
 Portafolio académico personal de **Zhuoli Yang (杨卓力)**, estudiante de secundaria (Promoción 2027, Kunming, China).
 
 - **Enfoque Principal**: Ciencias de la vida, biología molecular, osteología comparada (articulación esquelética de *Hydrocynus goliath*) y ecología de vivarios.
-- **Logros Académicos**: Puesto **11º** en la cohorte general (Calificación: **625.5 / 750**), Química **97/100**, Biología **95/100**, TOEFL iBT **93**.
+- **Logros Académicos**: Puesto **11** en la cohorte general (Calificación: **625.5 / 750**), Química **97/100**, Biología **95/100**, TOEFL iBT **93**.
 - **Artes y Diplomacia**: **Grado 10 con Distinción** en Saxofón (Teatro Nacional de Ópera de China), Delegado WIMUN Nueva York en la Sede de la ONU.
 - **Aspiración Universitaria**: Investigación acelerada en Biología Molecular y Biotecnología (HKU 6688 / Singapur).
 
-🔗 [Visitar Sitio Web](https://zhuoli-yang.github.io/) &nbsp;·&nbsp; [Volver arriba ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
+🔗 [Visitar Sitio Web](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [Volver arriba ↑](#top)
 
 ---
 
+<a id="francais"></a>
 ## Français
 
 Portfolio académique de **Zhuoli Yang (杨卓力)**, lycéen (Promotion 2027, Kunming, Chine).
@@ -61,4 +67,4 @@ Portfolio académique de **Zhuoli Yang (杨卓力)**, lycéen (Promotion 2027, K
 - **Musique et Parcours**: **Diplôme de 10e degré avec distinction** en Saxophone (Théâtre National d'Opéra de Chine), Délégué WIMUN New York au Siège de l'ONU.
 - **Objectif d'Études**: Cursus de recherche en biologie moléculaire et biotechnologie (programme HKU 6688 / Singapour).
 
-🔗 [Consulter le Portfolio](https://zhuoli-yang.github.io/) &nbsp;·&nbsp; [Retour en haut ↑](#zhuoli-yang-杨卓力--academic-portfolio-website)
+🔗 [Consulter le Portfolio](https://zhuoli-yang.github.io/) &nbsp;|&nbsp; [Retour en haut ↑](#top)
