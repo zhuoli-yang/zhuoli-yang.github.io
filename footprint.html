@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Footprint & Field Inquiries | Zhuoli Yang (杨卓力)</title>
+  <meta name="description" content="Chronological travel logs and field exploration archives of Zhuoli Yang across North America, Australia, and Yunnan, China.">
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            slate: {
+              850: '#131b2e',
+              950: '#090d16'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
+  <!-- Reading Progress Bar -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 z-50 transition-all duration-100" style="width: 0%;"></div>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo / Name -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:bg-emerald-700 transition-colors">
+          ZY
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-slate-900 dark:text-white tracking-tight leading-none group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            Zhuoli Yang <span class="text-xs font-normal text-slate-500 dark:text-slate-400">杨卓力</span>
+          </span>
+          <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-medium mt-0.5">
+            Personal Space &middot; Class of 2027
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1">
+          <i data-lucide="home" class="w-4 h-4"></i> Home
+        </a>
+        <a href="projects.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Works Archive</a>
+        <a href="footprint.html" class="text-emerald-600 dark:text-emerald-400 font-semibold transition-colors">Global Footprint</a>
+        <a href="gallery.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Arts &amp; Music</a>
+        <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Utility Actions: Theme Toggle -->
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" type="button" aria-label="Toggle Theme" class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i id="theme-icon-sun" data-lucide="sun" class="w-5 h-5 hidden"></i>
+          <i id="theme-icon-moon" data-lucide="moon" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-btn" type="button" aria-label="Open Mobile Menu" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-3 pb-5 space-y-2.5">
+      <a href="index.html" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Home</a>
+      <a href="projects.html" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Works Archive</a>
+      <a href="footprint.html" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Global Footprint</a>
+      <a href="gallery.html" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Arts &amp; Music</a>
+      <a href="#contact" class="mobile-nav-link block py-2 text-base font-medium text-slate-700 dark:text-slate-200">Contact</a>
+    </div>
+  </header>
+
+  <main class="flex-1 py-10 md:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Back Navigation & Breadcrumbs -->
+      <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-6">
+        <a href="index.html" class="inline-flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Home
+        </a>
+        <span>/</span>
+        <span class="text-slate-800 dark:text-slate-200 font-medium">Global Footprint &amp; Field Inquiries</span>
+      </div>
+
+      <!-- Hero Header -->
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+          Journeys &amp; Exploration &middot; Chronological Archive
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
+          Global Footprint &amp; Field Studies
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
+          From diplomatic consensus deliberations at the United Nations in New York to academic laboratory immersions in Sydney, Harvard problem-solving workshops, and rich biodiversity field surveys across Yunnan.
+        </p>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 p-5 rounded-2xl glass-card">
+        <div>
+          <span class="text-[10px] font-mono uppercase text-slate-400 block">Total Expeditions</span>
+          <span class="text-2xl font-bold font-mono text-slate-900 dark:text-white">6 Milestones</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono uppercase text-slate-400 block">Multilateral Diplomacy</span>
+          <span class="text-2xl font-bold font-mono text-blue-600 dark:text-blue-400">UN NYC (WIMUN)</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono uppercase text-slate-400 block">Higher Education</span>
+          <span class="text-2xl font-bold font-mono text-amber-600 dark:text-amber-400">USyd &middot; Harvard</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono uppercase text-slate-400 block">Field Ecology</span>
+          <span class="text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400">Gaoligongshan</span>
+        </div>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-slate-200/80 dark:border-slate-800/80">
+        <span class="text-xs font-mono text-slate-400 mr-2 flex items-center gap-1">
+          <i data-lucide="filter" class="w-3.5 h-3.5"></i> Filter:
+        </span>
+        <button type="button" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-medium transition-colors bg-blue-600 text-white" data-filter="all">
+          All Footprints (6)
+        </button>
+        <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="north-america">
+          North America (2)
+        </button>
+        <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="oceania">
+          Oceania / Australia (1)
+        </button>
+        <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="yunnan">
+          Yunnan Fieldwork (3)
+        </button>
+      </div>
+
+      <!-- Footprint Timeline Cards -->
+      <div class="space-y-8">
+
+        <!-- CARD 1: WIMUN 2024 -->
+        <article id="wimun" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="north-america">
+          <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
+              <img src="assets/images/wimun.jpg" 
+                   alt="WIMUN New York UN Headquarters" 
+                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   onload="this.classList.remove('hidden'); const p = document.getElementById('wimun-fp-thumb'); if (p) p.classList.add('hidden');"
+                   onerror="this.classList.add('hidden'); const p = document.getElementById('wimun-fp-thumb'); if (p) p.classList.remove('hidden');">
+              <div id="wimun-fp-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-blue-50/80 to-blue-100/50 dark:from-slate-800 dark:to-blue-950/40">
+                <div class="w-14 h-14 rounded-full bg-blue-600/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-2">
+                  <i data-lucide="globe" class="w-7 h-7"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">United Nations Headquarters</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">New York City, USA</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-blue-700 dark:text-blue-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-800 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: wimun.jpg
+                </span>
+              </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 uppercase">Feb 2024 &middot; New York, USA</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-blue-100/70 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300">WFUNA Official</span>
+                </div>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  WFUNA International Model United Nations (WIMUN 2024)
+                </h2>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
+                  Role: Delegate of Switzerland &middot; Second Committee (Economic and Financial)
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
+                  Convened at the United Nations Headquarters in New York, adhering strictly to authentic UN General Assembly consensus-building rules of procedure (WIMUN approach). Led drafting sessions representing the Swiss delegation, negotiating multilateral compromises on international sustainable economic frameworks and environmental accountability.
+                </p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Consensus Diplomacy</span>
+                    <span class="text-[11px] text-slate-500">Mastered negotiation through informal consultations and line-by-line draft consensus.</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Global Perspective</span>
+                    <span class="text-[11px] text-slate-500">Debated with international delegates across 40+ countries in English.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Location: UN Headquarters, NY</span>
+                <span class="text-blue-600 dark:text-blue-400 font-semibold">Official Delegate</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CARD 2: Harvard HSA 2024 -->
+        <article id="harvard" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="north-america">
+          <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
+              <img src="assets/images/harvard.jpg" 
+                   alt="Harvard Student Agencies Workshop" 
+                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   onload="this.classList.remove('hidden'); const p = document.getElementById('harvard-fp-thumb'); if (p) p.classList.add('hidden');"
+                   onerror="this.classList.add('hidden'); const p = document.getElementById('harvard-fp-thumb'); if (p) p.classList.remove('hidden');">
+              <div id="harvard-fp-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-rose-50/80 to-rose-100/50 dark:from-slate-800 dark:to-rose-950/40">
+                <div class="w-14 h-14 rounded-full bg-rose-600/10 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-2">
+                  <i data-lucide="book-open" class="w-7 h-7"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Harvard Student Agencies</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Cambridge &middot; Boston, USA</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-rose-700 dark:text-rose-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-rose-200 dark:border-rose-800 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: harvard.jpg
+                </span>
+              </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-mono font-bold text-rose-600 dark:text-rose-400 uppercase">Jan 2024 &middot; Boston &middot; Cambridge, USA</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-rose-100/70 dark:bg-rose-900/40 text-rose-800 dark:text-rose-300">HSA Trademark Tours</span>
+                </div>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  Harvard Student Agencies (HSA) Innovation Workshops
+                </h2>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
+                  Host: Harvard Student Agencies (Trademark Tours &middot; Cambridge, MA)
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
+                  Engaged in collegiate problem-solving challenges, team-based innovation sprints, and case-study sessions led by Harvard undergraduate mentors. Gained deep insights into analytical problem structuring, rapid hypothesis formulation, and multidisciplinary communication.
+                </p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Case Analysis</span>
+                    <span class="text-[11px] text-slate-500">Deconstructing complex open-ended scenarios into testable sub-problems.</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Academic Immersion</span>
+                    <span class="text-[11px] text-slate-500">Certificate of Completion awarded by HSA Trademark Tours.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Location: Harvard Yard &middot; Cambridge, MA</span>
+                <span class="text-rose-600 dark:text-rose-400 font-semibold">Certificate Awarded</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CARD 3: University of Sydney 2025 -->
+        <article id="sydney" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="oceania">
+          <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
+              <img src="assets/images/sydney.jpg" 
+                   alt="The University of Sydney Campus" 
+                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   onload="this.classList.remove('hidden'); const p = document.getElementById('sydney-fp-thumb'); if (p) p.classList.add('hidden');"
+                   onerror="this.classList.add('hidden'); const p = document.getElementById('sydney-fp-thumb'); if (p) p.classList.remove('hidden');">
+              <div id="sydney-fp-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-amber-50/80 to-amber-100/50 dark:from-slate-800 dark:to-amber-950/40">
+                <div class="w-14 h-14 rounded-full bg-amber-600/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-2">
+                  <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">The University of Sydney</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Sydney &middot; New South Wales, Australia</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-amber-700 dark:text-amber-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-amber-200 dark:border-amber-800 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: sydney.jpg
+                </span>
+              </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400 uppercase">Feb 2025 &middot; Sydney, Australia</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-amber-100/70 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300">University Immersion</span>
+                </div>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  The University of Sydney Academic Immersion &amp; Lab Visits
+                </h2>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
+                  Host: The University of Sydney (Camperdown Campus)
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
+                  Participated in university lectures and laboratory tours exploring Australian biodiversity, biomedical research infrastructures, and scientific research methodologies. Toured the Macleay Museum collections observing comparative historical zoological specimens.
+                </p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Lab &amp; Museum Inquiries</span>
+                    <span class="text-[11px] text-slate-500">Explored historical specimen conservation and modern bio-analytical setups.</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Official Certification</span>
+                    <span class="text-[11px] text-slate-500">Awarded Certificate of Completion upon academic curriculum fulfillment.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Location: Sydney, NSW, Australia</span>
+                <span class="text-amber-600 dark:text-amber-400 font-semibold">Certificate Awarded</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CARD 4: Gaoligongshan Field Study -->
+        <article id="gaoligongshan" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="yunnan">
+          <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
+              <img src="assets/images/gaoligongshan.jpg" 
+                   alt="Gaoligongshan Field Study" 
+                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   onload="this.classList.remove('hidden'); const p = document.getElementById('gaoligong-thumb'); if (p) p.classList.add('hidden');"
+                   onerror="this.classList.add('hidden'); const p = document.getElementById('gaoligong-thumb'); if (p) p.classList.remove('hidden');">
+              <div id="gaoligong-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-emerald-50/80 to-teal-100/50 dark:from-slate-800 dark:to-emerald-950/40">
+                <div class="w-14 h-14 rounded-full bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
+                  <i data-lucide="mountain" class="w-7 h-7"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Gaoligongshan Mountain</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Western Yunnan, China</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: gaoligongshan.jpg
+                </span>
+              </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase">Field Expedition &middot; Western Yunnan</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-100/70 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300">Biodiversity Hotspot</span>
+                </div>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  Gaoligongshan Montane Ecological Transect
+                </h2>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
+                  Location: Gaoligong National Nature Reserve &middot; Nujiang Valley
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
+                  Field transect surveying vertical ecological zonation spanning subtropical broadleaf forests to high-altitude humid cloud forests. Observed epiphytic orchid strategies, montane moss adaptations to perennial mist, and alpine entomological diversity.
+                </p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Microclimate Transects</span>
+                    <span class="text-[11px] text-slate-500">Tracked ambient temperature and humidity shifts across elevation gradients.</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Specimen Observation</span>
+                    <span class="text-[11px] text-slate-500">Non-invasive photographic documentation of endemic arthropods and fungi.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Elevation: 1,800m - 3,200m</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Field Survey Log</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CARD 5: Dianchi Lake Wetland Observation -->
+        <article id="dianchi" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="yunnan">
+          <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
+              <img src="assets/images/dianchi.jpg" 
+                   alt="Dianchi Lake Wetland Field Observation" 
+                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   onload="this.classList.remove('hidden'); const p = document.getElementById('dianchi-thumb'); if (p) p.classList.add('hidden');"
+                   onerror="this.classList.add('hidden'); const p = document.getElementById('dianchi-thumb'); if (p) p.classList.remove('hidden');">
+              <div id="dianchi-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-cyan-50/80 to-teal-100/50 dark:from-slate-800 dark:to-cyan-950/40">
+                <div class="w-14 h-14 rounded-full bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
+                  <i data-lucide="waves" class="w-7 h-7"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Dianchi Lake Wetlands</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Kunming &middot; Yunnan, China</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-cyan-700 dark:text-cyan-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-cyan-200 dark:border-cyan-800 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: dianchi.jpg
+                </span>
+              </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-mono font-bold text-cyan-600 dark:text-cyan-400 uppercase">Wetland Ecology &middot; Longitudinal Study</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-cyan-100/70 dark:bg-cyan-900/40 text-cyan-800 dark:text-cyan-300">Lacustrine Ecology</span>
+                </div>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  Dianchi Wetland Ecosystem &amp; Avian Wintering Dynamics
+                </h2>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
+                  Location: Kunming Dianchi Riparian Wetlands
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
+                  Multi-season field monitoring of wintering Black-Headed Gulls (<em>Chroicocephalus ridibundus</em>) migrating from Siberia. Correlated flock foraging density with aquatic vegetation belts, macrophyte coverage, and shoreline eutrophication mitigation efforts.
+                </p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Avian Flight &amp; Ethology</span>
+                    <span class="text-[11px] text-slate-500">Documented flock coordination, thermal soaring, and foraging dynamics.</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Water Quality Indicators</span>
+                    <span class="text-[11px] text-slate-500">Observed correlation between benthic algae, macro-invertebrates, and fish health.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Subject: Chroicocephalus ridibundus</span>
+                <span class="text-cyan-600 dark:text-cyan-400 font-semibold">Seasonal Ethology Log</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CARD 6: Xishuangbanna Rainforest -->
+        <article id="xishuangbanna" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="yunnan">
+          <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
+              <img src="assets/images/xishuangbanna.jpg" 
+                   alt="Xishuangbanna Tropical Rainforest" 
+                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   onload="this.classList.remove('hidden'); const p = document.getElementById('banna-thumb'); if (p) p.classList.add('hidden');"
+                   onerror="this.classList.add('hidden'); const p = document.getElementById('banna-thumb'); if (p) p.classList.remove('hidden');">
+              <div id="banna-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-emerald-50/80 to-amber-100/50 dark:from-slate-800 dark:to-emerald-950/40">
+                <div class="w-14 h-14 rounded-full bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
+                  <i data-lucide="trees" class="w-7 h-7"></i>
+                </div>
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Xishuangbanna Rainforest</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Southern Yunnan, China</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 mt-2">
+                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: xishuangbanna.jpg
+                </span>
+              </div>
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase">Tropical Fieldwork &middot; Southern Yunnan</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-100/70 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300">Canopy Ecology</span>
+                </div>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  Xishuangbanna Tropical Rainforest &amp; Nocturnal Ethology
+                </h2>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
+                  Location: Xishuangbanna Tropical Botanical Basin
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
+                  Investigated primary tropical rainforest structural architecture: buttress root buttresses, strangler fig lattice enclosures, and cauliflorous flowering. Conducted nocturnal field walks utilizing 365nm UV torches to locate bio-fluorescent scorpions, phasmids, and praying mantises.
+                </p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">UV Bio-Fluorescence</span>
+                    <span class="text-[11px] text-slate-500">Excitation of beta-carboline molecules in scorpion cuticles under long-wave UV.</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Canopy Epiphytes</span>
+                    <span class="text-[11px] text-slate-500">Micro-ecosystem humus baskets formed by *Asplenium nidus* (Bird's nest fern).</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Habitat: Lowland Monsoon Rainforest</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Field Survey Log</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER & CONTACT ==================== -->
+  <footer id="contact" class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-12 pb-10 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <span class="font-bold text-lg text-slate-900 dark:text-white">Zhuoli Yang (杨卓力)</span>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">High School Class of 2027 &middot; Personal Space &amp; Visual Works</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="copy-email-btn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-slate-700 dark:text-slate-200 text-xs font-medium border border-slate-200 dark:border-slate-700 transition-colors">
+            <i data-lucide="copy" class="w-3.5 h-3.5 text-emerald-600"></i>
+            yangzhuoli2009@163.com
+          </button>
+          <a href="mailto:yangzhuoli2009@163.com" class="p-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors" title="Send Email">
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 dark:text-slate-500">
+        <p>&copy; 2026 Zhuoli Yang (杨卓力). All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Home</a>
+          <a href="projects.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">All Projects</a>
+          <a href="footprint.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Footprint</a>
+          <a href="gallery.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Gallery</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Copy -->
+  <div id="copy-toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    Email copied to clipboard!
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" type="button" aria-label="Back to Top" class="fixed bottom-6 left-6 z-40 p-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 shadow-lg hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/50 transition-all duration-300 opacity-0 pointer-events-none backdrop-blur-md">
+    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js?v=5"></script>
+</body>
+</html>
