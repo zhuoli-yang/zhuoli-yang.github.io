@@ -255,17 +255,35 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `
     },
-    'cuticle': {
-      title: 'Reptilian Scales & Cuticular Architecture: Functional Morphology',
-      category: 'Functional Morphology & Integumentary Systems',
+    'snake': {
+      title: 'Albino Corn Snake Locomotion & Epidermal Architecture',
+      category: 'Herpetology & Squamate Kinematics',
       content: `
         <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-          <p><strong>Evolutionary Divergence:</strong> Comparative inquiry examining how squamates and arthropods solved the biomechanical challenge of terrestrial desiccation and mechanical abrasion while preserving dynamic locomotion.</p>
+          <p><strong>Kinematic Inquiry:</strong> In <em>Pantherophis guttatus</em>, locomotion across varied topography relies on specialized friction mechanics between ventral scutes and terrestrial or arboreal substrates.</p>
+          
           <div class="p-4 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
-            <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-1">Squamate Epidermal Kinematics</h4>
-            <p class="text-xs">In <em>Pantherophis guttatus</em>, overlapping beta-keratin scales generate anisotropic friction: high resistance against posterior slip combined with low resistance during anterior glide, enabling rectilinear locomotion along vertical substrates.</p>
+            <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-1">Directional Frictional Anisotropy</h4>
+            <p class="text-xs">Microscopic caudal-facing edges of keratinous scutes produce high friction against posterior movement (preventing rollback during climbing) while yielding low resistance during forward rectilinear glide.</p>
           </div>
-          <p><strong>Chitinous Sclerotization:</strong> Contrastingly, arthropod integuments leverage layered alpha-chitin microfibrils embedded in a cross-linked sclerotin matrix, combining rigid structural plates with flexible arthrodial membranes for articulation.</p>
+
+          <p><strong>Multi-Vertebral Articulation:</strong> Coordinated muscle contraction sequences propagate undulatory waves across hundreds of pre-cloacal vertebrae, creating stable purchase around branches without requiring rigid appendicular support.</p>
+        </div>
+      `
+    },
+    'turtle': {
+      title: 'Common Snapping Turtle Morphology & Ambush Biomechanics',
+      category: 'Herpetology & Testudines Morphology',
+      content: `
+        <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+          <p><strong>Morphological Adaptations:</strong> The common snapping turtle (<em>Chelydra serpentina</em>) represents a remarkable evolutionary divergence from typical heavy-shelled chelonians.</p>
+          
+          <div class="p-4 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800">
+            <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">Plastron Reduction & Mobility</h4>
+            <p class="text-xs">Unlike box turtles, <em>Chelydra</em> possesses a greatly reduced, cross-shaped plastron. This trade-off drastically decreases defensive retraction capability but grants extensive range of motion to powerful muscular limbs for benthic stalking.</p>
+          </div>
+
+          <p><strong>Cervical Extension Dynamics:</strong> A hyper-flexible cervical vertebral column allows explosive forward strikes, while serrated keratinous rhamphotheca edges deliver instantaneous crushing shear force upon aquatic prey.</p>
         </div>
       `
     }

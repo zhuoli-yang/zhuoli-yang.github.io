@@ -14,7 +14,7 @@ A hands-on explorer bridging vertebrate osteology, vivarium microclimates, bioph
 - **Closed Vivarium Ecology**: 3+ years managing closed-loop terraria and aquatic habitats (reptiles, arachnids, aquatic species); established differential diagnostic protocols between water chemistry shifts and cutaneous/parasitic infections.
 - **Classical Saxophone**: Awarded **Grade 10 Distinction** by China National Opera and Dance Drama Theater (Certificate: `20240072010301051120007`) across a 10-year classical repertoire.
 - **Field Ethology & Macro Photography**: Optical macro documentation of insect cuticular structural colors, Yunnan montane cloud forest flora, and Dianchi lake wintering avian flight dynamics.
-- **Global Footprint**: WIMUN New York Delegate at United Nations Headquarters (Second Committee / ECOFIN), University of Sydney Academic Immersion, Harvard Student Agencies (HSA) Workshops.
+- **Global Footprint**: WIMUN New York Delegate at United Nations Headquarters (Second Committee / ECOFIN), University of Sydney Educational Tour, Harvard Student Agencies (HSA) Workshops.
 
 ### Standardized Testing & Language
 - **TOEFL iBT Official**: **93 / 120** (Test Date: Oct 11, 2025)
@@ -22,7 +22,7 @@ A hands-on explorer bridging vertebrate osteology, vivarium microclimates, bioph
 
 ### Key Pages
 - **Home (`index.html`)**: Overview, featured highlights, academic profile, Curriculum Vitae (CV).
-- **Works Archive (`projects.html`)**: Interactive galleries for 6 biological specimen and habitat projects.
+- **Works Archive (`projects.html`)**: Interactive galleries for 5 biological specimen, reptile kinematics, and habitat projects.
 - **Global Footprint (`footprint.html`)**: International summits and regional field expedition journals.
 - **Arts & Gallery (`gallery.html`)**: 10-year classical saxophone journey and curated 12-slot nature photography.
 
