@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -131,10 +131,10 @@
           Creative Balance &middot; Complete Portfolio
         </span>
         <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
-          Saxophone Music &amp; Visual Arts
+          Saxophone Music &amp; Photo Gallery
         </h1>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
-          Documenting ten years of disciplined saxophone study alongside creative photography exploring architectural geometry, marine underwater light, urban streetscapes, and optical physics.
+          Documenting ten years of dedicated saxophone practice alongside personal photography from travel, outdoor adventures, hands-on hobbies, and everyday life.
         </p>
       </div>
 
@@ -153,8 +153,8 @@
           <span class="text-lg font-bold text-slate-900 dark:text-white">Alto (Vandoren)</span>
         </div>
         <div>
-          <span class="text-[10px] font-mono uppercase text-slate-400 block">Visual Studies</span>
-          <span class="text-2xl font-bold font-mono text-cyan-600 dark:text-cyan-400">8 Curated Works</span>
+          <span class="text-[10px] font-mono uppercase text-slate-400 block">Photo Gallery</span>
+          <span class="text-2xl font-bold font-mono text-cyan-600 dark:text-cyan-400">8 Curated Photos</span>
         </div>
       </div>
 
@@ -170,7 +170,7 @@
           Saxophone Music (1)
         </button>
         <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="photography">
-          Visual Arts &amp; Photography (1)
+          Photo Gallery (1)
         </button>
       </div>
 
@@ -326,44 +326,41 @@
 
       </section>
 
-      <!-- ==================== SECTION 2: 8-SLOT CURATED VISUAL ARTS & PHOTOGRAPHY ==================== -->
+      <!-- ==================== SECTION 2: 8-PHOTO CURATED LIFE & NATURE GALLERY ==================== -->
       <section id="photography" class="project-card" data-category="photography">
         
         <div class="max-w-3xl mb-8">
-          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Visual Perspectives &middot; Creative Studies</span>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Life Moments &middot; Photo Gallery</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">
-            Curated Visual Archive: Architecture, Optics &amp; Landscapes
+            Photo Gallery: Travel, Outdoors &amp; Everyday Life
           </h2>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-            An 8-work visual gallery exploring monumental architectural geometry, marine sub-surface optics, nocturnal street illumination, natural earth sculptures, and optical physics. Click any photograph to open the full-screen Lightbox.
+            Snapshots capturing memorable travel moments, outdoor adventures, hands-on hobbies, and everyday life. Click any photograph to view in full size.
           </p>
         </div>
 
         <!-- 8-Photo Curated Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          <!-- PHOTO 1: Paris Eiffel Tower Architectural Geometry -->
+          <!-- PHOTO 1: Paris Eiffel Tower -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/paris_eiffel.webp" 
-                   alt="Eiffel Tower Monumental Geometry &amp; Perspective" 
+                   alt="Zhuoli Yang at the Eiffel Tower in Paris" 
                    data-gallery="gallery"
-                   data-title="Eiffel Tower Monumental Geometry &amp; Perspective"
-                   data-caption="Architectural study of cast-iron lattice geometry and monumental urban perspective in Paris."
+                   data-title="Visiting Paris &amp; the Eiffel Tower"
+                   data-caption="Standing before the iconic Eiffel Tower on a clear, sunny summer day during my visit to Paris."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Architecture</span>
+                  <span>Travel</span>
                   <span>Paris &middot; France</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Structural Iron &amp; Geometry</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Visiting the Eiffel Tower</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Symmetrical linear perspective emphasizing mathematical symmetry and historic industrial engineering.
+                  Standing before the iconic Eiffel Tower on a clear, sunny summer day during my visit to Paris.
                 </p>
               </div>
             </div>
@@ -373,186 +370,165 @@
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/scuba_diving.webp" 
-                   alt="Ocean Scuba Diving &amp; Coral Reefs" 
+                   alt="Zhuoli Yang Scuba Diving on an Underwater Swing" 
                    data-gallery="gallery"
-                   data-title="Ocean Scuba Diving &amp; Coral Reefs"
-                   data-caption="Swimming through clear open water, watching rays of sunlight pierce the blue ocean depths."
+                   data-title="Scuba Diving on an Underwater Swing"
+                   data-caption="Diving into the open ocean in full scuba gear and sitting on an underwater swing."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Ocean Life</span>
+                  <span>Adventure</span>
                   <span>Scuba Diving</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Sunlight in Deep Blue Waters</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Underwater Scuba Swing</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Capturing calm open-water views and shafts of tropical sunlight filtering down through ocean waters.
+                  Exploring the open ocean in full scuba gear and sitting on an underwater swing surrounded by deep blue water.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- PHOTO 3: Times Square Nocturnal Illumination -->
+          <!-- PHOTO 3: Times Square at Night -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/times_square_art.webp" 
-                   alt="Times Square Nocturnal Illumination" 
+                   alt="Zhuoli Yang in Times Square, New York" 
                    data-gallery="gallery"
-                   data-title="Times Square Nocturnal Illumination &amp; Urban Pulse"
-                   data-caption="Nocturnal street composition capturing neon luminescence, architectural density, and urban rhythm."
+                   data-title="Times Square at Night, New York City"
+                   data-caption="Standing in Times Square in the evening, surrounded by glowing neon billboards and bustling streets."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Urban Night</span>
+                  <span>Travel</span>
                   <span>New York, NY</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Nocturnal Radiance &amp; Urban Pulse</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Times Square at Night</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  High-contrast street photography balancing multi-screen luminescence against the vibrant energy of Broadway.
+                  Walking through Times Square in the evening, surrounded by the bright billboard lights and vibrant street energy.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- PHOTO 4: Highland Cypress Lake & Riparian Angling -->
+          <!-- PHOTO 4: Lakeside Fishing -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/wetland_angling.webp" 
-                   alt="Highland Cypress Lake Angling Landscape" 
+                   alt="Zhuoli Yang Lakeside Fishing" 
                    data-gallery="gallery"
-                   data-title="Highland Cypress Lake &amp; Riparian Angling Landscape"
-                   data-caption="Atmospheric landscape perspective capturing calm water reflections among emergent swamp cypresses."
+                   data-title="Lakeside Fishing on a Quiet Afternoon"
+                   data-caption="Enjoying a quiet afternoon by the water, casting a fishing line and admiring the trees."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Landscape</span>
-                  <span>Highland Wetland</span>
+                  <span>Outdoor Life</span>
+                  <span>Lakeside Angling</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Riparian Stillness &amp; Reflection</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Lakeside Fishing Afternoon</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Quiet contemplative outdoor study framing vertical tree silhouettes against smooth mirror-like lake water.
+                  Enjoying a quiet afternoon by the water, casting a fishing line and admiring the reflections among the trees.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- PHOTO 5: Layered Rock Formations -->
+          <!-- PHOTO 5: Yunnan Mountain Rock Formations -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/geological_strata.webp" 
-                   alt="Naturally Curved Rock Formations" 
+                   alt="Weathered Rock Formations in Yunnan" 
                    data-gallery="gallery"
-                   data-title="Naturally Curved Rock Formations"
-                   data-caption="Naturally curved sedimentary rock layers showing beautiful contours shaped over centuries."
+                   data-title="Naturally Weathered Rock Formations in Yunnan"
+                   data-caption="Distinctive curved ridges and weathered stone patterns carved across a mountain rock face in Yunnan."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Nature Art</span>
-                  <span>Canyon Formations</span>
+                  <span>Nature Scenery</span>
+                  <span>Yunnan Mountain Hike</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Curved Canyon Stone Layers</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Yunnan Weathered Rock Cliffs</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Smooth, wave-like rock patterns carved into stone cliffs, showing natural rhythmic lines in the landscape.
+                  Naturally carved stone patterns and rhythmic contours captured along the mountain cliffs during an outdoor hike.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- PHOTO 6: Morning Dewdrops on Leaves -->
+          <!-- PHOTO 6: Finished Fish Skeletons in Cases -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/photo_droplets.webp" 
-                   alt="Morning Dewdrops &amp; Natural Lenses" 
+                   alt="Completed Fish Skeletons in Acrylic Cases" 
                    data-gallery="gallery"
-                   data-title="Morning Dewdrops &amp; Natural Lenses"
-                   data-caption="Clear morning water droplets resting on garden leaves, reflecting tiny miniature views of the garden."
+                   data-title="Finished Fish Skeleton Articulations in Display Cases"
+                   data-caption="Two completed fish skeleton articulators carefully assembled and showcased inside custom acrylic display boxes."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Macro Photography</span>
-                  <span>Garden Nature</span>
+                  <span>DIY Craft</span>
+                  <span>Bone Articulation</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Dewdrops on Green Leaves</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Fish Skeletons in Display Cases</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Close-up capture of fresh morning droplets resting like tiny, crystal-clear glass marbles on plant foliage.
+                  Two completed fish skeletons carefully assembled from individual bones and preserved inside custom acrylic display boxes.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- PHOTO 7: Beetle Iridescent Coloration -->
+          <!-- PHOTO 7: Desert Scorpion Feeding in Terrarium -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/photo_cuticle.webp" 
-                   alt="Shimmering Metallic Beetle Colors" 
+                   alt="Pet Desert Scorpion in Terrarium" 
                    data-gallery="gallery"
-                   data-title="Shimmering Metallic Beetle Colors"
-                   data-caption="Macro view of a beetle's wing case showing how surface light creates shifting emerald and gold highlights."
+                   data-title="Desert Scorpion Feeding in Its Habitat"
+                   data-caption="My desert scorpion active on the sand and gravel substrate of its terrarium during feeding time."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Macro Detail</span>
-                  <span>Insect Colors</span>
+                  <span>Pet Care</span>
+                  <span>Desert Terrarium</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Shimmering Beetle Shell</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Desert Scorpion in Its Habitat</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Macro study capturing the metallic emerald and golden colors that shine when sunlight hits a beetle's shell.
+                  Observing my desert scorpion active on the gravel and sand of its terrarium during evening feeding.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- PHOTO 8: Domestic Warmth & Companion Portrait -->
+          <!-- PHOTO 8: Puppy Resting on Hand -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
             <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/companion_pet.webp" 
-                   alt="Domestic Warmth &amp; Companion Portrait" 
+                   alt="White Puppy Resting on Hand" 
                    data-gallery="gallery"
-                   data-title="Domestic Warmth &amp; Companion Portrait"
-                   data-caption="Candid perspective of domestic pet interaction, capturing quiet companionship and natural expression."
+                   data-title="Affectionate Puppy Resting on My Hand"
+                   data-caption="A gentle white puppy resting its chin comfortably in my palm on the patio."
                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
-              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
-                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
-              </div>
             </div>
             <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>Life Perspective</span>
-                  <span>Companion Portrait</span>
+                  <span>Daily Life</span>
+                  <span>Puppy Companion</span>
                 </div>
-                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Everyday Warmth &amp; Expression</h4>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white mt-1">Puppy Resting on My Hand</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
-                  Informal portrait study capturing domestic tranquility, trust, and natural curiosity in everyday life.
+                  A sweet, quiet moment with an affectionate white puppy resting its head comfortably in my hand.
                 </p>
               </div>
             </div>
@@ -607,6 +583,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>
