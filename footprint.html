@@ -184,21 +184,60 @@
         <article id="wimun" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="north-america">
           <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-              <img src="assets/images/wimun.webp" 
+            <div class="md:col-span-5 relative min-h-[300px] md:min-h-[360px] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
+              <img src="assets/images/wimun_switzerland.webp" 
                    alt="WIMUN New York UN Headquarters" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('wimun-fp-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('wimun-fp-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="wimun-fp-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-blue-50/80 to-blue-100/50 dark:from-slate-800 dark:to-blue-950/40">
-                <div class="w-14 h-14 rounded-full bg-blue-600/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-2">
-                  <i data-lucide="globe" class="w-7 h-7"></i>
-                </div>
-                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">United Nations Headquarters</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">New York City, USA</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-blue-700 dark:text-blue-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-800 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: wimun.jpg
-                </span>
+                   id="wimun-main-img"
+                   data-gallery="wimun"
+                   data-title="WFUNA International Model UN (WIMUN 2024) &middot; UN Headquarters"
+                   data-caption="Student Delegate representing Switzerland at the United Nations General Assembly."
+                   class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                   onclick="openLightboxFromElement(this)">
+
+              <!-- Floating Multi-Photo Indicator -->
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                <i data-lucide="images" class="w-3.5 h-3.5 text-blue-400"></i>
+                <span class="font-bold">4 Photos</span>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Strip -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                <button type="button" 
+                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-blue-400 shadow-xs transition-all opacity-100"
+                        data-target="wimun-main-img"
+                        data-src="assets/images/wimun_switzerland.webp"
+                        data-title="Switzerland Delegation Desk Placard"
+                        data-caption="Seated at the Switzerland delegate desk in the UN conference room."
+                        title="Switzerland Desk">
+                  <img src="assets/images/wimun_switzerland.webp" alt="Switzerland Desk" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="wimun-main-img"
+                        data-src="assets/images/wimun_podium.webp"
+                        data-title="General Assembly Podium Speech"
+                        data-caption="Delivering committee speech at the UN General Assembly podium."
+                        title="Podium Speech">
+                  <img src="assets/images/wimun_podium.webp" alt="Podium Speech" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="wimun-main-img"
+                        data-src="assets/images/times_square.webp"
+                        data-title="Times Square New York City"
+                        data-caption="NYC cultural immersion and evening study sessions."
+                        title="Times Square NYC">
+                  <img src="assets/images/times_square.webp" alt="Times Square NYC" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="wimun-main-img"
+                        data-src="assets/images/wimun_delegates.webp"
+                        data-title="UN Committee Negotiations"
+                        data-caption="Diplomatic consultations and draft resolution consensus building."
+                        title="Committee Session">
+                  <img src="assets/images/wimun_delegates.webp" alt="Committee Session" class="w-full h-full object-cover">
+                </button>
               </div>
             </div>
 
@@ -244,21 +283,42 @@
         <article id="harvard" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="north-america">
           <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-              <img src="assets/images/harvard.webp" 
+            <div class="md:col-span-5 relative min-h-[300px] md:min-h-[360px] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
+              <img src="assets/images/harvard_certificate.webp" 
                    alt="Harvard Student Agencies Workshop" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('harvard-fp-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('harvard-fp-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="harvard-fp-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-rose-50/80 to-rose-100/50 dark:from-slate-800 dark:to-rose-950/40">
-                <div class="w-14 h-14 rounded-full bg-rose-600/10 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-2">
-                  <i data-lucide="book-open" class="w-7 h-7"></i>
-                </div>
-                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Harvard Student Agencies</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">Cambridge &middot; Boston, USA</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-rose-700 dark:text-rose-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-rose-200 dark:border-rose-800 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: harvard.jpg
-                </span>
+                   id="harvard-main-img"
+                   data-gallery="harvard"
+                   data-title="Harvard Student Agencies Innovation Workshops"
+                   data-caption="Official Certificate of Completion awarded by HSA Trademark Tours with undergraduate mentor."
+                   class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                   onclick="openLightboxFromElement(this)">
+
+              <!-- Floating Multi-Photo Indicator -->
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                <i data-lucide="images" class="w-3.5 h-3.5 text-rose-400"></i>
+                <span class="font-bold">2 Photos</span>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Strip -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                <button type="button" 
+                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-rose-400 shadow-xs transition-all opacity-100"
+                        data-target="harvard-main-img"
+                        data-src="assets/images/harvard_certificate.webp"
+                        data-title="Harvard Official Certificate"
+                        data-caption="Holding official Certificate of Completion with instructor."
+                        title="Certificate Award">
+                  <img src="assets/images/harvard_certificate.webp" alt="Certificate Award" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="harvard-main-img"
+                        data-src="assets/images/harvard_campus.webp"
+                        data-title="Harvard Yard Historic Campus"
+                        data-caption="Cambridge academic immersion and collegiate workshop sessions."
+                        title="Harvard Yard Campus">
+                  <img src="assets/images/harvard_campus.webp" alt="Harvard Yard Campus" class="w-full h-full object-cover">
+                </button>
               </div>
             </div>
 
@@ -304,21 +364,51 @@
         <article id="sydney" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="oceania">
           <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-              <img src="assets/images/sydney.webp" 
-                   alt="The University of Sydney Campus" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('sydney-fp-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('sydney-fp-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="sydney-fp-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-amber-50/80 to-amber-100/50 dark:from-slate-800 dark:to-amber-950/40">
-                <div class="w-14 h-14 rounded-full bg-amber-600/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-2">
-                  <i data-lucide="graduation-cap" class="w-7 h-7"></i>
-                </div>
-                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">The University of Sydney</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">Sydney &middot; New South Wales, Australia</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-amber-700 dark:text-amber-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-amber-200 dark:border-amber-800 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: sydney.jpg
-                </span>
+            <div class="md:col-span-5 relative min-h-[300px] md:min-h-[360px] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
+              <img src="assets/images/sydney_opera.webp" 
+                   alt="The University of Sydney & Australia" 
+                   id="sydney-main-img"
+                   data-gallery="sydney"
+                   data-title="The University of Sydney & Oceanic Marine Exploration"
+                   data-caption="Academic immersion in Sydney alongside marine exploration in the Pacific."
+                   class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                   onclick="openLightboxFromElement(this)">
+
+              <!-- Floating Multi-Photo Indicator -->
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                <i data-lucide="images" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span class="font-bold">3 Photos</span>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Strip -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                <button type="button" 
+                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-amber-400 shadow-xs transition-all opacity-100"
+                        data-target="sydney-main-img"
+                        data-src="assets/images/sydney_opera.webp"
+                        data-title="Sydney Opera House & Harbour"
+                        data-caption="Harbour maritime ecology and coastal oceanography perspective."
+                        title="Opera House & Harbour">
+                  <img src="assets/images/sydney_opera.webp" alt="Opera House" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="sydney-main-img"
+                        data-src="assets/images/sydney_quad.webp"
+                        data-title="USYD Sandstone Quadrangle"
+                        data-caption="Historic neo-gothic quadrangle and biological research faculty."
+                        title="Sandstone Quadrangle">
+                  <img src="assets/images/sydney_quad.webp" alt="Sandstone Quadrangle" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="sydney-main-img"
+                        data-src="assets/images/scuba_diving.webp"
+                        data-title="Pacific Scuba Diving"
+                        data-caption="Open-water scuba diving exploring Pacific benthic ecosystems."
+                        title="Pacific Scuba Diving">
+                  <img src="assets/images/scuba_diving.webp" alt="Scuba Diving" class="w-full h-full object-cover">
+                </button>
               </div>
             </div>
 
@@ -360,25 +450,46 @@
           </div>
         </article>
 
-        <!-- CARD 4: Gaoligongshan Field Study -->
+        <!-- CARD 4: Gaoligongshan & Tiger Leaping Gorge Field Study -->
         <article id="gaoligongshan" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="yunnan">
           <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-              <img src="assets/images/gaoligongshan.webp" 
-                   alt="Gaoligongshan Field Study" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('gaoligong-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('gaoligong-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="gaoligong-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-emerald-50/80 to-teal-100/50 dark:from-slate-800 dark:to-emerald-950/40">
-                <div class="w-14 h-14 rounded-full bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
-                  <i data-lucide="mountain" class="w-7 h-7"></i>
-                </div>
-                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Gaoligongshan Mountain</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">Western Yunnan, China</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: gaoligongshan.jpg
-                </span>
+            <div class="md:col-span-5 relative min-h-[300px] md:min-h-[360px] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
+              <img src="assets/images/tiger_leaping_gorge.webp" 
+                   alt="Tiger Leaping Gorge & Gaoligongshan" 
+                   id="gaoligong-main-img"
+                   data-gallery="gaoligong"
+                   data-title="Western Yunnan Ecological Expedition: Tiger Leaping Gorge & Gaoligongshan"
+                   data-caption="Torrential hydrology and montane vertical ecological transects."
+                   class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                   onclick="openLightboxFromElement(this)">
+
+              <!-- Floating Multi-Photo Indicator -->
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                <i data-lucide="images" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span class="font-bold">2 Photos</span>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Strip -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                <button type="button" 
+                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-emerald-400 shadow-xs transition-all opacity-100"
+                        data-target="gaoligong-main-img"
+                        data-src="assets/images/tiger_leaping_gorge.webp"
+                        data-title="Tiger Leaping Gorge Rushing Torrents"
+                        data-caption="Violent hydraulic forces sculpting granite canyon topography."
+                        title="Tiger Leaping Gorge">
+                  <img src="assets/images/tiger_leaping_gorge.webp" alt="Tiger Leaping Gorge" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="gaoligong-main-img"
+                        data-src="assets/images/gaoligongshan.webp"
+                        data-title="Gaoligongshan Cloud Forest"
+                        data-caption="Vertical biodiversity transects across alpine ridges and ravines."
+                        title="Gaoligong Mountain">
+                  <img src="assets/images/gaoligongshan.webp" alt="Gaoligong Mountain" class="w-full h-full object-cover">
+                </button>
               </div>
             </div>
 
@@ -389,14 +500,14 @@
                   <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-100/70 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300">Biodiversity Hotspot</span>
                 </div>
                 <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
-                  Gaoligongshan Montane Ecological Transect
+                  Gaoligongshan &amp; Tiger Leaping Gorge Field Transects
                 </h2>
                 <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
-                  Location: Gaoligong National Nature Reserve &middot; Nujiang Valley
+                  Location: Gaoligong National Nature Reserve &middot; Jinsha River Canyon
                 </div>
                 
                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
-                  Field transect surveying vertical ecological zonation spanning subtropical broadleaf forests to high-altitude humid cloud forests. Observed epiphytic orchid strategies, montane moss adaptations to perennial mist, and alpine entomological diversity.
+                  Field transects surveying vertical ecological zonation spanning subtropical broadleaf forests to high-altitude humid cloud forests. Observed epiphytic orchid strategies, montane moss adaptations to perennial mist, and torrential fluvial hydrology.
                 </p>
 
                 <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -406,7 +517,7 @@
                   </div>
                   <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
                     <span class="font-semibold text-slate-800 dark:text-slate-200 block">Specimen Observation</span>
-                    <span class="text-[11px] text-slate-500">Non-invasive photographic documentation of endemic arthropods and fungi.</span>
+                    <span class="text-[11px] text-slate-500">Non-invasive photographic documentation of endemic arthropods and flora.</span>
                   </div>
                 </div>
               </div>
@@ -424,21 +535,42 @@
         <article id="dianchi" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="yunnan">
           <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-              <img src="assets/images/dianchi.webp" 
+            <div class="md:col-span-5 relative min-h-[300px] md:min-h-[360px] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
+              <img src="assets/images/dianchi_gulls.webp" 
                    alt="Dianchi Lake Wetland Field Observation" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('dianchi-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('dianchi-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="dianchi-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-cyan-50/80 to-teal-100/50 dark:from-slate-800 dark:to-cyan-950/40">
-                <div class="w-14 h-14 rounded-full bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
-                  <i data-lucide="waves" class="w-7 h-7"></i>
-                </div>
-                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Dianchi Lake Wetlands</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">Kunming &middot; Yunnan, China</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-cyan-700 dark:text-cyan-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-cyan-200 dark:border-cyan-800 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: dianchi.jpg
-                </span>
+                   id="dianchi-main-img"
+                   data-gallery="dianchi"
+                   data-title="Dianchi Wetland Lacustrine Ecology & Avian Wintering Dynamics"
+                   data-caption="Black-Headed Gulls (Chroicocephalus ridibundus) flight mechanics over Dianchi waters."
+                   class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                   onclick="openLightboxFromElement(this)">
+
+              <!-- Floating Multi-Photo Indicator -->
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                <i data-lucide="images" class="w-3.5 h-3.5 text-cyan-400"></i>
+                <span class="font-bold">2 Photos</span>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Strip -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                <button type="button" 
+                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-cyan-400 shadow-xs transition-all opacity-100"
+                        data-target="dianchi-main-img"
+                        data-src="assets/images/dianchi_gulls.webp"
+                        data-title="Black-Headed Gulls in Flight"
+                        data-caption="Wintering migratory gulls showcasing aerodynamic wing formation."
+                        title="Migratory Gulls">
+                  <img src="assets/images/dianchi_gulls.webp" alt="Migratory Gulls" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="dianchi-main-img"
+                        data-src="assets/images/dianchi.webp"
+                        data-title="Dianchi Wetland Shoreline"
+                        data-caption="Traditional riparian waterwheel and macrophyte restoration zone."
+                        title="Wetland Waterwheel">
+                  <img src="assets/images/dianchi.webp" alt="Wetland Shoreline" class="w-full h-full object-cover">
+                </button>
               </div>
             </div>
 
@@ -480,25 +612,46 @@
           </div>
         </article>
 
-        <!-- CARD 6: Xishuangbanna Rainforest -->
+        <!-- CARD 6: Xishuangbanna Rainforest & Wetland -->
         <article id="xishuangbanna" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="yunnan">
           <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <div class="md:col-span-5 relative aspect-[16/10] md:aspect-auto bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-              <img src="assets/images/xishuangbanna.webp" 
+            <div class="md:col-span-5 relative min-h-[300px] md:min-h-[360px] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
+              <img src="assets/images/field_wetland.webp" 
                    alt="Xishuangbanna Tropical Rainforest" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.02]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('banna-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('banna-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="banna-thumb" class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-emerald-50/80 to-amber-100/50 dark:from-slate-800 dark:to-emerald-950/40">
-                <div class="w-14 h-14 rounded-full bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
-                  <i data-lucide="trees" class="w-7 h-7"></i>
-                </div>
-                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Xishuangbanna Rainforest</span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">Southern Yunnan, China</span>
-                <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 mt-2">
-                  <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: xishuangbanna.jpg
-                </span>
+                   id="banna-main-img"
+                   data-gallery="banna"
+                   data-title="Tropical Rainforest & Wetland Biodiversity"
+                   data-caption="Pristine wetland water reflection and tropical forest canopy."
+                   class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                   onclick="openLightboxFromElement(this)">
+
+              <!-- Floating Multi-Photo Indicator -->
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                <i data-lucide="images" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span class="font-bold">2 Photos</span>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Strip -->
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                <button type="button" 
+                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-emerald-400 shadow-xs transition-all opacity-100"
+                        data-target="banna-main-img"
+                        data-src="assets/images/field_wetland.webp"
+                        data-title="Morning Wetland Mirror"
+                        data-caption="Serene wetland water surface mirroring cloud cover."
+                        title="Wetland Mirror">
+                  <img src="assets/images/field_wetland.webp" alt="Wetland Mirror" class="w-full h-full object-cover">
+                </button>
+                <button type="button" 
+                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                        data-target="banna-main-img"
+                        data-src="assets/images/xishuangbanna.webp"
+                        data-title="Tropical Rainforest Canopy"
+                        data-caption="Lush multi-tiered rainforest vegetation and epiphyte communities."
+                        title="Rainforest Canopy">
+                  <img src="assets/images/xishuangbanna.webp" alt="Rainforest Canopy" class="w-full h-full object-cover">
+                </button>
               </div>
             </div>
 
@@ -587,6 +740,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

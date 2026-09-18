@@ -189,17 +189,25 @@
               </span>
             </div>
 
-            <!-- Dedicated Portrait Photo Frame -->
-            <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center justify-center group mb-4">
+            <!-- Dedicated Portrait Photo Frame (Natural 3:4 Portrait Ratio) -->
+            <div class="relative w-full aspect-[3/4] max-h-[380px] sm:max-h-[420px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center justify-center group mb-3 shadow-inner">
               <img src="assets/images/avatar.webp" 
                    alt="Zhuoli Yang (杨卓力)" 
                    id="avatar-img"
-                   class="w-full h-full object-cover object-top hidden transition-transform duration-300 group-hover:scale-[1.02]"
+                   class="w-full h-full object-cover object-center transition-all duration-300 group-hover:scale-[1.02]"
                    onload="this.classList.remove('hidden'); const fb = document.getElementById('avatar-fallback'); if (fb) fb.classList.add('hidden');"
                    onerror="this.classList.add('hidden'); const fb = document.getElementById('avatar-fallback'); if (fb) fb.classList.remove('hidden');">
 
+              <!-- Dual Perspective Floating Badge -->
+              <div id="avatar-caption-badge" class="absolute bottom-2.5 left-2.5 right-2.5 px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium flex items-center justify-between border border-white/10 shadow-sm transition-opacity">
+                <span id="avatar-caption-text" class="flex items-center gap-1.5 truncate">
+                  <i data-lucide="user-check" class="w-3.5 h-3.5 text-emerald-400"></i> 学生标准肖像 &middot; High School Student
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider shrink-0">Official</span>
+              </div>
+
               <!-- Elegant Silhouette / Photo Placeholder Frame -->
-              <div id="avatar-fallback" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-b from-slate-50 to-emerald-50/40 dark:from-slate-800/50 dark:to-emerald-950/20">
+              <div id="avatar-fallback" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-b from-slate-50 to-emerald-50/40 dark:from-slate-800/50 dark:to-emerald-950/20 hidden">
                 <div class="w-16 h-16 rounded-full bg-white dark:bg-slate-800 border-2 border-emerald-500/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2 shadow-xs">
                   <i data-lucide="user" class="w-8 h-8 stroke-[1.5]"></i>
                 </div>
@@ -209,6 +217,18 @@
                   <i data-lucide="camera" class="w-3 h-3"></i> Portrait Slot &middot; avatar.jpg
                 </span>
               </div>
+            </div>
+
+            <!-- Dual-Role Interactive Switcher -->
+            <div class="flex items-center justify-center gap-1.5 p-1 bg-slate-100/80 dark:bg-slate-800/80 rounded-xl mb-4 border border-slate-200/60 dark:border-slate-700/60">
+              <button type="button" id="avatar-tab-student" class="avatar-tab-btn active flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs flex items-center justify-center gap-1.5" data-src="assets/images/avatar.webp" data-caption="&lt;i data-lucide=&quot;user-check&quot; class=&quot;w-3.5 h-3.5 text-emerald-400&quot;&gt;&lt;/i&gt; 学生标准肖像 &amp;middot; High School Student">
+                <i data-lucide="user" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i>
+                <span>学生肖像</span>
+              </button>
+              <button type="button" id="avatar-tab-wimun" class="avatar-tab-btn flex-1 py-1.5 px-2 rounded-lg text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center justify-center gap-1.5" data-src="assets/images/wimun_podium.webp" data-caption="&lt;i data-lucide=&quot;mic&quot; class=&quot;w-3.5 h-3.5 text-blue-400&quot;&gt;&lt;/i&gt; 联合国大会发言 &amp;middot; WIMUN UN Podium">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-blue-600 dark:text-blue-400"></i>
+                <span>模联讲台</span>
+              </button>
             </div>
 
             <!-- Profile Quick Facts -->
@@ -963,6 +983,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

@@ -185,21 +185,51 @@
 
         <!-- PROJECT 1: Hydrocynus goliath -->
         <article id="tigerfish" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="anatomy">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
             <img src="assets/images/tigerfish.webp" 
                  alt="Goliath Tigerfish Skeletal Articulation" 
-                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                 onload="this.classList.remove('hidden'); const p = document.getElementById('tigerfish-ph'); if (p) p.classList.add('hidden');"
-                 onerror="this.classList.add('hidden'); const p = document.getElementById('tigerfish-ph'); if (p) p.classList.remove('hidden');">
+                 id="tigerfish-main-img"
+                 data-gallery="tigerfish"
+                 data-title="Goliath Tigerfish Skeletal Reconstruction (Hydrocynus goliath)"
+                 data-caption="1:1 scale fully articulated osteocranium and axial skeleton in white display case."
+                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                 onclick="openLightboxFromElement(this)">
 
-            <div id="tigerfish-ph" class="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-emerald-50/70 to-teal-50/40 dark:from-slate-800 dark:to-emerald-950/40">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
-                <i data-lucide="fish" class="w-7 h-7"></i>
-              </div>
-              <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Hydrocynus goliath 1:1 Specimen</span>
-              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200/80 dark:border-emerald-800/60 mt-1.5">
-                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: tigerfish.jpg
-              </span>
+            <!-- Floating Multi-Photo Indicator -->
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+              <i data-lucide="images" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span class="font-bold">3 Photos</span>
+            </div>
+
+            <!-- Interactive Thumbnail Switcher Strip -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+              <button type="button" 
+                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-emerald-400 shadow-xs transition-all opacity-100"
+                      data-target="tigerfish-main-img"
+                      data-src="assets/images/tigerfish.webp"
+                      data-title="Goliath Tigerfish Skeletal Articulation"
+                      data-caption="1:1 scale articulated skeleton preserving native undulatory kinematics."
+                      title="Full Articulated Skeleton">
+                <img src="assets/images/tigerfish.webp" alt="Full Skeleton" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="tigerfish-main-img"
+                      data-src="assets/images/tigerfish_jaw.webp"
+                      data-title="Predatory Dentition & Jaw Mechanics"
+                      data-caption="Close-up of razor-sharp shearing teeth interlocking in opposing jaw grooves."
+                      title="Jaw & Teeth Close-Up">
+                <img src="assets/images/tigerfish_jaw.webp" alt="Jaw & Dentition" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="tigerfish-main-img"
+                      data-src="assets/images/fish_skull_profile.webp"
+                      data-title="Neurocranium & Suture Alignment"
+                      data-caption="Lateral view of cranial osteology and articulated gill arches."
+                      title="Neurocranium Profile">
+                <img src="assets/images/fish_skull_profile.webp" alt="Neurocranium Profile" class="w-full h-full object-cover">
+              </button>
             </div>
           </div>
 
@@ -242,21 +272,51 @@
 
         <!-- PROJECT 2: Carp Calibration -->
         <article id="carp-calibration" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="anatomy">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
-            <img src="assets/images/carp_calibration.webp" 
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
+            <img src="assets/images/carp_pinned.webp" 
                  alt="Crucian Carp Chemical Calibration" 
-                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                 onload="this.classList.remove('hidden'); const p = document.getElementById('carp-ph'); if (p) p.classList.add('hidden');"
-                 onerror="this.classList.add('hidden'); const p = document.getElementById('carp-ph'); if (p) p.classList.remove('hidden');">
+                 id="carp-main-img"
+                 data-gallery="carp"
+                 data-title="Crucian Carp Chemical & Saponification Calibration"
+                 data-caption="Dissection positioning and pin alignment on high-density foam board."
+                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                 onclick="openLightboxFromElement(this)">
 
-            <div id="carp-ph" class="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-emerald-50/70 to-blue-50/40 dark:from-slate-800 dark:to-emerald-950/40">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
-                <i data-lucide="flask-conical" class="w-7 h-7"></i>
-              </div>
-              <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Carassius carassius Chemical Trial</span>
-              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-700 dark:text-emerald-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-emerald-200/80 dark:border-emerald-800/60 mt-1.5">
-                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: carp_calibration.jpg
-              </span>
+            <!-- Floating Multi-Photo Indicator -->
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+              <i data-lucide="images" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span class="font-bold">3 Photos</span>
+            </div>
+
+            <!-- Interactive Thumbnail Switcher Strip -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+              <button type="button" 
+                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-emerald-400 shadow-xs transition-all opacity-100"
+                      data-target="carp-main-img"
+                      data-src="assets/images/carp_pinned.webp"
+                      data-title="Crucian Carp Specimen Pinning"
+                      data-caption="Initial foam positioning and needle alignment prior to chemical processing."
+                      title="Foam Pinning">
+                <img src="assets/images/carp_pinned.webp" alt="Foam Pinning" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="carp-main-img"
+                      data-src="assets/images/carp_solution.webp"
+                      data-title="NaOH Saponification Bath"
+                      data-caption="Gradual lipid saponification and connective tissue clearance in reagent solution."
+                      title="Chemical Solution Bath">
+                <img src="assets/images/carp_solution.webp" alt="Chemical Bath" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="carp-main-img"
+                      data-src="assets/images/fish_skeletons_tier.webp"
+                      data-title="Two-Tier Finished Specimen Showcase"
+                      data-caption="Dual articulated vertebrate skeletons mounted within sealed acrylic archival display."
+                      title="Two-Tier Display Box">
+                <img src="assets/images/fish_skeletons_tier.webp" alt="Two-Tier Showcase" class="w-full h-full object-cover">
+              </button>
             </div>
           </div>
 
@@ -294,21 +354,51 @@
 
         <!-- PROJECT 3: Vivarium Ecology -->
         <article id="vivarium" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="vivarium">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
             <img src="assets/images/vivarium.webp" 
                  alt="Closed Vivarium Ecosystem" 
-                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                 onload="this.classList.remove('hidden'); const p = document.getElementById('vivarium-ph'); if (p) p.classList.add('hidden');"
-                 onerror="this.classList.add('hidden'); const p = document.getElementById('vivarium-ph'); if (p) p.classList.remove('hidden');">
+                 id="vivarium-main-img"
+                 data-gallery="vivarium"
+                 data-title="Closed Rainforest Vivarium Ecosystem"
+                 data-caption="Bioactive micro-habitat with automated misting and layered drainage substrate."
+                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                 onclick="openLightboxFromElement(this)">
 
-            <div id="vivarium-ph" class="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-teal-50/70 to-cyan-50/40 dark:from-slate-800 dark:to-teal-950/40">
-              <div class="w-14 h-14 rounded-2xl bg-teal-600/10 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-2">
-                <i data-lucide="leaf" class="w-7 h-7"></i>
-              </div>
-              <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Vivarium Ecology &amp; Microclimates</span>
-              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-teal-700 dark:text-teal-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-teal-200/80 dark:border-teal-800/60 mt-1.5">
-                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: vivarium.jpg
-              </span>
+            <!-- Floating Multi-Photo Indicator -->
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+              <i data-lucide="images" class="w-3.5 h-3.5 text-teal-400"></i>
+              <span class="font-bold">3 Photos</span>
+            </div>
+
+            <!-- Interactive Thumbnail Switcher Strip -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+              <button type="button" 
+                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-teal-400 shadow-xs transition-all opacity-100"
+                      data-target="vivarium-main-img"
+                      data-src="assets/images/vivarium.webp"
+                      data-title="Rainforest Vivarium Full Habitat"
+                      data-caption="Multi-layered tropical microhabitat establishing stable circadian humidity."
+                      title="Full Vivarium">
+                <img src="assets/images/vivarium.webp" alt="Full Vivarium" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="vivarium-main-img"
+                      data-src="assets/images/vivarium_aquatic.webp"
+                      data-title="Micro-Misting & Epiphytic Flora"
+                      data-caption="Fine water droplet condensation over live mosses and tropical ferns."
+                      title="Misting & Epiphytes">
+                <img src="assets/images/vivarium_aquatic.webp" alt="Misting & Epiphytes" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="vivarium-main-img"
+                      data-src="assets/images/aquarium_desk.webp"
+                      data-title="Study Desk Micro-Ecology Station"
+                      data-caption="Continuous multi-season monitoring of diurnal microclimate variations."
+                      title="Desk Micro-Ecology">
+                <img src="assets/images/aquarium_desk.webp" alt="Desk Micro-Ecology" class="w-full h-full object-cover">
+              </button>
             </div>
           </div>
 
@@ -347,23 +437,53 @@
           </div>
         </article>
 
-        <!-- PROJECT 4: Orthopteran Biomechanics -->
+        <!-- PROJECT 4: Orthopteran & Arthropod Biomechanics -->
         <article id="biomechanics" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="biomechanics">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
-            <img src="assets/images/biomechanics.webp" 
-                 alt="Orthopteran Biomechanics" 
-                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                 onload="this.classList.remove('hidden'); const p = document.getElementById('biomechanics-ph'); if (p) p.classList.add('hidden');"
-                 onerror="this.classList.add('hidden'); const p = document.getElementById('biomechanics-ph'); if (p) p.classList.remove('hidden');">
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
+            <img src="assets/images/scorpion_macro.webp" 
+                 alt="Arthropod Biomechanics" 
+                 id="biomechanics-main-img"
+                 data-gallery="biomechanics"
+                 data-title="Desert Scorpion Biomechanics & Predatory Strike"
+                 data-caption="Macro perspective of cheliceral kinematics and metasomal defensive articulation."
+                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                 onclick="openLightboxFromElement(this)">
 
-            <div id="biomechanics-ph" class="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-cyan-50/70 to-blue-50/40 dark:from-slate-800 dark:to-cyan-950/40">
-              <div class="w-14 h-14 rounded-2xl bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
-                <i data-lucide="activity" class="w-7 h-7"></i>
-              </div>
-              <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Orthopteran Saltation &amp; Resilin</span>
-              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-cyan-700 dark:text-cyan-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-cyan-200/80 dark:border-cyan-800/60 mt-1.5">
-                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: biomechanics.jpg
-              </span>
+            <!-- Floating Multi-Photo Indicator -->
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+              <i data-lucide="images" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span class="font-bold">3 Photos</span>
+            </div>
+
+            <!-- Interactive Thumbnail Switcher Strip -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+              <button type="button" 
+                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-cyan-400 shadow-xs transition-all opacity-100"
+                      data-target="biomechanics-main-img"
+                      data-src="assets/images/scorpion_macro.webp"
+                      data-title="Desert Scorpion Predatory Strike"
+                      data-caption="Fast-action strike and sensory trichobothria micro-orientation."
+                      title="Macro Strike">
+                <img src="assets/images/scorpion_macro.webp" alt="Macro Strike" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="biomechanics-main-img"
+                      data-src="assets/images/scorpion_finger.webp"
+                      data-title="Live Specimen Kinematics & Handling"
+                      data-caption="Climbing kinematics and pedipalp tension balance on human hand."
+                      title="Climbing Kinematics">
+                <img src="assets/images/scorpion_finger.webp" alt="Hand Interaction" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="biomechanics-main-img"
+                      data-src="assets/images/biomechanics.webp"
+                      data-title="Defensive Metasomal Posture"
+                      data-caption="Curled metasoma showcasing sclerotized segment articulation."
+                      title="Metasomal Posture">
+                <img src="assets/images/biomechanics.webp" alt="Defensive Posture" class="w-full h-full object-cover">
+              </button>
             </div>
           </div>
 
@@ -374,10 +494,10 @@
                 <span class="text-[10px] font-mono text-slate-400">Study #01</span>
               </div>
               <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
-                Orthopteran Saltatorial Biomechanics
+                Orthopteran &amp; Arthropod Biomechanics
               </h2>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Investigating the biomechanical paradox of saltatorial insects: the instantaneous power output during takeoff exceeds the maximum contractile speed of striated muscle fibers by an order of magnitude.
+                Investigating the biomechanical paradox of arthropod joints: high-tensile chitinous sclerites, elastic resilin energy storage, and metasomal articulation under sudden directional strikes.
               </p>
               
               <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-[11px] space-y-1.5 text-slate-600 dark:text-slate-300">
@@ -402,23 +522,53 @@
           </div>
         </article>
 
-        <!-- PROJECT 5: Plant Histology -->
+        <!-- PROJECT 5: Translucent Osteology & Histology -->
         <article id="histology" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="microscopy">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
-            <img src="assets/images/histology.webp" 
-                 alt="Plant Histology Microtome Section" 
-                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                 onload="this.classList.remove('hidden'); const p = document.getElementById('histology-ph'); if (p) p.classList.add('hidden');"
-                 onerror="this.classList.add('hidden'); const p = document.getElementById('histology-ph'); if (p) p.classList.remove('hidden');">
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
+            <img src="assets/images/fish_skull_translucent.webp" 
+                 alt="Transparent Skeleton & Histology" 
+                 id="histology-main-img"
+                 data-gallery="histology"
+                 data-title="Double-Stained Translucent Cranial Cartilage & Bone"
+                 data-caption="Alcian Blue (cartilage) and Alizarin Red (calcified bone) clearing protocol."
+                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                 onclick="openLightboxFromElement(this)">
 
-            <div id="histology-ph" class="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-purple-50/70 to-emerald-50/40 dark:from-slate-800 dark:to-purple-950/40">
-              <div class="w-14 h-14 rounded-2xl bg-purple-600/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-2">
-                <i data-lucide="microscope" class="w-7 h-7"></i>
-              </div>
-              <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Botanical Histology &amp; Staining</span>
-              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-purple-700 dark:text-purple-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-purple-200/80 dark:border-purple-800/60 mt-1.5">
-                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: histology.jpg
-              </span>
+            <!-- Floating Multi-Photo Indicator -->
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+              <i data-lucide="images" class="w-3.5 h-3.5 text-purple-400"></i>
+              <span class="font-bold">3 Photos</span>
+            </div>
+
+            <!-- Interactive Thumbnail Switcher Strip -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+              <button type="button" 
+                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-purple-400 shadow-xs transition-all opacity-100"
+                      data-target="histology-main-img"
+                      data-src="assets/images/fish_skull_translucent.webp"
+                      data-title="Translucent Cranial Staining"
+                      data-caption="Micro-resolution of transparent neurocranium showing internal suture junctions."
+                      title="Translucent Skull">
+                <img src="assets/images/fish_skull_translucent.webp" alt="Translucent Skull" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="histology-main-img"
+                      data-src="assets/images/histology.webp"
+                      data-title="Cranial Morphology Slide"
+                      data-caption="Detailed microscopic alignment of osteocranium bone densities."
+                      title="Micro-Section">
+                <img src="assets/images/histology.webp" alt="Micro-Section" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="histology-main-img"
+                      data-src="assets/images/carp_calibration.webp"
+                      data-title="Reagent Chemical Clearing"
+                      data-caption="Refined series of clearing baths maintaining soft chondral membranes."
+                      title="Clearing Baths">
+                <img src="assets/images/carp_calibration.webp" alt="Clearing Baths" class="w-full h-full object-cover">
+              </button>
             </div>
           </div>
 
@@ -429,79 +579,109 @@
                 <span class="text-[10px] font-mono text-slate-400">Slide Series #01</span>
               </div>
               <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                Plant Histology &amp; Vascular Cross-Sections
+                Translucent Skeletal Clearing &amp; Histology
               </h2>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Freehand microtome sectioning of monocot and dicot stem specimens, followed by dual staining using Safranin-O (staining lignified xylem) and Fast Green FCF (staining cellulosic phloem).
+                Optical clearing protocol employing enzymatic trypsin digestion, Alizarin Red S for calcified bone tissue, and Alcian Blue 8GX for chondral matrix, unveiling 3D developmental pathways in intact teleosts.
               </p>
               
               <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-[11px] space-y-1.5 text-slate-600 dark:text-slate-300">
                 <div class="flex items-start gap-1.5">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Vascular Differentiation:</strong> Clear optical resolution between spiral and annular xylem tracheid thickenings and adjacent companion cells.</span>
+                  <span><strong>Chondral Differentiation:</strong> Clear differentiation between cartilaginous branchial arches and ossified mandibular structures.</span>
                 </div>
                 <div class="flex items-start gap-1.5">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Slide Preparation:</strong> Practiced alcohol dehydration series and Canada balsam permanent mounting under glass coverslips.</span>
+                  <span><strong>Glycerin Refractive Matching:</strong> Preservation through graded KOH/glycerin baths matching the refractive index of cleared tissue.</span>
                 </div>
               </div>
             </div>
 
             <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <span class="text-[11px] font-mono text-slate-500">40x - 400x Brightfield Microscopy</span>
-              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Micro-Section Archive</span>
+              <span class="text-[11px] font-mono text-slate-500">Dual Staining &amp; Clearing</span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Archival Method</span>
             </div>
           </div>
         </article>
 
-        <!-- PROJECT 6: Arthropod Cuticle -->
+        <!-- PROJECT 6: Exotic Fauna & Cuticular Architecture -->
         <article id="cuticle" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="microscopy">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center">
-            <img src="assets/images/arthropod.webp" 
-                 alt="Arthropod Cuticular Micro-Morphology" 
-                 class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                 onload="this.classList.remove('hidden'); const p = document.getElementById('arthropod-ph'); if (p) p.classList.add('hidden');"
-                 onerror="this.classList.add('hidden'); const p = document.getElementById('arthropod-ph'); if (p) p.classList.remove('hidden');">
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
+            <img src="assets/images/snake_coiled.webp" 
+                 alt="Exotic Fauna & Cuticle" 
+                 id="cuticle-main-img"
+                 data-gallery="cuticle"
+                 data-title="Albino Corn Snake Locomotion & Epidermal Architecture"
+                 data-caption="Ventral scute kinematics and specialized overlapping scale arrangement."
+                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                 onclick="openLightboxFromElement(this)">
 
-            <div id="arthropod-ph" class="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-amber-50/70 to-rose-50/40 dark:from-slate-800 dark:to-amber-950/40">
-              <div class="w-14 h-14 rounded-2xl bg-amber-600/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-2">
-                <i data-lucide="shield" class="w-7 h-7"></i>
-              </div>
-              <span class="text-sm font-bold text-slate-800 dark:text-slate-200">Arthropod Cuticle Architecture</span>
-              <span class="inline-flex items-center gap-1 text-[10px] font-mono text-amber-700 dark:text-amber-300 bg-white/80 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-amber-200/80 dark:border-amber-800/60 mt-1.5">
-                <i data-lucide="camera" class="w-3 h-3"></i> Photo Slot: arthropod.jpg
-              </span>
+            <!-- Floating Multi-Photo Indicator -->
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+              <i data-lucide="images" class="w-3.5 h-3.5 text-amber-400"></i>
+              <span class="font-bold">3 Photos</span>
+            </div>
+
+            <!-- Interactive Thumbnail Switcher Strip -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+              <button type="button" 
+                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-amber-400 shadow-xs transition-all opacity-100"
+                      data-target="cuticle-main-img"
+                      data-src="assets/images/snake_coiled.webp"
+                      data-title="Albino Corn Snake Coiling"
+                      data-caption="Arboreal grip and flexible ribcage undulation around branches."
+                      title="Arboreal Coiling">
+                <img src="assets/images/snake_coiled.webp" alt="Coiled Snake" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="cuticle-main-img"
+                      data-src="assets/images/snake_hand.webp"
+                      data-title="Reptile Handling & Scale Texture"
+                      data-caption="Close-up examination of keratinous epidermal scales and docile temperament."
+                      title="Scale Texture">
+                <img src="assets/images/snake_hand.webp" alt="Scale Interaction" class="w-full h-full object-cover">
+              </button>
+              <button type="button" 
+                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      data-target="cuticle-main-img"
+                      data-src="assets/images/turtle_snapping.webp"
+                      data-title="Snapping Turtle Carapace & Feeding Adaptation"
+                      data-caption="Aquatic ambush morphology and rigid osteoderm armor adaptations."
+                      title="Aquatic Armor">
+                <img src="assets/images/turtle_snapping.webp" alt="Aquatic Armor" class="w-full h-full object-cover">
+              </button>
             </div>
           </div>
 
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold uppercase">Functional Morphology &middot; Cuticle</span>
+                <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold uppercase">Functional Morphology &middot; Cuticle &amp; Scales</span>
                 <span class="text-[10px] font-mono text-slate-400">Specimen #06</span>
               </div>
               <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
-                Arthropod Cuticular Architecture &amp; Microstructures
+                Reptilian Scales &amp; Arthropod Cuticle Architecture
               </h2>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Optical and macro-photographic exploration of arachnid and insect cuticles: examining the protective epicuticular wax layer, sensory trichobothria arrays, and micro-grooved moisture channeling structures.
+                Comparative analysis of protective integuments across exotics: overlapping keratin scales in squamates facilitating rectilinear locomotion versus sclerotized chitin plates in arthropods.
               </p>
               
               <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-[11px] space-y-1.5 text-slate-600 dark:text-slate-300">
                 <div class="flex items-start gap-1.5">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Arachnid Chelicerae:</strong> Serration geometry and venom duct openings observed on molted exuviae without harming live animals.</span>
+                  <span><strong>Locomotion Friction:</strong> Microscopic scale ridges reduce hydrodynamic and surface drag while maintaining gripping friction.</span>
                 </div>
                 <div class="flex items-start gap-1.5">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Structural Coloration:</strong> Examining how multi-layer interference produces metallic iridescence on coleopteran elytra.</span>
+                  <span><strong>Defensive Evolution:</strong> Distinct functional divergence between heavy kinetic carapaces (*Chelydra*) and flexible venomous speed.</span>
                 </div>
               </div>
             </div>
 
             <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <span class="text-[11px] font-mono text-slate-500">Exuviae Micro-Analysis</span>
-              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Morphology Log</span>
+              <span class="text-[11px] font-mono text-slate-500">Live Specimen Behavioral Observation</span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Husbandry Log</span>
             </div>
           </div>
         </article>
@@ -575,6 +755,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

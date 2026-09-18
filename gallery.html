@@ -181,23 +181,53 @@
           
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <!-- Left: Hero Photo Slot / Placeholder -->
+            <!-- Left: Hero Photo Slot with Multi-Photo Switcher -->
             <div class="lg:col-span-5 space-y-4">
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center">
+              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
                 <img src="assets/images/saxophone.webp" 
                      alt="Zhuoli Yang Saxophone Performance" 
-                     class="w-full h-full object-cover hidden transition-transform duration-300 hover:scale-[1.02]"
-                     onload="this.classList.remove('hidden'); const p = document.getElementById('sax-full-thumb'); if (p) p.classList.add('hidden');"
-                     onerror="this.classList.add('hidden'); const p = document.getElementById('sax-full-thumb'); if (p) p.classList.remove('hidden');">
-                <div id="sax-full-thumb" class="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-purple-50/80 to-purple-100/50 dark:from-slate-800 dark:to-purple-950/40">
-                  <div class="w-16 h-16 rounded-full bg-purple-600/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3">
-                    <i data-lucide="music" class="w-8 h-8"></i>
-                  </div>
-                  <span class="text-base font-bold text-slate-800 dark:text-slate-200">Alto Saxophone Recital</span>
-                  <span class="text-xs text-slate-500 dark:text-slate-400 mt-1">Grade 10 Distinction Repertoire</span>
-                  <span class="inline-flex items-center gap-1 text-[10px] font-mono text-purple-700 dark:text-purple-300 bg-white/80 dark:bg-slate-800/80 px-3 py-1 rounded-full border border-purple-200 dark:border-purple-800 mt-3">
-                    <i data-lucide="camera" class="w-3.5 h-3.5"></i> Photo Slot: saxophone.jpg
-                  </span>
+                     id="sax-main-img"
+                     data-gallery="saxophone"
+                     data-title="Alto Saxophone Rehearsal Studio Performance"
+                     data-caption="High school ensemble rehearsal & advanced classical repertoire performance."
+                     class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
+                     onclick="openLightboxFromElement(this)">
+
+                <!-- Floating Multi-Photo Indicator -->
+                <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
+                  <i data-lucide="music" class="w-3.5 h-3.5 text-purple-400"></i>
+                  <span class="font-bold">3 Milestones</span>
+                </div>
+
+                <!-- Interactive Thumbnail Switcher Strip -->
+                <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+                  <button type="button" 
+                          class="card-thumb-btn active relative flex-1 h-11 rounded-lg overflow-hidden border-2 border-purple-400 shadow-xs transition-all opacity-100"
+                          data-target="sax-main-img"
+                          data-src="assets/images/saxophone.webp"
+                          data-title="Alto Saxophone Rehearsal Studio Performance"
+                          data-caption="High school ensemble rehearsal & advanced classical repertoire performance."
+                          title="Rehearsal Studio">
+                    <img src="assets/images/saxophone.webp" alt="Rehearsal Studio" class="w-full h-full object-cover">
+                  </button>
+                  <button type="button" 
+                          class="card-thumb-btn relative flex-1 h-11 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                          data-target="sax-main-img"
+                          data-src="assets/images/saxophone_early_lessons.webp"
+                          data-title="Early Music Mentorship & Foundation"
+                          data-caption="One-on-one professional coaching with instructor focusing on embouchure and breath support."
+                          title="Early Mentorship">
+                    <img src="assets/images/saxophone_early_lessons.webp" alt="Early Mentorship" class="w-full h-full object-cover">
+                  </button>
+                  <button type="button" 
+                          class="card-thumb-btn relative flex-1 h-11 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                          data-target="sax-main-img"
+                          data-src="assets/images/saxophone_practice.webp"
+                          data-title="Daily Dedication & Repertoire Polish"
+                          data-caption="Independent home practice mastering chromatic scales and distinction concertos."
+                          title="Daily Practice">
+                    <img src="assets/images/saxophone_practice.webp" alt="Daily Practice" class="w-full h-full object-cover">
+                  </button>
                 </div>
               </div>
 
@@ -248,46 +278,39 @@
               <div class="space-y-3">
                 <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">Chronological Repertoire Journey</h3>
                 
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 shadow-2xs space-y-1">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold text-slate-900 dark:text-white">Foundation &amp; Tone (Grades 1 - 3)</span>
-                    <span class="font-mono text-[10px] text-purple-600 dark:text-purple-400">Scale Patterns</span>
+                <div class="space-y-2 text-xs">
+                  <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">1</span>
+                    <div>
+                      <span class="font-bold text-slate-900 dark:text-white block">Grades 1 - 3: Embouchure &amp; Diaphragmatic Breath</span>
+                      <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Foundation in overtone production, consistent reed vibration, and stable airflow support.</p>
+                    </div>
                   </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Mastered major/minor diatonic scales, Hyacinthe Klosé 25 Daily Etudes, embouchure stabilization, and centered column breathing.
-                  </p>
-                </div>
 
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 shadow-2xs space-y-1">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold text-slate-900 dark:text-white">Articulation &amp; Vibrato (Grades 4 - 6)</span>
-                    <span class="font-mono text-[10px] text-purple-600 dark:text-purple-400">Mule Etudes</span>
+                  <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">2</span>
+                    <div>
+                      <span class="font-bold text-slate-900 dark:text-white block">Grades 4 - 6: Technical Velocity &amp; Articulation</span>
+                      <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Scale sequences, double staccato, vibrato control, and dynamic inflection.</p>
+                    </div>
                   </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Marcel Mule 18 Exercises after Berbiguier, dynamic nuance from pianissimo to fortissimo, and continuous jaw vibrato modulation.
-                  </p>
-                </div>
 
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 shadow-2xs space-y-1">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold text-slate-900 dark:text-white">Advanced Expression (Grades 7 - 8)</span>
-                    <span class="font-mono text-[10px] text-purple-600 dark:text-purple-400">Classical Sonatas</span>
+                  <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">3</span>
+                    <div>
+                      <span class="font-bold text-slate-900 dark:text-white block">Grades 7 - 9: Complex Phrasing &amp; Classical Concertos</span>
+                      <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Expressive romantic sonatas, altissimo register harmonics, and chamber ensemble performance.</p>
+                    </div>
                   </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Eugène Bozza <em>Aria</em>, Jules Demersseman <em>Fantaisie sur un thème original</em>, rapid staccato tonguing, and phrasing rubato.
-                  </p>
-                </div>
 
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 shadow-2xs space-y-1">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold text-purple-700 dark:text-purple-300">Grade 10 Distinction Capstone (Grade 9 - 10)</span>
-                    <span class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">Distinction Award</span>
+                  <div class="p-3 rounded-xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200/80 dark:border-purple-800/80 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">&#9733;</span>
+                    <div>
+                      <span class="font-bold text-purple-950 dark:text-purple-200 block">Grade 10: Capstone Distinction Recital</span>
+                      <p class="text-[11px] text-purple-800 dark:text-purple-300 mt-0.5">Mastery of benchmark virtuoso concertos evaluated with top Distinction by national examiners.</p>
+                    </div>
                   </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Concertos by Paul Creston (<em>Sonata Op. 19</em>), Jacques Ibert (<em>Concertino da Camera</em>), and Alexander Glazunov (<em>Concerto in E-flat major</em>).
-                  </p>
                 </div>
-
               </div>
 
               <!-- Quote Box -->
@@ -303,176 +326,183 @@
 
       </section>
 
-      <!-- ==================== SECTION 2: NATURE MACRO PHOTOGRAPHY ==================== -->
+      <!-- ==================== SECTION 2: 12-SLOT CURATED PHOTO & SPECIMEN EXHIBITION ==================== -->
       <section id="photography" class="project-card" data-category="photography">
         
-        <div class="mb-8">
-          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Field Ethology &amp; Optics</span>
+        <div class="max-w-3xl mb-8">
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Field Ethology &amp; Biological Optics</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">
-            Macro Nature Photography &amp; Biological Textures
+            Curated Visual Archive: Nature, Specimens &amp; World Expeditions
           </h2>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Visual observations documenting cellular patterns, compound eyes, cuticular structural colors, and vivarium flora.
+            An expansive 12-photograph gallery showcasing osteological precision, living arachnid biophysics, fluvial geography, and global field research. Click any photograph to open the full-screen Lightbox.
           </p>
         </div>
 
-        <!-- 6-Photo Curated Grid -->
+        <!-- 12-Photo Curated Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <!-- PHOTO 1: Insect Iridescence -->
+          <!-- PHOTO 1: Desert Scorpion Predatory Strike -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
-            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/photo_cuticle.webp" 
-                   alt="Insect Cuticle Structural Coloration" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('p1-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('p1-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="p1-thumb" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-cyan-50/70 to-emerald-50/40 dark:from-slate-800 dark:to-cyan-950/40">
-                <div class="w-12 h-12 rounded-full bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-1.5">
-                  <i data-lucide="sparkles" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Cuticular Structural Colors</span>
-                <span class="text-[10px] font-mono text-cyan-700 dark:text-cyan-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photo_cuticle.jpg</span>
+                   alt="Desert Scorpion Predatory Strike" 
+                   data-gallery="gallery"
+                   data-title="Desert Scorpion Predatory Strike (Hadrurus arizonensis)"
+                   data-caption="Macro high-speed capture of cheliceral kinematics and metasomal defensive posture."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
               </div>
             </div>
             <div class="p-4 space-y-1.5">
               <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                <span>Subject: Coleopteran Elytra</span>
+                <span>Subject: Arachnid Biomechanics</span>
                 <span>Macro 2:1</span>
               </div>
-              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Photonic Multilayer Iridescence</h4>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Predatory Strike &amp; Cuticle Mechanics</h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Interference reflection generated by stacked chitin and protein layers reflecting selective green-gold spectra.
+                High-speed micro-kinetics of metasomal strike and tactile trichobothria arrays coordinating prey capture.
               </p>
             </div>
           </div>
 
-          <!-- PHOTO 2: Moss Sporophyte -->
+          <!-- PHOTO 2: Underwater Scuba Diving -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
-            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
-              <img src="assets/images/photo_spore.webp" 
-                   alt="Vivarium Moss Sporophyte Capsule" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('p2-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('p2-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="p2-thumb" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-emerald-50/70 to-teal-50/40 dark:from-slate-800 dark:to-emerald-950/40">
-                <div class="w-12 h-12 rounded-full bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-1.5">
-                  <i data-lucide="leaf" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Vivarium Moss Sporophyte</span>
-                <span class="text-[10px] font-mono text-emerald-700 dark:text-emerald-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photo_spore.jpg</span>
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/scuba_diving.webp" 
+                   alt="Pacific Open-Water Scuba Diving" 
+                   data-gallery="gallery"
+                   data-title="Pacific Open-Water Scuba Diving Exploration"
+                   data-caption="Benthic marine biodiversity survey and open-water buoyancy exploration."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
               </div>
             </div>
             <div class="p-4 space-y-1.5">
               <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                <span>Subject: Bryophyte Capsule</span>
-                <span>F/5.6 &middot; 1/200s</span>
+                <span>Location: Pacific Waters</span>
+                <span>Sub-surface Exploration</span>
               </div>
-              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Peristome Teeth Spore Mechanics</h4>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Pelagic Ecology &amp; Marine Dynamics</h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Hygroscopic movement of peristome teeth governing spore dispersal under humidity fluctuations in terrarium glass.
+                Field documentation of benthic reef ecosystems, natural buoyancy control, and pelagic fauna behaviors.
               </p>
             </div>
           </div>
 
-          <!-- PHOTO 3: Tigerfish Osteocranium -->
+          <!-- PHOTO 3: Goliath Tigerfish Razor Teeth -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
-            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/photo_jaw.webp" 
                    alt="Tigerfish Jaw Articulation Close-Up" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('p3-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('p3-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="p3-thumb" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-amber-50/70 to-red-50/40 dark:from-slate-800 dark:to-amber-950/40">
-                <div class="w-12 h-12 rounded-full bg-amber-600/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-1.5">
-                  <i data-lucide="fish" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Osteocranium &amp; Dentition</span>
-                <span class="text-[10px] font-mono text-amber-700 dark:text-amber-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photo_jaw.jpg</span>
+                   data-gallery="gallery"
+                   data-title="Goliath Tigerfish Interlocking Dentition"
+                   data-caption="Macro perspective of razor-sharp shearing teeth interlocking within opposing premaxillary grooves."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
               </div>
             </div>
             <div class="p-4 space-y-1.5">
               <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
                 <span>Subject: Hydrocynus goliath</span>
-                <span>Macro Optics</span>
+                <span>Osteology Macro</span>
               </div>
               <h4 class="text-sm font-bold text-slate-900 dark:text-white">Predatory Dentition Geometry</h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Macro perspective of alternating replacement teeth sockets situated along the premaxillary and dentary margins.
+                Precision alignment of alternating replacement crypts nestled in opposing jaw margins of an apex characin.
               </p>
             </div>
           </div>
 
-          <!-- PHOTO 4: Montane Lichens -->
+          <!-- PHOTO 4: Albino Corn Snake Coiling -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
-            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
-              <img src="assets/images/photo_lichen.webp" 
-                   alt="Gaoligongshan Epiphytic Lichens" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('p4-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('p4-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="p4-thumb" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-teal-50/70 to-emerald-50/40 dark:from-slate-800 dark:to-teal-950/40">
-                <div class="w-12 h-12 rounded-full bg-teal-600/10 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-1.5">
-                  <i data-lucide="cloud" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Montane Cloud Epiphytes</span>
-                <span class="text-[10px] font-mono text-teal-700 dark:text-teal-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photo_lichen.jpg</span>
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/snake_coiled.webp" 
+                   alt="Albino Corn Snake Coiling" 
+                   data-gallery="gallery"
+                   data-title="Albino Corn Snake (Pantherophis guttatus) Coiling Kinetics"
+                   data-caption="Ventral scute gripping friction and multi-vertebral undulatory flexibility around terrarium wood."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
               </div>
             </div>
             <div class="p-4 space-y-1.5">
               <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                <span>Location: Gaoligongshan</span>
-                <span>Altitude 2,600m</span>
+                <span>Subject: Squamate Locomotion</span>
+                <span>Terrarium Ethology</span>
               </div>
-              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Symbiotic Lichen Thalli</h4>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Arboreal Scute Gripping Dynamics</h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Foliose and fruticose lichens cloaking old-growth rhododendron trunks, serving as sensitive bio-indicators of pristine air.
+                Distribution of weight across hundreds of pre-cloacal vertebrae, creating stable lateral purchase on vertical branches.
               </p>
             </div>
           </div>
 
-          <!-- PHOTO 5: Vivarium Micro-Drops -->
+          <!-- PHOTO 5: Two-Tier Specimen Showcase -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
-            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
-              <img src="assets/images/photo_droplets.webp" 
-                   alt="Vivarium Morning Droplets on Fern" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('p5-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('p5-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="p5-thumb" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-blue-50/70 to-teal-50/40 dark:from-slate-800 dark:to-blue-950/40">
-                <div class="w-12 h-12 rounded-full bg-blue-600/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-1.5">
-                  <i data-lucide="droplet" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Vivarium Surface Tension</span>
-                <span class="text-[10px] font-mono text-blue-700 dark:text-blue-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photo_droplets.jpg</span>
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/fish_skeletons_tier.webp" 
+                   alt="Two-Tier Finished Specimen Showcase" 
+                   data-gallery="gallery"
+                   data-title="Two-Tier Finished Vertebrate Specimen Showcase"
+                   data-caption="Archival museum-grade double acrylic mounting for teleost axial and appendicular skeletons."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
               </div>
             </div>
             <div class="p-4 space-y-1.5">
               <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
-                <span>Subject: Hydrophobic Cuticle</span>
-                <span>F/4.0 &middot; 1/320s</span>
+                <span>Medium: Acrylic &amp; Osteology</span>
+                <span>Archival Mount</span>
               </div>
-              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Condensation &amp; Surface Tension</h4>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Two-Tier Articulated Reconstruction</h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Contact angle of mist droplets on creeping fig (<em>Ficus pumila</em>) leaves inside closed habitat vivaria.
+                Custom-fabricated dual-level enclosure presenting complete articulated specimens under clean optical-grade acrylic.
               </p>
             </div>
           </div>
 
-          <!-- PHOTO 6: Dianchi Gull Flight Dynamics -->
+          <!-- PHOTO 6: Translucent Stained Cranial Cartilage -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
-            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/fish_skull_translucent.webp" 
+                   alt="Translucent Stained Cranial Cartilage" 
+                   data-gallery="gallery"
+                   data-title="Double-Stained Translucent Fish Skull"
+                   data-caption="Trypsin enzyme clearing paired with Alcian Blue and Alizarin Red revealing chondral and bony architecture."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
+              </div>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Method: Trypsin &amp; Staining</span>
+                <span>3D Histochemistry</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Cleared &amp; Double-Stained Osteology</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Intact visualization of internal cranial sutures and branchial baskets rendered transparent via optical matching.
+              </p>
+            </div>
+          </div>
+
+          <!-- PHOTO 7: Dianchi Lake Gulls in Flight -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
               <img src="assets/images/photo_gull.webp" 
                    alt="Dianchi Wintering Gull Flight Aerodynamics" 
-                   class="w-full h-full object-cover hidden transition-transform duration-300 group-hover:scale-[1.03]"
-                   onload="this.classList.remove('hidden'); const p = document.getElementById('p6-thumb'); if (p) p.classList.add('hidden');"
-                   onerror="this.classList.add('hidden'); const p = document.getElementById('p6-thumb'); if (p) p.classList.remove('hidden');">
-              <div id="p6-thumb" class="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-cyan-50/70 to-blue-50/40 dark:from-slate-800 dark:to-cyan-950/40">
-                <div class="w-12 h-12 rounded-full bg-cyan-600/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-1.5">
-                  <i data-lucide="wind" class="w-6 h-6"></i>
-                </div>
-                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Avian Wing Slotting</span>
-                <span class="text-[10px] font-mono text-cyan-700 dark:text-cyan-300 mt-1"><i data-lucide="camera" class="w-2.5 h-2.5 inline"></i> photo_gull.jpg</span>
+                   data-gallery="gallery"
+                   data-title="Dianchi Lake Wintering Gulls (Chroicocephalus ridibundus)"
+                   data-caption="High-speed freeze of primary wingtip splay and alula deployment during low-speed skimming."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
               </div>
             </div>
             <div class="p-4 space-y-1.5">
@@ -482,7 +512,132 @@
               </div>
               <h4 class="text-sm font-bold text-slate-900 dark:text-white">Alula &amp; Wingtip Aerodynamics</h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                High-speed shutter freeze showing primary feather splay and alula deployment preventing stall during low-speed hover.
+                Airfoil slotting in Siberian migratory gulls managing induced drag and vortex shedding during aquatic skimming.
+              </p>
+            </div>
+          </div>
+
+          <!-- PHOTO 8: Tiger Leaping Gorge Torrents -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/tiger_leaping_gorge.webp" 
+                   alt="Tiger Leaping Gorge Torrents" 
+                   data-gallery="gallery"
+                   data-title="Jinsha River Tiger Leaping Gorge Canyon Rapids"
+                   data-caption="Spectacular hydraulic roar and erosional canyon geomorphology along the upper Yangtze River."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
+              </div>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Location: Jinsha River</span>
+                <span>Geomorphology</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Hydraulic Forces &amp; Fluvial Erosion</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Extreme kinetic water volume carving narrow alpine gorges between Yulong and Haba Snow Mountains.
+              </p>
+            </div>
+          </div>
+
+          <!-- PHOTO 9: USYD Sandstone Quadrangle -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/sydney_quad.webp" 
+                   alt="The University of Sydney Sandstone Quadrangle" 
+                   data-gallery="gallery"
+                   data-title="The University of Sydney Historic Gothic Quadrangle"
+                   data-caption="Collegiate architecture and natural history heritage at Australia's oldest university."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
+              </div>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Location: Camperdown, Sydney</span>
+                <span>Gothic Revival</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Collegiate Heritage &amp; Sciences</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Historic sandstone cloister housing the foundational history of Australian medical and biological discovery.
+              </p>
+            </div>
+          </div>
+
+          <!-- PHOTO 10: UN General Assembly Podium -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/wimun_podium.webp" 
+                   alt="UN General Assembly Podium Speech" 
+                   data-gallery="gallery"
+                   data-title="United Nations General Assembly Podium & Hall"
+                   data-caption="Speaking at the official United Nations podium in New York representing Switzerland at WIMUN."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
+              </div>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Location: UN HQ, New York</span>
+                <span>Global Diplomacy</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">United Nations General Assembly Speech</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Delivering formal diplomatic addresses on economic development and sustainability frameworks from the UN rostrum.
+              </p>
+            </div>
+          </div>
+
+          <!-- PHOTO 11: Chelydra serpentina Aquatic Armor -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/turtle_snapping.webp" 
+                   alt="Common Snapping Turtle Morphology" 
+                   data-gallery="gallery"
+                   data-title="Common Snapping Turtle (Chelydra serpentina) Morphology"
+                   data-caption="Aquatic ambush feeding mechanics, serrated marginal scutes, and powerful beak morphology."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
+              </div>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Subject: Aquatic Chelonian</span>
+                <span>Kinetic Anatomy</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Armor &amp; Ambush Kinematics</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Heavily reduced plastron permitting increased leg motility and explosive predatory cervical extension strikes.
+              </p>
+            </div>
+          </div>
+
+          <!-- PHOTO 12: Vivarium Condensation & Droplets -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm">
+            <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-700 cursor-pointer" onclick="openLightboxFromElement(this.querySelector('img'))">
+              <img src="assets/images/photo_droplets.webp" 
+                   alt="Vivarium Morning Droplets on Fern" 
+                   data-gallery="gallery"
+                   data-title="Terrarium Surface Tension & Microclimate Water Drops"
+                   data-caption="High relative humidity condensation over epiphyte leaves within closed vivarium micro-ecosystem."
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03] lightbox-trigger">
+              <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/70 text-[10px] font-mono text-white flex items-center gap-1 backdrop-blur-xs">
+                <i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Click to Zoom
+              </div>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Subject: Hydrophobic Cuticle</span>
+                <span>F/4.0 &middot; Macro</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Condensation &amp; Surface Tension</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Contact angle of mist droplets on creeping fig (<em>Ficus pumila</em>) leaves inside closed habitat vivaria.
               </p>
             </div>
           </div>
@@ -536,6 +691,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
