@@ -7,23 +7,23 @@
 ---
 
 Personal digital space of **Zhuoli Yang** — High School Class of 2027 (Kunming, China).  
-A hands-on explorer bridging vertebrate osteology, vivarium microclimates, biophysics, and performing arts.
+A passionate young explorer interested in hands-on biology, pet care, DIY crafts, nature photography, and music.
 
-### Core Passions & Explorations
-- **Vertebrate Osteology & Comparative Anatomy**: Completed 1:1 skeletal articulation of the Goliath Tigerfish (*Hydrocynus goliath*); empirically calibrated NaOH lipid saponification parameters on crucian carp (*Carassius carassius*) to preserve delicate cranial suture landmarks.
-- **Closed Vivarium Ecology**: 3+ years managing closed-loop terraria and aquatic habitats (reptiles, arachnids, aquatic species); established differential diagnostic protocols between water chemistry shifts and cutaneous/parasitic infections.
-- **Classical Saxophone**: Awarded **Grade 10 Distinction** by China National Opera and Dance Drama Theater (Certificate: `20240072010301051120007`) across a 10-year classical repertoire.
-- **Field Ethology & Macro Photography**: Optical macro documentation of insect cuticular structural colors, Yunnan montane cloud forest flora, and Dianchi lake wintering avian flight dynamics.
-- **Global Footprint**: WIMUN New York Delegate at United Nations Headquarters (Second Committee / ECOFIN), University of Sydney Educational Tour, Harvard Student Agencies (HSA) Workshops.
+### Core Passions & Hobbies
+- **DIY Fish Bone Articulation**: Built a 1:1 Goliath Tigerfish (*Hydrocynus goliath*) skeleton assembly from scratch after practicing bone cleaning and articulation techniques on a local carp.
+- **Living Vivarium & Unique Pets**: 3+ years keeping planted vivariums, aquariums, and desert terrariums; caring for an albino corn snake, an Asian desert scorpion, and an alligator snapping turtle.
+- **Classical Saxophone**: Awarded **Grade 10 Distinction** by China National Opera and Dance Drama Theater (Certificate: `20240072010301051120007`) across 10 years of study.
+- **Nature Photography & Field Trips**: Capturing outdoor moments including Yunnan mountain hikes, night rainforest walks in Xishuangbanna, wintering Siberian gulls at Dianchi Lake, and macro nature photography.
+- **Global Footprint**: WIMUN New York Delegate at United Nations Headquarters, University of Sydney campus and wildlife visit, and Harvard Student Agencies (HSA) student workshops.
 
 ### Standardized Testing & Language
 - **TOEFL iBT Official**: **93 / 120** (Test Date: Oct 11, 2025)
   - Reading: **24** &nbsp;|&nbsp; Listening: **23** &nbsp;|&nbsp; Speaking: **22** &nbsp;|&nbsp; Writing: **24**
 
 ### Key Pages
-- **Home (`index.html`)**: Overview, featured highlights, academic profile, Curriculum Vitae (CV).
-- **Works Archive (`projects.html`)**: Interactive galleries for 5 biological specimen, reptile kinematics, and habitat projects.
-- **Global Footprint (`footprint.html`)**: International summits and regional field expedition journals.
+- **Home (`index.html`)**: Overview, featured highlights, personal profile, and Curriculum Vitae (CV).
+- **Works Archive (`projects.html`)**: Interactive galleries for 5 hands-on projects and pet care stories.
+- **Global Footprint (`footprint.html`)**: International summits, university visits, and nature travel memories.
 - **Arts & Gallery (`gallery.html`)**: 10-year classical saxophone journey and curated 8-work visual arts & creative photography.
 
 ---

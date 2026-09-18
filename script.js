@@ -120,20 +120,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const stepData = [
     {
-      title: 'Phase 1: Soft Tissue Clearance',
-      desc: 'Careful mechanical dissection preserving micro-articular condyles and delicate fin rays.'
+      title: 'Step 1: Cleaning the Bones',
+      desc: 'Carefully removing tissue by hand so delicate fin rays and skull bones are not broken or bent.'
     },
     {
-      title: 'Phase 2: NaOH Lipid Saponification (Carp Trial)',
-      desc: 'Empirically tested serial dilutions of sodium hydroxide on Carassius carassius to safely strip fats without dissolving sutures.'
+      title: 'Step 2: Practicing on a Market Carp',
+      desc: 'Tested the bone cleaning and degreasing steps on a common crucian carp first to make sure I got the method right.'
     },
     {
-      title: 'Phase 3: Mild H2O2 Oxidation & Bleaching',
-      desc: 'Controlled bath preventing surface chalking while neutralizing remaining organic compounds.'
+      title: 'Step 3: Gentle Drying & Preparation',
+      desc: 'Carefully dried each cleaned bone, keeping them organized on sorting trays so nothing got lost.'
     },
     {
-      title: 'Phase 4: Kinematic Articulation & Assembly',
-      desc: 'Topological reconstruction matching unfamiliar joints against adjacent functional motion constraints.'
+      title: 'Step 4: Assembling the Skeleton',
+      desc: 'Puzzling the vertebrae in order along a guiding wire and gluing each sharp tooth back into its socket.'
     }
   ];
 
@@ -205,85 +205,92 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const projectDetails = {
     'tigerfish': {
-      title: 'Hydrocynus goliath: Skeletal Articulation & Biomechanical Analysis',
-      category: 'Comparative Anatomy & Osteology',
+      title: 'Building a Goliath Tigerfish Skeleton',
+      category: 'Hands-on DIY & Fish Anatomy',
       content: `
         <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-          <p><strong>Methodological Premise:</strong> Articulating a delicate fish skeleton forgives no guesswork. While video demonstrations suggested sodium hydroxide (NaOH) for lipid stripping, they omit critical concentration and duration parameters. An overtreatment would dissolve delicate osteological landmarks.</p>
+          <p><strong>How the Project Started:</strong> I've always been captivated by aquatic life, especially the African Goliath Tigerfish (<em>Hydrocynus goliath</em>) with its dagger-like, interlocking teeth. I wanted to build and preserve a complete skeleton inside an acrylic display case, but doing it completely by hand was a huge learning curve.</p>
           
           <div class="p-4 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800">
-            <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">Preliminary Controlled Trial</h4>
-            <p class="text-xs">Prior to working on the primary <em>Hydrocynus goliath</em> specimen, a controlled trial was conducted on a common crucian carp (<em>Carassius carassius</em>). By testing serial dilutions of NaOH and soaking intervals, an optimal threshold was calibrated to effectively saponify remaining fats without compromising bone density or suture integrity.</p>
+            <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">Practicing on a Market Carp First</h4>
+            <p class="text-xs">Because tigerfish specimens are rare and fragile, I didn't want to make a beginner's mistake on the real thing. I went to the local fish market, bought a common crucian carp, and practiced cleaning, degreasing, and separating bones. This helped me find the right gentle method to remove tissue without damaging delicate sutures or fine fin rays.</p>
           </div>
 
-          <p><strong>Kinematics & Articulation:</strong> Once soft tissues were cleaned, individual bones had lost their original relative coordinates. By cross-referencing adjacent known articular facets (analogous to topological induction in mathematics), each unfamiliar vertebra was reconstructed based on the specific degree of motion it permits.</p>
+          <p><strong>The Assembly Process:</strong> Once all the tigerfish bones were cleaned and dried, I had a tray of hundreds of loose bones. Piecing them back together felt like assembling an intricate 3D puzzle. I numbered each vertebra along the spine, carefully arranged the skull bones, and glued each sharp tooth back into its original jaw socket.</p>
 
-          <p><strong>Key Insight:</strong> The transition from descriptive taxonomy to functional morphology: examining not merely the appearance of bones, but their mechanical adaptation to predatory apex kinematics in torrential river systems.</p>
+          <p><strong>What I Learned:</strong> Taking on this project taught me immense patience and attention to detail. Seeing the completed skeleton standing in the display case was one of my proudest moments in high school.</p>
         </div>
       `
     },
     'vivarium': {
-      title: 'Long-Term Vivarium Ecology & Differential Pathology',
-      category: 'Husbandry & Applied Ethology',
+      title: 'My Rainforest Vivarium & Planted Aquarium',
+      category: 'Plant & Tank Keeping · 3+ Years',
       content: `
         <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-          <p><strong>Ecosystem Management:</strong> Maintained controlled closed habitats over multiple years spanning reptiles, arachnids, scorpions, and aquatic fauna. Inspired by classical naturalists including J.-H. Fabre (<em>Souvenirs Entomologiques</em>).</p>
+          <p><strong>Creating a Slice of Nature:</strong> For the past three years, I've kept and maintained a bioactive tropical vivarium and a planted freshwater aquarium in my room. My goal was to create a self-sustaining environment where plants and aquatic life could thrive together.</p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-2">
             <div class="p-3 bg-slate-50 dark:bg-slate-800/80 rounded-lg border border-slate-200 dark:border-slate-700">
-              <span class="text-xs font-bold text-amber-600 dark:text-amber-400 block mb-1">Parasitic Presentation (e.g. Ichthyophthirius)</span>
-              <p class="text-xs">Identified by cutaneous white trophonts; triggered by acute thermal shifts or unquarantined vectors. Addressed via stepwise thermal escalation (accelerating parasite lifecycle) and targeted water treatment.</p>
+              <span class="text-xs font-bold text-teal-600 dark:text-teal-400 block mb-1">Vivarium Microclimate</span>
+              <p class="text-xs">Set up a layered drainage false bottom, planted tropical mosses and ferns, and installed an automated fine-mist timer to keep humidity high without waterlogging the roots.</p>
             </div>
             <div class="p-3 bg-slate-50 dark:bg-slate-800/80 rounded-lg border border-slate-200 dark:border-slate-700">
-              <span class="text-xs font-bold text-rose-600 dark:text-rose-400 block mb-1">Bacterial & Metabolic Ailments</span>
-              <p class="text-xs">Characterized by sluggish motility and abdominal distension; tied to nitrate accumulation or feed spoilage. Treated through feed restriction, bio-filtration renewal, and substrate siphon flushing rather than chemical shock.</p>
+              <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400 block mb-1">Aquarium Water Care</span>
+              <p class="text-xs">Learned how biological filtration works, monitored water conditions, performed gentle partial water changes, and kept track of temperature stability across changing seasons.</p>
             </div>
           </div>
 
-          <p><strong>Literature Synthesis:</strong> Cross-referenced academic husbandry literature and veterinary care guides in both English and Chinese to establish rigorous quarantine and biological safety protocols.</p>
+          <p><strong>Daily Dedication:</strong> Keeping living tanks taught me that balance doesn't happen by accident. Daily observation—checking plant growth, cleaning glass, and trimming moss—became a calm, rewarding routine during busy school weeks.</p>
         </div>
       `
     },
     'biomechanics': {
-      title: 'Orthopteran Saltatorial Biomechanics & Elastic Energy Storage',
-      category: 'Biomechanics & Molecular Curiosity',
+      title: 'Keeping a Desert Scorpion',
+      category: 'Pet Care · Desert Terrarium',
       content: `
         <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-          <p><strong>Core Scientific Question:</strong> How does an organism jump tens of times its body length without shattering micro-skeletal junctions? The power output of an orthopteran jump vastly exceeds direct muscle contraction velocity, necessitating elastic mechanical storage (semi-lunar processes and resilin proteins).</p>
-          <p><strong>Bridging Micro to Macro:</strong> Exploring how physical resilience is encoded at the molecular level: the arrangement of chitin fibrils, the structural elasticity of proteins, and how mutations in these macromolecules propagate into macroscopic mechanical failures.</p>
-          <p><strong>Aspirations:</strong> Looking forward to applying advanced biophysical and molecular assays (e.g., cryo-EM, mass spectrometry, CRISPR mutagenesis) during undergraduate studies to quantitatively probe these structure-function relationships.</p>
+          <p><strong>A Misunderstood Pet:</strong> Many people think scorpions are scary or aggressive, but keeping an arid desert scorpion showed me how quiet, clean, and fascinating they really are.</p>
+          
+          <div class="p-4 rounded-lg bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800">
+            <h4 class="font-semibold text-cyan-800 dark:text-cyan-300 mb-1">Custom Arid Terrarium</h4>
+            <p class="text-xs">I built an enclosure with fine desert sand, natural gravel, and pieces of curved bark where it could hide during the day. Keeping the humidity low and providing a warm gradient was essential for keeping it active and healthy.</p>
+          </div>
+
+          <p><strong>Feeding & Gentle Handling:</strong> I fed it crickets and mealworms using long tweezers. Watching it use its large front pincers to grab food before bringing its tail over was incredible. When necessary, I guided it gently with soft brushes or allowed it to walk slowly onto my palm, noticing how calm it was when treated with care.</p>
+
+          <p><strong>Key Reflection:</strong> Raising unique pets taught me to look beyond common fears and appreciate animals for their natural beauty and calm behaviors.</p>
         </div>
       `
     },
     'snake': {
-      title: 'Albino Corn Snake Locomotion & Epidermal Architecture',
-      category: 'Herpetology & Squamate Kinematics',
+      title: 'Caring for My Pet Albino Corn Snake',
+      category: 'Pet Care · Reptiles',
       content: `
         <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-          <p><strong>Kinematic Inquiry:</strong> In <em>Pantherophis guttatus</em>, locomotion across varied topography relies on specialized friction mechanics between ventral scutes and terrestrial or arboreal substrates.</p>
+          <p><strong>A Gentle Companion:</strong> Corn snakes are famous for their docile personality, and my albino corn snake was no exception. With its striking orange and red coloration, it quickly became a favorite among my friends.</p>
           
           <div class="p-4 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
-            <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-1">Directional Frictional Anisotropy</h4>
-            <p class="text-xs">Microscopic caudal-facing edges of keratinous scutes produce high friction against posterior movement (preventing rollback during climbing) while yielding low resistance during forward rectilinear glide.</p>
+            <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-1">Climbing & Holding</h4>
+            <p class="text-xs">It loved wrapping gently around my wrist or climbing through wooden branches in its tank. I was always amazed by how strong and smooth snake muscles are—even without legs, they can anchor themselves firmly and climb effortlessly.</p>
           </div>
 
-          <p><strong>Multi-Vertebral Articulation:</strong> Coordinated muscle contraction sequences propagate undulatory waves across hundreds of pre-cloacal vertebrae, creating stable purchase around branches without requiring rigid appendicular support.</p>
+          <p><strong>Regular Care & Shedding:</strong> I kept a logbook of feeding dates, ambient temperatures, and shed cycles. Seeing it shed its old skin in a single, perfect piece from head to tail was always a clear sign that its humidity and nutrition were right on target.</p>
         </div>
       `
     },
     'turtle': {
-      title: 'Common Snapping Turtle Morphology & Ambush Biomechanics',
-      category: 'Herpetology & Testudines Morphology',
+      title: 'Raising a Common Snapping Turtle',
+      category: 'Pet Care · Reptiles',
       content: `
         <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-          <p><strong>Morphological Adaptations:</strong> The common snapping turtle (<em>Chelydra serpentina</em>) represents a remarkable evolutionary divergence from typical heavy-shelled chelonians.</p>
+          <p><strong>A Prehistoric Look:</strong> I raised a common snapping turtle (<em>Chelydra serpentina</em>) from a small juvenile. Unlike smooth pond turtles, snapping turtles have a rugged, dinosaur-like shell with raised ridges along their back.</p>
           
           <div class="p-4 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800">
-            <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">Plastron Reduction & Mobility</h4>
-            <p class="text-xs">Unlike box turtles, <em>Chelydra</em> possesses a greatly reduced, cross-shaped plastron. This trade-off drastically decreases defensive retraction capability but grants extensive range of motion to powerful muscular limbs for benthic stalking.</p>
+            <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">Safe & Respectful Handling</h4>
+            <p class="text-xs">Because snapping turtles have long necks and sharp beaks, you have to know how to hold them safely. I always picked it up with both hands securely near the rear of the carapace, keeping my fingers well away from its reach while making sure the turtle felt fully supported.</p>
           </div>
 
-          <p><strong>Cervical Extension Dynamics:</strong> A hyper-flexible cervical vertebral column allows explosive forward strikes, while serrated keratinous rhamphotheca edges deliver instantaneous crushing shear force upon aquatic prey.</p>
+          <p><strong>Observing Feeding Habits:</strong> Watching it swim along the bottom of the tank and ambush food was fascinating. Raising this energetic little turtle gave me a hands-on understanding of reptile behavior and responsible pet care.</p>
         </div>
       `
     }
