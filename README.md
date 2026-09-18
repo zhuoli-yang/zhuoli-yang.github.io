@@ -24,7 +24,7 @@ A hands-on explorer bridging vertebrate osteology, vivarium microclimates, bioph
 - **Home (`index.html`)**: Overview, featured highlights, academic profile, Curriculum Vitae (CV).
 - **Works Archive (`projects.html`)**: Interactive galleries for 5 biological specimen, reptile kinematics, and habitat projects.
 - **Global Footprint (`footprint.html`)**: International summits and regional field expedition journals.
-- **Arts & Gallery (`gallery.html`)**: 10-year classical saxophone journey and curated 12-slot nature photography.
+- **Arts & Gallery (`gallery.html`)**: 10-year classical saxophone journey and curated 8-work visual arts & creative photography.
 
 ---
 
