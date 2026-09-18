@@ -254,6 +254,20 @@ document.addEventListener('DOMContentLoaded', () => {
           <p><strong>Aspirations:</strong> Looking forward to applying advanced biophysical and molecular assays (e.g., cryo-EM, mass spectrometry, CRISPR mutagenesis) during undergraduate studies to quantitatively probe these structure-function relationships.</p>
         </div>
       `
+    },
+    'cuticle': {
+      title: 'Reptilian Scales & Cuticular Architecture: Functional Morphology',
+      category: 'Functional Morphology & Integumentary Systems',
+      content: `
+        <div class="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+          <p><strong>Evolutionary Divergence:</strong> Comparative inquiry examining how squamates and arthropods solved the biomechanical challenge of terrestrial desiccation and mechanical abrasion while preserving dynamic locomotion.</p>
+          <div class="p-4 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
+            <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-1">Squamate Epidermal Kinematics</h4>
+            <p class="text-xs">In <em>Pantherophis guttatus</em>, overlapping beta-keratin scales generate anisotropic friction: high resistance against posterior slip combined with low resistance during anterior glide, enabling rectilinear locomotion along vertical substrates.</p>
+          </div>
+          <p><strong>Chitinous Sclerotization:</strong> Contrastingly, arthropod integuments leverage layered alpha-chitin microfibrils embedded in a cross-linked sclerotin matrix, combining rigid structural plates with flexible arthrodial membranes for articulation.</p>
+        </div>
+      `
     }
   };
 

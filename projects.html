@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Works & Biological Projects | Zhuoli Yang</title>
-  <meta name="description" content="Complete archive of biological inquiries, specimen articulations, vivarium husbandry, biomechanics, and histology by Zhuoli Yang.">
+  <meta name="description" content="Complete archive of biological inquiries, specimen articulations, vivarium husbandry, biomechanics, and functional morphology by Zhuoli Yang.">
   
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -72,7 +72,7 @@
             Zhuoli Yang
           </span>
           <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-medium mt-0.5">
-            Personal Space &middot; Class of 2027
+            Personal Space &middot; Visual Portfolio
           </span>
         </div>
       </a>
@@ -142,7 +142,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 p-5 rounded-2xl glass-card">
         <div>
           <span class="text-[10px] font-mono uppercase text-slate-400 block">Documented Inquiries</span>
-          <span class="text-2xl font-bold font-mono text-slate-900 dark:text-white">6 In-Depth</span>
+          <span class="text-2xl font-bold font-mono text-slate-900 dark:text-white">4 In-Depth</span>
         </div>
         <div>
           <span class="text-[10px] font-mono uppercase text-slate-400 block">Skeletal Reconstruction</span>
@@ -153,8 +153,8 @@
           <span class="text-2xl font-bold font-mono text-teal-600 dark:text-teal-400">3+ Years Log</span>
         </div>
         <div>
-          <span class="text-[10px] font-mono uppercase text-slate-400 block">Lab Methodology</span>
-          <span class="text-2xl font-bold font-mono text-cyan-600 dark:text-cyan-400">NaOH Matrix</span>
+          <span class="text-[10px] font-mono uppercase text-slate-400 block">Exotic Husbandry</span>
+          <span class="text-2xl font-bold font-mono text-cyan-600 dark:text-cyan-400">Multi-Taxa</span>
         </div>
       </div>
 
@@ -164,19 +164,19 @@
           <i data-lucide="filter" class="w-3.5 h-3.5"></i> Filter:
         </span>
         <button type="button" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-medium transition-colors bg-emerald-600 text-white" data-filter="all">
-          All Works (6)
+          All Works (4)
         </button>
         <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="anatomy">
-          Osteology &amp; Dissection (2)
+          Vertebrate Osteology (1)
         </button>
         <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="vivarium">
           Vivarium Systems (1)
         </button>
         <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="biomechanics">
-          Biomechanics &amp; Kinetics (1)
+          Arthropod Biomechanics (1)
         </button>
-        <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="microscopy">
-          Micro-Morphology &amp; Histology (2)
+        <button type="button" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-filter="morphology">
+          Herpetology &amp; Scales (1)
         </button>
       </div>
 
@@ -270,89 +270,7 @@
           </div>
         </article>
 
-        <!-- PROJECT 2: Carp Calibration -->
-        <article id="carp-calibration" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="anatomy">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
-            <img src="assets/images/carp_pinned.webp" 
-                 alt="Crucian Carp Chemical Calibration" 
-                 id="carp-main-img"
-                 data-gallery="carp"
-                 data-title="Crucian Carp Chemical & Saponification Calibration"
-                 data-caption="Dissection positioning and pin alignment on high-density foam board."
-                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
-                 onclick="openLightboxFromElement(this)">
-
-            <!-- Floating Multi-Photo Indicator -->
-            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
-              <i data-lucide="images" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span class="font-bold">3 Photos</span>
-            </div>
-
-            <!-- Interactive Thumbnail Switcher Strip -->
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
-              <button type="button" 
-                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-emerald-400 shadow-xs transition-all opacity-100"
-                      data-target="carp-main-img"
-                      data-src="assets/images/carp_pinned.webp"
-                      data-title="Crucian Carp Specimen Pinning"
-                      data-caption="Initial foam positioning and needle alignment prior to chemical processing."
-                      title="Foam Pinning">
-                <img src="assets/images/carp_pinned.webp" alt="Foam Pinning" class="w-full h-full object-cover">
-              </button>
-              <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
-                      data-target="carp-main-img"
-                      data-src="assets/images/carp_solution.webp"
-                      data-title="NaOH Saponification Bath"
-                      data-caption="Gradual lipid saponification and connective tissue clearance in reagent solution."
-                      title="Chemical Solution Bath">
-                <img src="assets/images/carp_solution.webp" alt="Chemical Bath" class="w-full h-full object-cover">
-              </button>
-              <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
-                      data-target="carp-main-img"
-                      data-src="assets/images/fish_skeletons_tier.webp"
-                      data-title="Two-Tier Finished Specimen Showcase"
-                      data-caption="Dual articulated vertebrate skeletons mounted within sealed acrylic archival display."
-                      title="Two-Tier Display Box">
-                <img src="assets/images/fish_skeletons_tier.webp" alt="Two-Tier Showcase" class="w-full h-full object-cover">
-              </button>
-            </div>
-          </div>
-
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Empirical Calibration &middot; Chemistry</span>
-                <span class="text-[10px] font-mono text-slate-400">Specimen #02</span>
-              </div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                NaOH Lipid Saponification Calibration
-              </h2>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Systematic calibration performed on crucian carp (<em>Carassius carassius</em>) to determine exact concentration, duration, and temperature parameters for soft-tissue maceration before touching the valuable tigerfish specimen.
-              </p>
-              
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-[11px] space-y-1.5 text-slate-600 dark:text-slate-300">
-                <div class="flex items-start gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Serial Dilutions:</strong> Evaluated 0.5%, 1.0%, 2.0%, and 3.5% NaOH baths; documented that >2.0% erodes fine neural spines and softens opercular margins.</span>
-                </div>
-                <div class="flex items-start gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Optimal Threshold:</strong> Established 1.0% NaOH at ambient 22&deg;C with 4-hour cycle inspections as the gold standard for preserving delicate sutures.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <span class="text-[11px] font-mono text-slate-500">Controlled Laboratory Matrix</span>
-              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Parameter Calibrated</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 3: Vivarium Ecology -->
+        <!-- PROJECT 2: Vivarium Ecology -->
         <article id="vivarium" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="vivarium">
           <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
             <img src="assets/images/vivarium.webp" 
@@ -406,7 +324,7 @@
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-mono text-teal-600 dark:text-teal-400 font-semibold uppercase">Applied Ethology &middot; 3+ Years</span>
-                <span class="text-[10px] font-mono text-slate-400">Habitat #01</span>
+                <span class="text-[10px] font-mono text-slate-400">Habitat #02</span>
               </div>
               <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                 Closed Vivarium Ecology &amp; Differential Diagnostics
@@ -437,7 +355,7 @@
           </div>
         </article>
 
-        <!-- PROJECT 4: Orthopteran & Arthropod Biomechanics -->
+        <!-- PROJECT 3: Orthopteran & Arthropod Biomechanics -->
         <article id="biomechanics" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="biomechanics">
           <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
             <img src="assets/images/scorpion_macro.webp" 
@@ -491,7 +409,7 @@
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-semibold uppercase">Biophysics &middot; Molecular Curiosity</span>
-                <span class="text-[10px] font-mono text-slate-400">Study #01</span>
+                <span class="text-[10px] font-mono text-slate-400">Inquiry #03</span>
               </div>
               <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                 Orthopteran &amp; Arthropod Biomechanics
@@ -522,90 +440,8 @@
           </div>
         </article>
 
-        <!-- PROJECT 5: Translucent Osteology & Histology -->
-        <article id="histology" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="microscopy">
-          <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
-            <img src="assets/images/fish_skull_translucent.webp" 
-                 alt="Transparent Skeleton & Histology" 
-                 id="histology-main-img"
-                 data-gallery="histology"
-                 data-title="Double-Stained Translucent Cranial Cartilage & Bone"
-                 data-caption="Alcian Blue (cartilage) and Alizarin Red (calcified bone) clearing protocol."
-                 class="w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
-                 onclick="openLightboxFromElement(this)">
-
-            <!-- Floating Multi-Photo Indicator -->
-            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
-              <i data-lucide="images" class="w-3.5 h-3.5 text-purple-400"></i>
-              <span class="font-bold">3 Photos</span>
-            </div>
-
-            <!-- Interactive Thumbnail Switcher Strip -->
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
-              <button type="button" 
-                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-purple-400 shadow-xs transition-all opacity-100"
-                      data-target="histology-main-img"
-                      data-src="assets/images/fish_skull_translucent.webp"
-                      data-title="Translucent Cranial Staining"
-                      data-caption="Micro-resolution of transparent neurocranium showing internal suture junctions."
-                      title="Translucent Skull">
-                <img src="assets/images/fish_skull_translucent.webp" alt="Translucent Skull" class="w-full h-full object-cover">
-              </button>
-              <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
-                      data-target="histology-main-img"
-                      data-src="assets/images/histology.webp"
-                      data-title="Cranial Morphology Slide"
-                      data-caption="Detailed microscopic alignment of osteocranium bone densities."
-                      title="Micro-Section">
-                <img src="assets/images/histology.webp" alt="Micro-Section" class="w-full h-full object-cover">
-              </button>
-              <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
-                      data-target="histology-main-img"
-                      data-src="assets/images/carp_calibration.webp"
-                      data-title="Reagent Chemical Clearing"
-                      data-caption="Refined series of clearing baths maintaining soft chondral membranes."
-                      title="Clearing Baths">
-                <img src="assets/images/carp_calibration.webp" alt="Clearing Baths" class="w-full h-full object-cover">
-              </button>
-            </div>
-          </div>
-
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-mono text-purple-600 dark:text-purple-400 font-semibold uppercase">Microscopy &middot; Histochemistry</span>
-                <span class="text-[10px] font-mono text-slate-400">Slide Series #01</span>
-              </div>
-              <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                Translucent Skeletal Clearing &amp; Histology
-              </h2>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Optical clearing protocol employing enzymatic trypsin digestion, Alizarin Red S for calcified bone tissue, and Alcian Blue 8GX for chondral matrix, unveiling 3D developmental pathways in intact teleosts.
-              </p>
-              
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-[11px] space-y-1.5 text-slate-600 dark:text-slate-300">
-                <div class="flex items-start gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Chondral Differentiation:</strong> Clear differentiation between cartilaginous branchial arches and ossified mandibular structures.</span>
-                </div>
-                <div class="flex items-start gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-600 mt-0.5 shrink-0"></i>
-                  <span><strong>Glycerin Refractive Matching:</strong> Preservation through graded KOH/glycerin baths matching the refractive index of cleared tissue.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <span class="text-[11px] font-mono text-slate-500">Dual Staining &amp; Clearing</span>
-              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Archival Method</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT 6: Exotic Fauna & Cuticular Architecture -->
-        <article id="cuticle" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="microscopy">
+        <!-- PROJECT 4: Exotic Fauna & Cuticular Architecture -->
+        <article id="cuticle" class="project-card glass-card rounded-2xl overflow-hidden flex flex-col group shadow-sm" data-category="morphology">
           <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-center group/img">
             <img src="assets/images/snake_coiled.webp" 
                  alt="Exotic Fauna & Cuticle" 
@@ -658,7 +494,7 @@
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold uppercase">Functional Morphology &middot; Cuticle &amp; Scales</span>
-                <span class="text-[10px] font-mono text-slate-400">Specimen #06</span>
+                <span class="text-[10px] font-mono text-slate-400">Specimen #04</span>
               </div>
               <h2 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                 Reptilian Scales &amp; Arthropod Cuticle Architecture
@@ -681,7 +517,10 @@
 
             <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
               <span class="text-[11px] font-mono text-slate-500">Live Specimen Behavioral Observation</span>
-              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Husbandry Log</span>
+              <button type="button" class="open-modal-btn inline-flex items-center gap-1 text-xs font-semibold text-amber-600 hover:text-amber-700 dark:text-amber-400" data-project="cuticle">
+                <span>Morphology Notes</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </button>
             </div>
           </div>
         </article>
@@ -719,7 +558,7 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
         <div>
           <span class="font-bold text-lg text-slate-900 dark:text-white">Zhuoli Yang</span>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">High School Class of 2027 &middot; Personal Space &amp; Visual Works</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Personal Space &amp; Visual Portfolio</p>
         </div>
         <div class="flex items-center gap-3">
           <button id="copy-email-btn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-slate-700 dark:text-slate-200 text-xs font-medium border border-slate-200 dark:border-slate-700 transition-colors">
@@ -755,6 +594,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
