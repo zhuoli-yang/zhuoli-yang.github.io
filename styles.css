@@ -129,7 +129,7 @@
   transform: translateY(0);
 }
 
-/* Tooltip for scientific terms (巧思小功能) */
+/* Tooltip for scientific terms */
 .bio-tooltip {
   position: relative;
   cursor: help;
