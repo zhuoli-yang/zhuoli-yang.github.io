@@ -4,11 +4,11 @@
 
 ---
 
-### 中文 (Chinese)
-大家好，我是杨卓力（Zhuoli Yang）。一名热爱动手生物学、异宠饲养、古典萨克斯演奏与自然探索的高中生。欢迎访问我的个人主页！
-
 ### English
 Hi, I'm Zhuoli Yang (杨卓力). I am a high school student passionate about hands-on biology, pet care, classical saxophone, and nature exploration. Welcome to my personal portfolio!
+
+### 中文 (Chinese)
+大家好，我是杨卓力（Zhuoli Yang）。一名热爱动手生物学、异宠饲养、古典萨克斯演奏与自然探索的高中生。欢迎访问我的个人主页！
 
 ### Français (French)
 Bonjour, je m'appelle Zhuoli Yang. Je suis un lycéen passionné par la biologie pratique, le soin des animaux de compagnie, le saxophone classique et l'exploration de la nature. Bienvenue sur mon portfolio personnel !
