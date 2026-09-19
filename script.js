@@ -364,6 +364,109 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==================== 8B. FACULTY EVALUATIONS CAROUSEL ====================
+  function initFacultyCarousels() {
+    const carousels = document.querySelectorAll('.eval-carousel');
+    if (!carousels.length) return;
+
+    carousels.forEach(carousel => {
+      const slides = carousel.querySelectorAll('.eval-slide');
+      const dots = carousel.querySelectorAll('.eval-dot');
+      const counter = carousel.querySelector('.eval-counter');
+      const prevBtn = carousel.querySelector('.eval-prev-btn');
+      const nextBtn = carousel.querySelector('.eval-next-btn');
+
+      if (!slides.length) return;
+
+      let currentIndex = 0;
+      const total = slides.length;
+
+      function showSlide(index) {
+        currentIndex = (index + total) % total;
+
+        slides.forEach((slide, idx) => {
+          if (idx === currentIndex) {
+            slide.classList.remove('hidden');
+            slide.classList.add('eval-slide-active');
+          } else {
+            slide.classList.add('hidden');
+            slide.classList.remove('eval-slide-active');
+          }
+        });
+
+        dots.forEach((dot, idx) => {
+          if (idx === currentIndex) {
+            dot.classList.add('w-3.5', 'bg-emerald-600');
+            dot.classList.remove('w-1', 'w-1.5', 'bg-slate-300', 'dark:bg-slate-700', 'dark:bg-slate-600');
+          } else {
+            dot.classList.remove('w-3.5', 'bg-emerald-600');
+            dot.classList.add('w-1.5', 'bg-slate-300', 'dark:bg-slate-700');
+          }
+        });
+
+        if (counter) {
+          counter.textContent = `${currentIndex + 1} / ${total}`;
+        }
+
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          showSlide(currentIndex - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          showSlide(currentIndex + 1);
+        });
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          showSlide(idx);
+        });
+      });
+
+      // Touch swipe gesture support for mobile
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      carousel.addEventListener('touchstart', (e) => {
+        if (e.touches && e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        if (e.changedTouches && e.changedTouches.length === 1) {
+          const deltaX = e.changedTouches[0].clientX - touchStartX;
+          const deltaY = e.changedTouches[0].clientY - touchStartY;
+
+          if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 35) {
+            if (deltaX < 0) {
+              showSlide(currentIndex + 1); // Swipe left -> Next
+            } else {
+              showSlide(currentIndex - 1); // Swipe right -> Previous
+            }
+          }
+        }
+      }, { passive: true });
+
+      // Initial state
+      showSlide(0);
+    });
+  }
+
+  initFacultyCarousels();
+
   // ==================== 9. COPY EMAIL TOAST ====================
   const copyEmailBtns = [
     document.getElementById('copy-email-btn'),

@@ -160,3 +160,23 @@
   opacity: 1;
   transform: translateX(-50%) translateY(-2px);
 }
+
+/* Faculty evaluation carousel animations */
+.eval-slide {
+  user-select: text;
+}
+
+@keyframes evalSlideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eval-slide-active {
+  animation: evalSlideFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="styles.css?v=20">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -370,16 +370,84 @@
             </p>
           </div>
 
-          <!-- Homeroom Teacher Note (Preserved) -->
-          <div class="p-4 rounded-2xl bg-slate-50/70 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-xs">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span class="font-bold text-slate-900 dark:text-white">Ms. Mengting Hu</span>
-              <span class="text-[11px] text-slate-500">&middot; Homeroom Teacher &amp; Biology Instructor</span>
+          <!-- Faculty Notes Carousel -->
+          <div id="index-eval-carousel" class="eval-carousel p-4 rounded-2xl bg-slate-50/70 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-xs flex flex-col justify-between space-y-3 relative overflow-hidden group select-none">
+            
+            <!-- Carousel Header: Title, Counter & Controls -->
+            <div class="flex items-center justify-between pb-2 border-b border-slate-200/60 dark:border-slate-700/60">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Faculty Notes</span>
+              </div>
+              
+              <div class="flex items-center gap-1">
+                <span class="eval-counter text-[10px] font-mono text-slate-400 dark:text-slate-500 mr-1 select-none font-semibold">1 / 3</span>
+                <button type="button" class="eval-prev-btn p-1 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-700/60 transition-colors" aria-label="Previous Note">
+                  <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+                </button>
+                <button type="button" class="eval-next-btn p-1 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-700/60 transition-colors" aria-label="Next Note">
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
             </div>
-            <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed font-serif pl-2 border-l-2 border-emerald-500/60">
-              "Zhuoli stands out for his genuine curiosity, patience, and hands-on dedication. Whether assembling intricate bone skeletons by hand or caring for living terrariums and pets every day, he is observant, thoughtful, and eager to learn by doing."
-            </blockquote>
+
+            <!-- Slides Container -->
+            <div class="eval-slides-track min-h-[110px] flex items-stretch">
+              
+              <!-- Slide 1: Ms. Mengting Hu -->
+              <div class="eval-slide eval-slide-active w-full flex flex-col justify-between space-y-2">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white">Ms. Mengting Hu</span>
+                    <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Biology &middot; STEM</span>
+                  </div>
+                  <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed font-serif pl-2 border-l-2 border-emerald-500/60">
+                    "Zhuoli stands out for his genuine curiosity, patience, and hands-on dedication. In biology classes, he possesses a strong capacity for conceptual migration—linking microscopic molecular traits to macroscopic ecosystems."
+                  </blockquote>
+                </div>
+                <span class="text-[10px] text-slate-400 block pt-1">Homeroom Teacher &amp; Biology Instructor</span>
+              </div>
+
+              <!-- Slide 2: Ms. Chen He -->
+              <div class="eval-slide w-full flex flex-col justify-between space-y-2 hidden">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white">Ms. Chen He</span>
+                    <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-semibold">Math &middot; Logic</span>
+                  </div>
+                  <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed font-serif pl-2 border-l-2 border-blue-500/60">
+                    "Zhuoli demonstrates exceptional aptitude in abstract thinking and mathematical modeling. His pragmatic habit of pinpointing bottlenecks and mastering core principles drives his steady academic excellence."
+                  </blockquote>
+                </div>
+                <span class="text-[10px] text-slate-400 block pt-1">Head of Mathematics &amp; Instructor</span>
+              </div>
+
+              <!-- Slide 3: Mr. Yunpeng Cui -->
+              <div class="eval-slide w-full flex flex-col justify-between space-y-2 hidden">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white">Mr. Yunpeng Cui</span>
+                    <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 font-semibold">Global History</span>
+                  </div>
+                  <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed font-serif pl-2 border-l-2 border-amber-500/60">
+                    "Zhuoli approached international relations with a commendable global perspective, cross-referencing primary literature with sharp evidence-based rigor. Grounded, self-disciplined, and an objective collaborator."
+                  </blockquote>
+                </div>
+                <span class="text-[10px] text-slate-400 block pt-1">Vice President &amp; History Instructor</span>
+              </div>
+
+            </div>
+
+            <!-- Dots -->
+            <div class="pt-2 border-t border-slate-200/50 dark:border-slate-700/50 flex items-center justify-between">
+              <span class="text-[10px] text-slate-400">Kunming Long-Spring High School</span>
+              <div class="eval-dots flex items-center gap-1.5">
+                <button type="button" class="eval-dot w-3.5 h-1 rounded-full bg-emerald-600 transition-all cursor-pointer" data-index="0" aria-label="Slide 1"></button>
+                <button type="button" class="eval-dot w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" data-index="1" aria-label="Slide 2"></button>
+                <button type="button" class="eval-dot w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" data-index="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -753,6 +821,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=19"></script>
+  <script src="script.js?v=20"></script>
 </body>
 </html>

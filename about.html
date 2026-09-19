@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="styles.css?v=20">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -254,26 +254,117 @@
             </p>
           </div>
 
-          <!-- Homeroom Teacher Evaluation -->
-          <div class="lg:col-span-5 glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
-            <div class="space-y-3">
+          <!-- Faculty Evaluations Carousel -->
+          <div id="about-eval-carousel" class="eval-carousel lg:col-span-5 glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 relative overflow-hidden group select-none">
+            
+            <!-- Carousel Header: Title, Counter & Controls -->
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
               <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <div>
-                  <h4 class="text-sm font-bold text-slate-900 dark:text-white">Ms. Mengting Hu</h4>
-                  <p class="text-[11px] text-slate-500">Homeroom Teacher &amp; Biology Instructor</p>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                  Faculty Recommendations
+                </span>
+              </div>
+              
+              <!-- Navigation Controls -->
+              <div class="flex items-center gap-1.5">
+                <span class="eval-counter text-[11px] font-mono text-slate-400 dark:text-slate-500 mr-1.5 select-none font-semibold">1 / 3</span>
+                <button type="button" class="eval-prev-btn p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Previous Recommendation">
+                  <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                </button>
+                <button type="button" class="eval-next-btn p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Next Recommendation">
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Slides Container with Touch Swipe Support -->
+            <div class="eval-slides-track relative min-h-[220px] flex items-stretch">
+              
+              <!-- Slide 1: Ms. Mengting Hu (Biology & Homeroom) -->
+              <div class="eval-slide eval-slide-active w-full flex flex-col justify-between space-y-3">
+                <div class="space-y-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        Ms. Mengting Hu
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 font-semibold">Biology</span>
+                      </h4>
+                      <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Homeroom Teacher &amp; Biology Instructor</p>
+                    </div>
+                  </div>
+
+                  <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed text-xs sm:text-sm font-serif pl-3 border-l-2 border-emerald-500/70 py-1">
+                    "Zhuoli stands out for his active engagement and lively curiosity. In biology classes, he possesses a strong capacity for conceptual migration—frequently linking microscopic molecular characteristics to macroscopic ecosystem behaviors. His maturity and persistence in untangling complex concepts is a trait far more valuable than a perfect score."
+                  </blockquote>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between text-xs text-slate-500">
+                  <span class="text-[11px]">Academic Recommendation</span>
+                  <span class="font-mono text-emerald-600 dark:text-emerald-400 font-semibold text-[11px]">Life Sciences &middot; STEM</span>
                 </div>
               </div>
 
-              <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed text-xs sm:text-sm font-serif pl-3 border-l-2 border-emerald-500/70 py-1">
-                "Zhuoli stands out for his genuine curiosity, patience, and hands-on dedication. Whether assembling intricate bone skeletons by hand or caring for living terrariums and pets every day, he is observant, thoughtful, and eager to learn by doing. His persistence in mastering classical saxophone for a decade mirrors his steady approach to science."
-              </blockquote>
+              <!-- Slide 2: Ms. Chen He (Head of Mathematics) -->
+              <div class="eval-slide w-full flex flex-col justify-between space-y-3 hidden">
+                <div class="space-y-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        Ms. Chen He
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950/70 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60 font-semibold">Mathematics</span>
+                      </h4>
+                      <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Head of Mathematics &amp; Instructor</p>
+                    </div>
+                  </div>
+
+                  <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed text-xs sm:text-sm font-serif pl-3 border-l-2 border-blue-500/70 py-1">
+                    "Zhuoli consistently demonstrates exceptional aptitude in abstract thinking and mathematical modeling. In geometric proofs and statistics, he approaches problems with great open-mindedness and creative logic. His pragmatic habit of pinpointing exact bottlenecks and mastering core principles has driven steady academic excellence."
+                  </blockquote>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between text-xs text-slate-500">
+                  <span class="text-[11px]">Academic Recommendation</span>
+                  <span class="font-mono text-blue-600 dark:text-blue-400 font-semibold text-[11px]">Mathematics &middot; Logic</span>
+                </div>
+              </div>
+
+              <!-- Slide 3: Mr. Yunpeng Cui (Vice President & History) -->
+              <div class="eval-slide w-full flex flex-col justify-between space-y-3 hidden">
+                <div class="space-y-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        Mr. Yunpeng Cui
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 font-semibold">Administration</span>
+                      </h4>
+                      <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Vice President &amp; History Instructor</p>
+                    </div>
+                  </div>
+
+                  <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed text-xs sm:text-sm font-serif pl-3 border-l-2 border-amber-500/70 py-1">
+                    "Zhuoli approached complex historical topics such as post-WWII international relations with a commendable global perspective, looking beyond standard textbooks to cross-reference primary literature. Grounded, self-disciplined, and objective in discussions, he pairs sharp analytical rigor with a warm, collaborative spirit."
+                  </blockquote>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between text-xs text-slate-500">
+                  <span class="text-[11px]">Leadership Recommendation</span>
+                  <span class="font-mono text-amber-600 dark:text-amber-400 font-semibold text-[11px]">Global History &middot; Leadership</span>
+                </div>
+              </div>
+
             </div>
 
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
-              <span>High School Academic Reference</span>
-              <span class="font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Biology &middot; STEM</span>
+            <!-- Carousel Footer: Pagination Dots -->
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-[11px] text-slate-400 font-mono">Kunming Long-Spring High School</span>
+              <div class="eval-dots flex items-center gap-1.5">
+                <button type="button" class="eval-dot w-4 h-1.5 rounded-full bg-emerald-600 transition-all cursor-pointer" data-index="0" aria-label="Slide 1"></button>
+                <button type="button" class="eval-dot w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 transition-all cursor-pointer" data-index="1" aria-label="Slide 2"></button>
+                <button type="button" class="eval-dot w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 transition-all cursor-pointer" data-index="2" aria-label="Slide 3"></button>
+              </div>
             </div>
+
           </div>
 
         </div>
@@ -392,6 +483,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=19"></script>
+  <script src="script.js?v=20"></script>
 </body>
 </html>
