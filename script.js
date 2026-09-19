@@ -394,22 +394,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==================== 9. COPY EMAIL TOAST ====================
-  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const copyEmailBtns = [
+    document.getElementById('copy-email-btn'),
+    document.getElementById('contact-copy-email-btn')
+  ].filter(Boolean);
   const toast = document.getElementById('copy-toast');
 
-  if (copyEmailBtn && toast) {
-    copyEmailBtn.addEventListener('click', () => {
+  copyEmailBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       const email = 'yangzhuoli2009@163.com';
-      navigator.clipboard.writeText(email).then(() => {
-        toast.classList.remove('opacity-0', 'pointer-events-none');
-        toast.classList.add('opacity-100');
-        setTimeout(() => {
-          toast.classList.remove('opacity-100');
-          toast.classList.add('opacity-0', 'pointer-events-none');
-        }, 2000);
-      });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          if (toast) {
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+            setTimeout(() => {
+              toast.classList.remove('opacity-100');
+              toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 2000);
+          }
+        }).catch(() => {
+          window.prompt('Copy email address:', email);
+        });
+      } else {
+        window.prompt('Copy email address:', email);
+      }
     });
-  }
+  });
 
   // ==================== 10. AVATAR DUAL-PERSPECTIVE SWITCHER ====================
   const avatarTabs = document.querySelectorAll('.avatar-tab-btn');
@@ -594,12 +605,14 @@ document.addEventListener('DOMContentLoaded', () => {
     currentGalleryIndex = Math.max(0, currentGalleryItems.findIndex(item => item.src === currentSrc));
 
     updateLightboxView();
+    lightboxModal.style.display = 'flex';
     lightboxModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     if (lightboxModal) {
+      lightboxModal.style.display = 'none';
       lightboxModal.classList.add('hidden');
       document.body.style.overflow = 'auto';
     }
@@ -629,7 +642,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (e) => {
-    if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
+    if (lightboxModal && !lightboxModal.classList.contains('hidden') && lightboxModal.style.display !== 'none') {
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowLeft' && currentGalleryItems.length > 1) {
         currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryItems.length) % currentGalleryItems.length;
@@ -642,61 +655,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ==================== 10. COPY EMAIL BUTTONS & CONTACT FORM ====================
-  const copyToast = document.getElementById('copy-toast');
-  let copyToastTimeout = null;
-
-  function showCopyToast() {
-    if (!copyToast) return;
-    copyToast.classList.remove('opacity-0', 'pointer-events-none');
-    copyToast.classList.add('opacity-100');
-    if (copyToastTimeout) clearTimeout(copyToastTimeout);
-    copyToastTimeout = setTimeout(() => {
-      copyToast.classList.remove('opacity-100');
-      copyToast.classList.add('opacity-0', 'pointer-events-none');
-    }, 2500);
-  }
-
-  function copyEmailToClipboard() {
-    const email = 'yangzhuoli2009@163.com';
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(email).then(() => {
-        showCopyToast();
-      }).catch(() => {
-        window.prompt('Copy email address:', email);
+  // Auto-bind click to all .lightbox-trigger elements without inline onclick
+  document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+    if (!trigger.getAttribute('onclick')) {
+      trigger.addEventListener('click', () => {
+        openLightboxFromElement(trigger);
       });
-    } else {
-      window.prompt('Copy email address:', email);
     }
-  }
-
-  const copyEmailBtn = document.getElementById('copy-email-btn');
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', copyEmailToClipboard);
-  }
-
-  const contactCopyEmailBtn = document.getElementById('contact-copy-email-btn');
-  if (contactCopyEmailBtn) {
-    contactCopyEmailBtn.addEventListener('click', copyEmailToClipboard);
-  }
-
-  // ==================== 11. BACK TO TOP BUTTON ====================
-  const backToTopBtn = document.getElementById('back-to-top');
-  if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-        backToTopBtn.classList.add('opacity-100');
-      } else {
-        backToTopBtn.classList.remove('opacity-100');
-        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
-      }
-    }, { passive: true });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+  });
 
   // Expose global helper
   window.openLightboxFromElement = openLightboxFromElement;
@@ -706,3 +672,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 });
+
+// Fallback global handler if called before DOMContentLoaded
+window.openLightboxFromElement = window.openLightboxFromElement || function(el) {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof window.openLightboxFromElement === 'function') {
+      window.openLightboxFromElement(el);
+    }
+  });
+};
+
