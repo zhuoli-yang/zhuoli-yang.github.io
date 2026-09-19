@@ -680,22 +680,6 @@ document.addEventListener('DOMContentLoaded', () => {
     contactCopyEmailBtn.addEventListener('click', copyEmailToClipboard);
   }
 
-  // Handle contact.html direct email drafting form
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = (document.getElementById('form-name')?.value || '').trim();
-      const email = (document.getElementById('form-email')?.value || '').trim();
-      const subject = (document.getElementById('form-subject')?.value || '').trim();
-      const message = (document.getElementById('form-message')?.value || '').trim();
-
-      const emailSubject = encodeURIComponent(subject ? `[Portfolio Contact] ${subject}` : 'Portfolio Contact from ' + name);
-      const emailBody = encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`);
-      window.location.href = `mailto:yangzhuoli2009@163.com?subject=${emailSubject}&body=${emailBody}`;
-    });
-  }
-
   // ==================== 11. BACK TO TOP BUTTON ====================
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
