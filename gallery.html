@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -764,86 +764,6 @@
           </div>
         </article>
 
-        <!-- CARD 6: Xishuangbanna Rainforest & Wetland -->
-        <article id="xishuangbanna" class="project-card glass-card rounded-2xl overflow-hidden shadow-sm" data-category="footprint">
-          <div class="grid grid-cols-1 md:grid-cols-12">
-            
-            <div class="md:col-span-5 relative h-72 sm:h-80 md:h-full md:min-h-[380px] bg-slate-100 dark:bg-slate-800 overflow-hidden border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 group/img">
-              <img src="assets/images/field_wetland.webp" 
-                   alt="Xishuangbanna Tropical Rainforest" 
-                   id="banna-main-img"
-                   data-gallery="banna"
-                   data-title="Exploring the Tropical Rainforest of Xishuangbanna"
-                   data-caption="Pristine wetland reflection and lush tropical forest canopy."
-                   class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
-                   onclick="openLightboxFromElement(this)">
-
-              <!-- Floating Multi-Photo Indicator -->
-              <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/75 backdrop-blur-md text-white text-[10px] font-mono flex items-center gap-1.5 border border-white/10 shadow-xs pointer-events-none z-10">
-                <i data-lucide="images" class="w-3.5 h-3.5 text-emerald-400"></i>
-                <span class="font-bold">2 Photos</span>
-              </div>
-
-              <!-- Interactive Thumbnail Switcher Strip -->
-              <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
-                <button type="button" 
-                        class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-emerald-400 shadow-xs transition-all opacity-100"
-                        data-target="banna-main-img"
-                        data-src="assets/images/field_wetland.webp"
-                        data-title="Morning Wetland Mirror"
-                        data-caption="Serene wetland water surface mirroring the sky and palm trees."
-                        title="Wetland Mirror">
-                  <img src="assets/images/field_wetland.webp" alt="Wetland Mirror" class="w-full h-full object-cover">
-                </button>
-                <button type="button" 
-                        class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
-                        data-target="banna-main-img"
-                        data-src="assets/images/xishuangbanna.webp"
-                        data-title="Tropical Rainforest Canopy"
-                        data-caption="Lush multi-tiered rainforest trees and hanging tropical vines."
-                        title="Rainforest Canopy">
-                  <img src="assets/images/xishuangbanna.webp" alt="Rainforest Canopy" class="w-full h-full object-cover">
-                </button>
-              </div>
-            </div>
-
-            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase">Travel &amp; Nature &middot; Southern Yunnan</span>
-                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-100/70 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300">Rainforest Walk</span>
-                </div>
-                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white">
-                  Exploring the Tropical Rainforest of Xishuangbanna
-                </h2>
-                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
-                  Location: Xishuangbanna Botanical Basin &middot; Southern Yunnan
-                </div>
-                
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
-                  A wonderful nature trip into the tropical rainforests of Xishuangbanna. We walked past towering buttress roots and winding strangler figs during the day, and set out on an exciting night walk with a UV flashlight to spot scorpions and insects glowing brightly in neon green against the dark tree bark.
-                </p>
-
-                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
-                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Night Walk with UV Light</span>
-                    <span class="text-[11px] text-slate-500">Shining a UV flashlight onto hollow trunks and rocks to find scorpions glowing in the dark.</span>
-                  </div>
-                  <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
-                    <span class="font-semibold text-slate-800 dark:text-slate-200 block">Rainforest Canopy</span>
-                    <span class="text-[11px] text-slate-500">Exploring massive buttress roots, aerial vines, and hanging ferns in the humid canopy.</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
-                <span>Habitat: Lowland Tropical Rainforest</span>
-                <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Travel Journal</span>
-              </div>
-            </div>
-
-          </div>
-        </article>
 
       </section>
 
@@ -1103,6 +1023,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=23"></script>
+  <script src="script.js?v=24"></script>
 </body>
 </html>
