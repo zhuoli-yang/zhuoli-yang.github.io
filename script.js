@@ -178,23 +178,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
+  function applyFilter(filter, activeBtn) {
+    if (activeBtn) {
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-emerald-600', 'bg-purple-600', 'bg-blue-600', 'text-white');
+        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
+      activeBtn.classList.add('active', 'bg-emerald-600', 'text-white');
+      activeBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+    }
+
+    projectCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (filter === 'all' || (category && category.includes(filter))) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active', 'bg-emerald-600', 'text-white'));
-      btn.classList.add('active', 'bg-emerald-600', 'text-white');
-
       const filter = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category.includes(filter)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      applyFilter(filter, btn);
     });
   });
+
+  // Handle URL query parameters (e.g., ?filter=footprint)
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialFilter = urlParams.get('filter');
+  if (initialFilter) {
+    const targetFilterBtn = document.querySelector(`.filter-btn[data-filter="${initialFilter}"]`);
+    if (targetFilterBtn) {
+      applyFilter(initialFilter, targetFilterBtn);
+    }
+  }
+
+  // Handle URL hash targets on load (e.g. #saxophone, #wimun, #moments)
+  const currentHash = window.location.hash;
+  if (currentHash) {
+    const targetElement = document.querySelector(currentHash);
+    if (targetElement) {
+      const parentCard = targetElement.closest('.project-card') || targetElement;
+      if (parentCard && parentCard.classList.contains('project-card')) {
+        const cat = parentCard.getAttribute('data-category');
+        if (cat) {
+          const targetFilterBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+          if (targetFilterBtn) {
+            applyFilter(cat, targetFilterBtn);
+          }
+        }
+      }
+      setTimeout(() => {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    }
+  }
 
   // ==================== 8. MODAL DEEP DIVE SYSTEM ====================
   const modal = document.getElementById('project-modal');

@@ -20,11 +20,10 @@ A passionate young explorer interested in hands-on biology, pet care, DIY crafts
 - **TOEFL iBT Official**: **93 / 120** (Test Date: Oct 11, 2025)
   - Reading: **24** &nbsp;|&nbsp; Listening: **23** &nbsp;|&nbsp; Speaking: **22** &nbsp;|&nbsp; Writing: **24**
 
-### Key Pages
+### Two-Pillar Information Architecture
 - **Home (`index.html`)**: Overview, featured highlights, personal profile, and Curriculum Vitae (CV).
-- **Works Archive (`projects.html`)**: Interactive galleries for 5 hands-on projects and pet care stories.
-- **Global Footprint (`footprint.html`)**: International summits, university visits, and nature travel memories.
-- **Arts & Gallery (`gallery.html`)**: 10-year classical saxophone journey and curated 8-work visual arts & creative photography.
+- **Works Archive (`projects.html`)**: Professional / hands-on biological projects and unique pet care stories (fish skeleton DIY, living vivarium, desert scorpion, corn snake, snapping turtle).
+- **Personal Gallery (`gallery.html`)**: Personal life space unifying 10-year classical saxophone study, global student footprint (UN WIMUN, Harvard, USyd, Yunnan), and curated life & outdoor photography.
 
 ---
 
