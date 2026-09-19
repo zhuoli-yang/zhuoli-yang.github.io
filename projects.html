@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -456,6 +456,7 @@
                  data-gallery="snake"
                  data-title="Caring for My Pet Albino Corn Snake"
                  data-caption="Gentle temperament and smooth climbing movements around branches and hands."
+                 style="object-position: center 76%;"
                  class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
                  onclick="openLightboxFromElement(this)">
 
@@ -466,29 +467,32 @@
             </div>
 
             <!-- Interactive Thumbnail Switcher Strip -->
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+            <div class="absolute bottom-2 left-2 right-2 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
               <button type="button" 
-                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-amber-400 shadow-xs transition-all opacity-100"
+                      class="card-thumb-btn active relative flex-1 h-8 rounded-lg overflow-hidden border-2 border-amber-400 shadow-xs transition-all opacity-100"
                       data-target="snake-main-img"
                       data-src="assets/images/snake_coiled.webp"
+                      data-position="center 76%"
                       data-title="Arboreal Climbing"
                       data-caption="Curling smoothly around wooden branches inside the enclosure."
                       title="Arboreal Coiling">
-                <img src="assets/images/snake_coiled.webp" alt="Coiled Snake" class="w-full h-full object-cover">
+                <img src="assets/images/snake_coiled.webp" alt="Coiled Snake" class="w-full h-full object-cover" style="object-position: center 76%;">
               </button>
               <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      class="card-thumb-btn relative flex-1 h-8 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
                       data-target="snake-main-img"
                       data-src="assets/images/snake_hook.webp"
+                      data-position="center 35%"
                       data-title="Safe Hook Handling"
                       data-caption="Guiding the snake gently during tank cleaning and inspection."
                       title="Snake Hook Handling">
-                <img src="assets/images/snake_hook.webp" alt="Snake Hook Handling" class="w-full h-full object-cover">
+                <img src="assets/images/snake_hook.webp" alt="Snake Hook Handling" class="w-full h-full object-cover" style="object-position: center 35%;">
               </button>
               <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      class="card-thumb-btn relative flex-1 h-8 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
                       data-target="snake-main-img"
                       data-src="assets/images/snake_wrist.webp"
+                      data-position="center 50%"
                       data-title="Gentle Hand Interaction"
                       data-caption="Wrapping calmly around fingers and wrists to explore body warmth."
                       title="Hand Interaction">
@@ -662,6 +666,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=17"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
