@@ -1,4 +1,4 @@
-# 卓阳 my profile
+# Zhuoli Yang’s Portfolio
 
 🌐 **Portfolio Website**: [https://zhuoli-yang.github.io/](https://zhuoli-yang.github.io/)
 
