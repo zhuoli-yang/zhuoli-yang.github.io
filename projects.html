@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Projects &amp; Living Hobbies | Zhuoli Yang</title>
+  <title>Works Archive &middot; My Portfolio | Zhuoli Yang</title>
   <meta name="description" content="Personal journey and hands-on projects of Zhuoli Yang: DIY fish skeleton assembly, planted vivarium care, pet snake and scorpion keeping, and outdoor adventures.">
   
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=14">
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
@@ -72,7 +72,7 @@
             Zhuoli Yang
           </span>
           <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-medium mt-0.5">
-            Personal Space &middot; Visual Portfolio
+            My Portfolio
           </span>
         </div>
       </a>
@@ -367,6 +367,7 @@
                  data-gallery="biomechanics"
                  data-title="Keeping a Desert Scorpion"
                  data-caption="Observing feeding habits and calm handling in a custom desert terrarium."
+                 style="object-position: center 72%;"
                  class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover/img:scale-[1.02] cursor-pointer lightbox-trigger"
                  onclick="openLightboxFromElement(this)">
 
@@ -377,33 +378,36 @@
             </div>
 
             <!-- Interactive Thumbnail Switcher Strip -->
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
+            <div class="absolute bottom-2 left-2 right-2 flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/65 backdrop-blur-md border border-white/10 shadow-md z-10">
               <button type="button" 
-                      class="card-thumb-btn active relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-cyan-400 shadow-xs transition-all opacity-100"
+                      class="card-thumb-btn active relative flex-1 h-8 rounded-lg overflow-hidden border-2 border-cyan-400 shadow-xs transition-all opacity-100"
                       data-target="biomechanics-main-img"
                       data-src="assets/images/scorpion_macro.webp"
+                      data-position="center 72%"
                       data-title="Feeding with Tweezers"
                       data-caption="Watching the scorpion use its pincers to catch food during feeding time."
                       title="Feeding Time">
-                <img src="assets/images/scorpion_macro.webp" alt="Feeding Time" class="w-full h-full object-cover">
+                <img src="assets/images/scorpion_macro.webp" alt="Feeding Time" class="w-full h-full object-cover" style="object-position: center 72%;">
               </button>
               <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      class="card-thumb-btn relative flex-1 h-8 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
                       data-target="biomechanics-main-img"
                       data-src="assets/images/scorpion_finger.webp"
+                      data-position="center 50%"
                       data-title="Gentle Hand Handling"
                       data-caption="Carefully allowing the scorpion to walk across my hand to observe its gentle grip."
                       title="Hand Handling">
                 <img src="assets/images/scorpion_finger.webp" alt="Hand Handling" class="w-full h-full object-cover">
               </button>
               <button type="button" 
-                      class="card-thumb-btn relative flex-1 h-10 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
+                      class="card-thumb-btn relative flex-1 h-8 rounded-lg overflow-hidden border-2 border-transparent hover:border-white/60 shadow-xs transition-all opacity-70 hover:opacity-100"
                       data-target="biomechanics-main-img"
                       data-src="assets/images/scorpion_habitat.webp"
+                      data-position="center 80%"
                       data-title="Desert Terrarium Setup"
                       data-caption="Dry gravel substrate with hollow bark shelters mimicking a natural desert home."
                       title="Terrarium Setup">
-                <img src="assets/images/scorpion_habitat.webp" alt="Terrarium Setup" class="w-full h-full object-cover">
+                <img src="assets/images/scorpion_habitat.webp" alt="Terrarium Setup" class="w-full h-full object-cover" style="object-position: center 80%;">
               </button>
             </div>
           </div>
@@ -621,7 +625,7 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
         <div>
           <span class="font-bold text-lg text-slate-900 dark:text-white">Zhuoli Yang</span>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Personal Space &amp; Visual Portfolio</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">My Portfolio</p>
         </div>
         <div class="flex items-center gap-3">
           <button id="copy-email-btn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-slate-700 dark:text-slate-200 text-xs font-medium border border-slate-200 dark:border-slate-700 transition-colors">
@@ -657,6 +661,6 @@
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Zhuoli Yang | Personal Space & Portfolio
+# Zhuoli Yang | My Portfolio
 
 <p align="center">
   🌐 <b>Live Portfolio</b>: <a href="https://zhuoli-yang.github.io/">https://zhuoli-yang.github.io/</a>

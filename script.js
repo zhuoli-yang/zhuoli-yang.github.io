@@ -477,6 +477,12 @@ document.addEventListener('DOMContentLoaded', () => {
         targetImg.src = newSrc;
         if (newTitle) targetImg.setAttribute('data-title', newTitle);
         if (newCaption) targetImg.setAttribute('data-caption', newCaption);
+        const newPos = btn.getAttribute('data-position');
+        if (newPos) {
+          targetImg.style.objectPosition = newPos;
+        } else {
+          targetImg.style.objectPosition = '';
+        }
         targetImg.style.opacity = '1';
       }, 120);
     };
