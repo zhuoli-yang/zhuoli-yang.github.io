@@ -642,6 +642,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ==================== 10. COPY EMAIL BUTTONS & CONTACT FORM ====================
+  const copyToast = document.getElementById('copy-toast');
+  let copyToastTimeout = null;
+
+  function showCopyToast() {
+    if (!copyToast) return;
+    copyToast.classList.remove('opacity-0', 'pointer-events-none');
+    copyToast.classList.add('opacity-100');
+    if (copyToastTimeout) clearTimeout(copyToastTimeout);
+    copyToastTimeout = setTimeout(() => {
+      copyToast.classList.remove('opacity-100');
+      copyToast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2500);
+  }
+
+  function copyEmailToClipboard() {
+    const email = 'yangzhuoli2009@163.com';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(() => {
+        showCopyToast();
+      }).catch(() => {
+        window.prompt('Copy email address:', email);
+      });
+    } else {
+      window.prompt('Copy email address:', email);
+    }
+  }
+
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', copyEmailToClipboard);
+  }
+
+  const contactCopyEmailBtn = document.getElementById('contact-copy-email-btn');
+  if (contactCopyEmailBtn) {
+    contactCopyEmailBtn.addEventListener('click', copyEmailToClipboard);
+  }
+
+  // Handle contact.html direct email drafting form
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (document.getElementById('form-name')?.value || '').trim();
+      const email = (document.getElementById('form-email')?.value || '').trim();
+      const subject = (document.getElementById('form-subject')?.value || '').trim();
+      const message = (document.getElementById('form-message')?.value || '').trim();
+
+      const emailSubject = encodeURIComponent(subject ? `[Portfolio Contact] ${subject}` : 'Portfolio Contact from ' + name);
+      const emailBody = encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`);
+      window.location.href = `mailto:yangzhuoli2009@163.com?subject=${emailSubject}&body=${emailBody}`;
+    });
+  }
+
+  // ==================== 11. BACK TO TOP BUTTON ====================
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100');
+      } else {
+        backToTopBtn.classList.remove('opacity-100');
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // Expose global helper
   window.openLightboxFromElement = openLightboxFromElement;
 

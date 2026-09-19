@@ -20,10 +20,12 @@ A passionate young explorer interested in hands-on biology, pet care, DIY crafts
 - **TOEFL iBT Official**: **93 / 120** (Test Date: Oct 11, 2025)
   - Reading: **24** &nbsp;|&nbsp; Listening: **23** &nbsp;|&nbsp; Speaking: **22** &nbsp;|&nbsp; Writing: **24**
 
-### Two-Pillar Information Architecture
+### 5-Page Information Architecture
 - **Home (`index.html`)**: Overview, featured highlights, personal profile, and Curriculum Vitae (CV).
-- **Works Archive (`projects.html`)**: Professional / hands-on biological projects and unique pet care stories (fish skeleton DIY, living vivarium, desert scorpion, corn snake, snapping turtle).
+- **Works Archive (`projects.html`)**: Hands-on biological projects and pet care stories (fish skeleton DIY, living vivarium, desert scorpion, corn snake, snapping turtle).
 - **Personal Gallery (`gallery.html`)**: Personal life space unifying 10-year classical saxophone study, global student footprint (UN WIMUN, Harvard, USyd, Yunnan), and curated life & outdoor photography.
+- **About (`about.html`)**: Comprehensive profile featuring academic facts, official TOEFL iBT scores, teacher recommendation, core interest pillars, and Curriculum Vitae (CV).
+- **Contact (`contact.html`)**: Dedicated outreach page featuring verified email, 1-click address copy, Kunming location & CST timezone, and direct email drafter.
 
 ---
 

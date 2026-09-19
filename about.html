@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me &middot; My Portfolio | Zhuoli Yang</title>
+  <meta name="description" content="Learn more about Zhuoli Yang — High school student (Class of 2027) in Kunming exploring hands-on comparative anatomy, vivarium ecology, classical saxophone, and global conferences.">
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            slate: {
+              850: '#131b2e',
+              950: '#090d16'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=15">
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased bio-grid-pattern transition-colors duration-300 min-h-screen flex flex-col">
+  <!-- Reading Progress Bar -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 z-50 transition-all duration-100" style="width: 0%;"></div>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo / Name -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:bg-emerald-700 transition-colors">
+          ZY
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-slate-900 dark:text-white tracking-tight leading-none group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            Zhuoli Yang
+          </span>
+          <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-medium mt-0.5">
+            My Portfolio
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1">
+          <i data-lucide="home" class="w-4 h-4"></i> Home
+        </a>
+        <a href="projects.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Works Archive</a>
+        <a href="gallery.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Personal Gallery</a>
+        <a href="about.html" class="text-emerald-600 dark:text-emerald-400 font-semibold transition-colors">About</a>
+        <a href="contact.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Controls: Theme Toggle & Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md px-4 py-4 space-y-3 text-sm font-medium">
+      <a href="index.html" class="block text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 py-1">Home</a>
+      <a href="projects.html" class="block text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 py-1">Works Archive</a>
+      <a href="gallery.html" class="block text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 py-1">Personal Gallery</a>
+      <a href="about.html" class="block text-emerald-600 dark:text-emerald-400 font-semibold py-1">About</a>
+      <a href="contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 py-1">Contact</a>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="flex-1">
+    
+    <!-- Hero / Intro Banner -->
+    <section class="py-12 md:py-16 border-b border-slate-200/80 dark:border-slate-800/80 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Column: Biography & Background -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <i data-lucide="user" class="w-3.5 h-3.5 text-emerald-600"></i> Personal Biography
+              </span>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Class of 2027</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              About Zhuoli Yang
+            </h1>
+
+            <p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              I am currently a high school student (Class of 2027) living in Kunming, Yunnan, China. Growing up surrounded by diverse natural landscapes, I developed a passion for hands-on biological exploration, comparative anatomy, and ecological observation early on.
+            </p>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Rather than just reading textbooks, I enjoy learning through direct practice—spending weeks cleaning and assembling a 1:1 Goliath Tigerfish skeleton bone by bone, maintaining planted vivarium ecosystems, caring for unique pet reptiles and scorpions, and performing classical saxophone distinction concertos.
+            </p>
+
+            <!-- Quick Action: Direct CV Download -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="assets/CV-Yang_Zhuoli.pdf" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md shadow-emerald-600/20 transition-all">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>Download Official CV (PDF)</span>
+                <i data-lucide="download" class="w-3.5 h-3.5 opacity-80"></i>
+              </a>
+              <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium transition-all">
+                <i data-lucide="mail" class="w-4 h-4 text-emerald-600"></i>
+                <span>Get in Touch</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Dedicated Academic Portrait & Stats -->
+          <div class="lg:col-span-5">
+            <div class="glass-card rounded-2xl p-5 sm:p-6 shadow-md space-y-4">
+              <div class="relative w-full aspect-[3/4] max-h-[380px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <img src="assets/images/avatar.webp" alt="Zhuoli Yang Portrait" class="w-full h-full object-cover object-center">
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="p-2.5 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">Academic Track</span>
+                  <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">Physics, Chem, Bio</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">Standardized</span>
+                  <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">TOEFL iBT 93</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">Saxophone</span>
+                  <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">Grade 10 Distinction</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100/70 dark:bg-slate-800/50">
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">Location</span>
+                  <span class="font-semibold text-slate-800 dark:text-slate-200 text-xs">Kunming, China</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ACADEMICS & LANGUAGE SECTION ==================== -->
+    <section class="py-14 bg-white dark:bg-slate-900/60 border-b border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-8">
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Academic &amp; Language Standards</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+            Foundations for International Study
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+            Demonstrating disciplined coursework, standardized English proficiency, and educator endorsement.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- TOEFL Official Score Breakdown -->
+          <div class="lg:col-span-7 glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Official Standardized Testing</span>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">TOEFL iBT Official Score Report</h3>
+              </div>
+              <span class="text-xs font-mono font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-100/80 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+                Official ETS
+              </span>
+            </div>
+
+            <div class="flex items-baseline justify-between py-2 border-y border-slate-100 dark:border-slate-800">
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-extrabold font-mono text-slate-900 dark:text-white">93</span>
+                <span class="text-sm font-normal text-slate-400 font-mono">/ 120 Total</span>
+              </div>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Test Date: October 11, 2025</span>
+            </div>
+
+            <!-- 4 Section Subscores -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-center">
+                <span class="text-[10px] font-mono uppercase text-slate-500 dark:text-slate-400 block tracking-wider">Reading</span>
+                <span class="text-xl font-bold font-mono text-slate-900 dark:text-white mt-0.5 block">24</span>
+                <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Advanced</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-center">
+                <span class="text-[10px] font-mono uppercase text-slate-500 dark:text-slate-400 block tracking-wider">Listening</span>
+                <span class="text-xl font-bold font-mono text-slate-900 dark:text-white mt-0.5 block">23</span>
+                <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Advanced</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-center">
+                <span class="text-[10px] font-mono uppercase text-slate-500 dark:text-slate-400 block tracking-wider">Speaking</span>
+                <span class="text-xl font-bold font-mono text-slate-900 dark:text-white mt-0.5 block">22</span>
+                <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Good</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-center">
+                <span class="text-[10px] font-mono uppercase text-slate-500 dark:text-slate-400 block tracking-wider">Writing</span>
+                <span class="text-xl font-bold font-mono text-slate-900 dark:text-white mt-0.5 block">24</span>
+                <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Advanced</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pt-1">
+              Demonstrates consistent and balanced capability across reading scientific literature, active listening in collegiate lectures, articulating reasoned arguments, and academic synthesis.
+            </p>
+          </div>
+
+          <!-- Homeroom Teacher Evaluation -->
+          <div class="lg:col-span-5 glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-white">Ms. Mengting Hu</h4>
+                  <p class="text-[11px] text-slate-500">Homeroom Teacher &amp; Biology Instructor</p>
+                </div>
+              </div>
+
+              <blockquote class="italic text-slate-600 dark:text-slate-300 leading-relaxed text-xs sm:text-sm font-serif pl-3 border-l-2 border-emerald-500/70 py-1">
+                "Zhuoli stands out for his genuine curiosity, patience, and hands-on dedication. Whether assembling intricate bone skeletons by hand or caring for living terrariums and pets every day, he is observant, thoughtful, and eager to learn by doing. His persistence in mastering classical saxophone for a decade mirrors his steady approach to science."
+              </blockquote>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+              <span>High School Academic Reference</span>
+              <span class="font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Biology &middot; STEM</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== THREE CORE FOUNDATIONS ==================== -->
+    <section class="py-14 border-b border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-10">
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Core Passions &amp; Discipline</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+            Three Pillars of Growth
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+            Combining meticulous craftsmanship, patience with living systems, and 10 years of musical dedication.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center">
+                <i data-lucide="wrench" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Hands-on Skeletal Articulation</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Assembled a full Goliath Tigerfish skeleton by hand. To avoid damaging fragile bones, I practiced cleaning and piecing together a local market carp first. Once confident, I cleaned, numbered, and glued every sharp tooth and delicate vertebra into an acrylic display case.
+              </p>
+            </div>
+            <a href="projects.html#tigerfish" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1 pt-2">
+              <span>View Tigerfish Project</span> &rarr;
+            </a>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 flex items-center justify-center">
+                <i data-lucide="leaf" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Living Ecosystems &amp; Pet Care</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Over 3 years of experience managing bio-active tropical vivariums, arid desert terrariums, and aquatic tanks. Responsible daily for misting schedules, heating gradients, and feeding routines for my pet albino corn snake, desert scorpion, and snapping turtle.
+              </p>
+            </div>
+            <a href="projects.html#biomechanics" class="text-xs font-semibold text-teal-600 hover:text-teal-700 dark:text-teal-400 inline-flex items-center gap-1 pt-2">
+              <span>Explore Living Pets</span> &rarr;
+            </a>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 flex items-center justify-center">
+                <i data-lucide="music" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">10-Year Classical Saxophone</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Dedicated ten years to classical alto saxophone study, achieving Grade 10 Distinction from China National Opera and Dance Drama Theater. The daily discipline of breath control, embouchure stability, and musical dynamics taught me patience and rigorous precision.
+              </p>
+            </div>
+            <a href="gallery.html?filter=music#saxophone" class="text-xs font-semibold text-purple-600 hover:text-purple-700 dark:text-purple-400 inline-flex items-center gap-1 pt-2">
+              <span>View Saxophone Study</span> &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== COMPLETE CURRICULUM VITAE (CV) ==================== -->
+    <section id="cv" class="py-14 md:py-20 bg-slate-50/50 dark:bg-slate-900/30">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- CV Card with Header -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+            <div>
+              <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block">Curriculum Vitae</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Zhuoli Yang</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Kunming, Yunnan, China &middot; yangzhuoli2009@163.com</p>
+            </div>
+
+            <a href="assets/CV-Yang_Zhuoli.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition-all self-start sm:self-auto">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Download PDF File</span>
+            </a>
+          </div>
+
+          <!-- CV Timeline Sections -->
+          <div class="py-6 space-y-8 text-sm text-slate-700 dark:text-slate-300">
+            
+            <!-- 1. Education -->
+            <div class="space-y-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-emerald-600"></i>
+                <span>1. Education</span>
+              </h3>
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                  <span>High School Diploma Program (Class of 2027)</span>
+                  <span class="font-mono text-xs text-slate-500 font-normal">Kunming, China &middot; Expected 2027</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+                  Academic focus: Physics, Chemistry, Biology, Mathematics, and English. Emphasizing hands-on scientific inquiries and independent practical projects.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. Standardized Testing -->
+            <div class="space-y-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-blue-600"></i>
+                <span>2. Standardized Testing &amp; Language</span>
+              </h3>
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60 space-y-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                  <span>TOEFL iBT (Official ETS Report)</span>
+                  <span class="font-mono text-xs text-slate-500 font-normal">October 11, 2025</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+                  <span class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Total: <strong>93 / 120</strong></span>
+                  <span class="px-2 py-1 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">R: 24</span>
+                  <span class="px-2 py-1 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">L: 23</span>
+                  <span class="px-2 py-1 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">S: 22</span>
+                  <span class="px-2 py-1 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">W: 24</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Hands-on Projects -->
+            <div class="space-y-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="wrench" class="w-4 h-4 text-emerald-600"></i>
+                <span>3. Hands-on Biological Exploration &amp; Pet Care</span>
+              </h3>
+              <div class="space-y-3">
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                    <span>1:1 Goliath Tigerfish Skeletal Assembly</span>
+                    <span class="font-mono text-xs text-slate-500 font-normal">Independent Project</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                    Practiced bone cleaning on a market carp first, then cleaned, articulated, and mounted a full skeleton of <em>Hydrocynus goliath</em> inside an acrylic display case.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                    <span>Living Vivarium &amp; Exotic Pet Care (3+ Years)</span>
+                    <span class="font-mono text-xs text-slate-500 font-normal">Long-Term Practice</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                    Designed and maintained high-humidity planted vivariums, arid scorpion enclosures, and aquatic turtle tanks. Caring for an albino corn snake, an Asian desert scorpion, and an alligator snapping turtle.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Global Footprint & Leadership -->
+            <div class="space-y-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="globe" class="w-4 h-4 text-purple-600"></i>
+                <span>4. Global Student Footprint &amp; Conferences</span>
+              </h3>
+              <div class="space-y-3">
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                    <span>WIMUN New York 2024 &middot; United Nations Headquarters</span>
+                    <span class="font-mono text-xs text-slate-500 font-normal">New York, USA</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                    Selected as a youth delegate representing Switzerland at the United Nations Headquarters, debating international resolutions and multilateral consensus.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                    <span>Harvard Student Agencies (HSA) Workshop</span>
+                    <span class="font-mono text-xs text-slate-500 font-normal">Cambridge, USA</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                    Completed collegiate mentorship workshops, campus discussions, and academic presentation sessions at Harvard University.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                    <span>The University of Sydney Campus &amp; Wildlife Visit</span>
+                    <span class="font-mono text-xs text-slate-500 font-normal">Sydney, Australia</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                    Toured academic faculties, historic sandstone grounds, and local wildlife conservation centers observing endemic Australian fauna.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Performing Arts & Music -->
+            <div class="space-y-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="music" class="w-4 h-4 text-purple-600"></i>
+                <span>5. Music &amp; Performing Arts</span>
+              </h3>
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between font-bold text-slate-900 dark:text-white">
+                  <span>Classical Saxophone &middot; Grade 10 Distinction</span>
+                  <span class="font-mono text-xs text-slate-500 font-normal">10-Year Study</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                  Certified by China National Opera and Dance Drama Theater (Certificate: <code>20240072010301051120007</code>). Practiced advanced concerto distinction repertoire, chromatic scales, and ensemble dynamics.
+                </p>
+              </div>
+            </div>
+
+            <!-- 6. Skills & Languages -->
+            <div class="space-y-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="code" class="w-4 h-4 text-emerald-600"></i>
+                <span>6. Skills &amp; Core Strengths</span>
+              </h3>
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/60">
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Bone Articulation &amp; Assembly</span>
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Vivarium Habitat Design</span>
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Exotic Pet Care</span>
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Classical Saxophone (Grade 10)</span>
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Macro Nature Photography</span>
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">English (TOEFL 93)</span>
+                  <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Mandarin Chinese (Native)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER & CONTACT ==================== -->
+  <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-12 pb-10 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <span class="font-bold text-lg text-slate-900 dark:text-white">Zhuoli Yang</span>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">My Portfolio</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="copy-email-btn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-slate-700 dark:text-slate-200 text-xs font-medium border border-slate-200 dark:border-slate-700 transition-colors">
+            <i data-lucide="copy" class="w-3.5 h-3.5 text-emerald-600"></i>
+            yangzhuoli2009@163.com
+          </button>
+          <a href="mailto:yangzhuoli2009@163.com" class="p-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors" title="Send Email">
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 dark:text-slate-500">
+        <p>&copy; 2026 Zhuoli Yang. All Rights Reserved.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Home</a>
+          <a href="projects.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Works Archive</a>
+          <a href="gallery.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Personal Gallery</a>
+          <a href="about.html" class="text-emerald-600 dark:text-emerald-400 font-semibold">About</a>
+          <a href="contact.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Copy -->
+  <div id="copy-toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    Email copied to clipboard!
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" type="button" aria-label="Back to Top" class="fixed bottom-6 left-6 z-40 p-2.5 rounded-xl bg-white/90 dark:bg-slate-900/90 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 shadow-lg hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/50 transition-all duration-300 opacity-0 pointer-events-none backdrop-blur-md">
+    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js?v=15"></script>
+</body>
+</html>
