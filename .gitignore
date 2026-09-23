@@ -15,3 +15,7 @@ CLAUDE.md
 *.local.md
 *CHECKLIST*.md
 *.draft.md
+
+# Resumes and Documents
+*.pdf
+
